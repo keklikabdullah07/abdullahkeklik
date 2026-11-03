@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# scripts/check — ANEW evidence-over-claims kuralının somut karşılığı.
+# 5 Aşamalı Katı Kanıt Zinciri: Tip -> Lint -> Test -> Bilinmeyenler -> Drift
+# Sıfır Sahte Kapı: Herhangi bir aşama veya konfigürasyon eksikse doğrudan fail eder.
+#
+# Kullanım: bash scripts/check
+# Veya:    pnpm check / npm run check (package.json'a ekle)
+
+set -e
+
+echo "=== 1/5 TypeScript ==="
+if [ ! -f "tsconfig.json" ]; then
+  echo "❌ [HATA] tsconfig.json bulunamadı — derleme doğrulaması zorunludur!" >&2
+  exit 1
+fi
+npx tsc --noEmit
+
+echo "=== 2/5 Lint ==="
+if [ -f "biome.json" ]; then
+  npx biome check .
+elif [ -f ".eslintrc.json" ] || [ -f "eslint.config.js" ] || [ -f "eslint.config.mjs" ]; then
+  npx eslint . --max-warnings=0
+else
+  echo "❌ [HATA] Linter yapılandırması (biome.json veya eslint) bulunamadı — kod kalitesi doğrulaması zorunludur!" >&2
+  exit 1
+fi
+
+echo "=== 3/5 Birim Testleri ==="
+if [ -f "vitest.config.ts" ] || [ -f "vitest.config.js" ] || [ -f "vite.config.ts" ]; then
+  npx vitest run
+else
+  echo "❌ [HATA] Test yapılandırması (vitest) bulunamadı — birim test kanıtı zorunludur!" >&2
+  exit 1
+fi
+
+echo "=== 4/5 Bilinmeyenler Kapısı ==="
+if [ ! -f "scripts/check-unknowns.ts" ]; then
+  echo "❌ [HATA] scripts/check-unknowns.ts bulunamadı!" >&2
+  exit 1
+fi
+npx tsx scripts/check-unknowns.ts
+
+echo "=== 5/5 Harness Drift & Invariant Kapısı ==="
+if [ ! -f "scripts/check-adr-drift.ts" ]; then
+  echo "❌ [HATA] scripts/check-adr-drift.ts bulunamadı!" >&2
+  exit 1
+fi
+npx tsx scripts/check-adr-drift.ts
+
+echo ""
+echo "✅ OK: scripts/check başarıyla geçti. 5 aşamalı kanıt hazır."
