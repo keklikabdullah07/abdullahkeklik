@@ -13,14 +13,12 @@
 
 ## 1. Temel İş Kavramları (Glossary)
 
-> Her satır: `<Terim>` | `<Tanım ve iş mantığı>` | `<İhlal edilirse ne olur / dikkat kuralı>`
-> Terimleri **domain sahibiyle birlikte** yaz; koddan türetilemeyen kavramlar
-> (ör. "onaylı", "iptal", "mahsup") burada tanımlanır.
-
 | Terim | Tanım ve İş Mantığı | Dikkat Edilecek Kural / Invariant |
 |---|---|---|
-| `<Terim 1>` | `<tek cümle tanım>` | `<değişmez kural>` |
-| `<Terim 2>` | `<tek cümle tanım>` | `<değişmez kural>` |
+| Vitrin (Showcase) | Geliştiricinin en iyi işlerini sergilediği öne çıkan projeler bento-grid alanı | İlk ekranda en fazla 4-6 odak proje sergilenir; ziyaretçi boğulmaz. |
+| Bireysel Proje | Geliştiricinin açık kaynak veya kişisel olarak geliştirdiği projeler | GitHub/GitLab linkleri ve canlı demo bağlantıları doğrulanabilir olmalıdır. |
+| Kurumsal Proje | Şirket veya müşteriler için geliştirilen kurumsal işler | Gizlilik (NDA) kurallarına dikkat edilir; ticari sırlar veya özel kodlar ifşa edilmez. |
+| Hibrit Veri (Fallback) | Harici Git API'leri (GitHub/GitLab) erişilemez olduğunda devreye giren yerel proje verisi | API kota aşımında veya çevrimdışı durumda site asla boş veya kırık kalmaz. |
 
 ---
 

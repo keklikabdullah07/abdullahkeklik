@@ -3,16 +3,16 @@
 # AGENTS.md — AI Ajanı Mühendislik Anayasası ve Proje Kimlik Kartı
 # -----------------------------------------------------------------------------
 project_name: "Partridge"
-platform: [web | mobile | backend | game | cli | embedded | data-pipeline | hybrid]
-scale: [lean-hobby | production | enterprise]
+platform: web
+scale: lean-hobby
 
 # Yetenek Bazlı Dinamik Bağlam Yönlendirmesi (Capability-Based Routing)
 # Sıfır Context Şişkinliği: Yalnızca projede gereken yetenekleri 'true' yapın!
 capabilities:
   # --- Frontend & Tasarım ---
-  ui_design_system: false      # true: DESIGN.md, Storybook CDD, 15 anti-slop kuralı aktif
+  ui_design_system: true       # true: DESIGN.md, Storybook CDD, 15 anti-slop kuralı aktif
     # requires: e2e_browser_testing
-  e2e_browser_testing: false   # true: Playwright getByRole a11y-first testi zorunlu
+  e2e_browser_testing: true    # true: Playwright getByRole a11y-first testi zorunlu
   realtime_performance: false  # true: 60 FPS bütçesi, Update döngüsünde GC tahsis yasağı, Object Pooling
 
   # --- Backend & Veri ---
@@ -31,8 +31,8 @@ capabilities:
   # --- Uyum & Erişilebilirlik ---
   compliance_gdpr: false       # true: KVKK/GDPR, PII handling, "right to be forgotten" audit trail
     # requires: database_migrations, structured_logging
-  i18n_localization: false     # true: Çoklu dil, RTL, Intl.NumberFormat/DateTimeFormat
-  accessibility_aa: false      # true: WCAG AA, contrast 4.5:1, klavye navigasyon, aria-label, focus-visible
+  i18n_localization: true      # true: Çoklu dil, RTL, Intl.NumberFormat/DateTimeFormat
+  accessibility_aa: true       # true: WCAG AA, contrast 4.5:1, klavye navigasyon, aria-label, focus-visible
     # requires: e2e_browser_testing, ui_design_system
 
   # --- Güvenlik ---

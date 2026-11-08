@@ -4,113 +4,113 @@
 # Markdown bölümlerde {tokens.path.to.value} referansı kullan.
 # Hex sadece burada yazılır, başka yerde tekrar etmez.
 
-name: ""                        # Proje adı (örn: "KidsCare Veli Paneli")
-version: "v3.0"                # Bu şablon versiyonu (kararları değil)
-default_mode: "PERSUADE"       # PERSUADE | OPERATE | READ | EXPERIENCE (proje genelinde yön)
-default_platform: "web"        # web | ios | android | adaptive
-build_path: "code"             # code | comp (Persuade/Experience için geçerli)
+name: "Partridge"
+version: "v3.0"
+default_mode: "EXPERIENCE"
+default_platform: "web"
+build_path: "code"
 
 # ─── RENK PALETİ (60-30-10) ─────────────────────────────────────
 # Hakim (%60): zemin, Yüzey (%30): kart/panel, Vurgu (%10): birincil aksiyon
 colors:
   # Hakim (zemin)
-  canvas: ""
-  canvas_alt: ""               # alternatif zemin (örn: parchment dark modda)
+  canvas: "#090D16"            # Derin Obsidyen
+  canvas_alt: "#FAF9F6"        # Keten (aydınlık mod alternatifi)
   # Yüzey
-  surface: ""                  # kart/panel (canvas'tan farklı olmalı)
-  surface_raised: ""           # modal, popover
-  surface_sunken: ""           # input, inset
+  surface: "#111726"           # Yükseltilmiş obsidyen kart
+  surface_raised: "#1A2234"    # Modal / popover / flyout
+  surface_sunken: "#06090F"    # Kod blokları / gömülü alanlar
   # Vurgu
-  primary: ""                  # birincil aksiyon
-  primary_hover: ""
-  primary_active: ""
-  primary_on_dark: ""          # koyu yüzeylerde vurgu
+  primary: "#10B981"           # Zümrüt Yeşili (Emerald)
+  primary_hover: "#059669"
+  primary_active: "#047857"
+  primary_on_dark: "#34D399"
   # Sınır
-  hairline: ""                 # 1px border
-  hairline_strong: ""          # focus, aktif state
+  hairline: "rgba(255, 255, 255, 0.08)" # 1px subtle sınır
+  hairline_strong: "rgba(16, 185, 129, 0.4)" # Odak / aktif sınır
   # Metin
-  ink: ""                      # başlık
-  body: ""                     # gövde
-  body_muted: ""               # yardımcı metin
-  body_disabled: ""            # pasif
-  body_on_dark: ""             # koyu yüzeyde metin
+  ink: "#F3F4F6"               # Başlıklar (kırık beyaz)
+  body: "#9CA3AF"              # Gövde metinleri (orta gri)
+  body_muted: "#6B7280"        # İkincil metinler
+  body_disabled: "#4B5563"     # Pasif metinler
+  body_on_dark: "#F9FAFB"      # Koyu yüzeyde net metin
   # Durum
-  success: ""
-  warning: ""
-  danger: ""
-  info: ""
+  success: "#10B981"
+  warning: "#F59E0B"
+  danger: "#EF4444"
+  info: "#3B82F6"
 
 # ─── TİPOGRAFİ ─────────────────────────────────────────────────
 typography:
-  display:                      # hero, büyük başlıklar
-    family: ""
-    weights: []                # [400, 600, 800]
-    min_size: ""
-    max_size: ""
-    letter_spacing: ""
-  headline:                     # h1, h2
-    family: ""
-    weights: []
-  title:                        # h3, panel başlıkları
-    family: ""
-    weights: []
-  body:                         # paragraf
-    family: ""
-    weights: []
-    size: ""                   # 16 veya 17 (Apple tercihi)
-    line_height: ""
-  caption:                      # yardımcı, etiket
-    family: ""
-    weights: []
-    size: ""
-  mono:                         # kod, teknik
-    family: ""
-    weights: []
+  display:
+    family: "var(--font-display, Inter, sans-serif)"
+    weights: [600, 700, 800]
+    min_size: "2.25rem"
+    max_size: "4rem"
+    letter_spacing: "-0.02em"
+  headline:
+    family: "var(--font-display, Inter, sans-serif)"
+    weights: [600, 700]
+  title:
+    family: "var(--font-display, Inter, sans-serif)"
+    weights: [600]
+  body:
+    family: "var(--font-sans, Inter, sans-serif)"
+    weights: [400, 600]
+    size: "17"
+    line_height: "1.65"
+  caption:
+    family: "var(--font-sans, Inter, sans-serif)"
+    weights: [500]
+    size: "13"
+  mono:
+    family: "var(--font-mono, JetBrains Mono, monospace)"
+    weights: [400, 500]
 
 # ─── KENARLIK & BOŞLUK ─────────────────────────────────────────
 rounded:
   none: "0"
-  xs: ""                       # küçük chip
-  sm: ""                       # buton, input
-  md: ""                       # kart
-  lg: ""                       # büyük kart, modal
-  pill: "9999"                 # tam yuvarlak
-  full: "9999"
+  xs: "4px"
+  sm: "6px"
+  md: "10px"
+  lg: "16px"
+  pill: "9999px"
+  full: "9999px"
 
 spacing:
-  xxs: ""
-  xs: ""
-  sm: ""
-  md: ""
-  lg: ""
-  xl: ""
-  xxl: ""
-  section: ""                  # bölüm dikey padding
+  xxs: "4px"
+  xs: "8px"
+  sm: "12px"
+  md: "16px"
+  lg: "24px"
+  xl: "32px"
+  xxl: "48px"
+  section: "80px"
 
 # ─── GÖLGE ─────────────────────────────────────────────────────
 shadow:
   none: "none"
-  hairline: ""                 # 1px subtle
-  panel: ""                    # modal, popover
-  product: ""                  # ürün fotoğrafı (Apple kalıbı: rgba(0,0,0,0.22) 3px 5px 30px)
-  button_press: ""             # dokunsal buton alt dudağı (3px solid)
+  hairline: "0 0 0 1px rgba(255, 255, 255, 0.08)"
+  panel: "0 10px 30px -10px rgba(0, 0, 0, 0.5)"
+  product: "0 20px 40px -15px rgba(0, 0, 0, 0.6)"
+  button_press: "0 2px 0 0 rgba(4, 120, 87, 0.8)"
 
 # ─── HAREKET ───────────────────────────────────────────────────
 motion:
-  duration_fast: ""            # 100ms
-  duration_base: ""            # 200ms
-  duration_slow: ""            # 400ms
-  easing_default: ""           # ease-out
-  easing_emphasis: ""          # cubic-bezier(0.4, 0, 0.2, 1)
-  scale_press: ""              # 0.96 (dokunsal buton basılma)
-  translate_press: ""          # translateY(3px) (3D buton)
-  reduced_motion: ""           # prefers-reduced-motion: reduce davranışı
+  duration_fast: "120ms"
+  duration_base: "220ms"
+  duration_slow: "450ms"
+  easing_default: "cubic-bezier(0.16, 1, 0.3, 1)"
+  easing_emphasis: "cubic-bezier(0.4, 0, 0.2, 1)"
+  scale_press: "0.98"
+  translate_press: "translateY(1px)"
+  reduced_motion: "none"
 
 # ─── YOĞUNLUK & HAREKET DİALLERİ ───────────────────────────────
 dials:
-  visual_density: 5            # 1-10 (1=blog sparse, 10=finansal terminal)
-  motion_intensity: 5          # 1-10 (1=statik, 10=parallax, scroll-driven)
-  design_variance: 5           # 1-10 (1=merkezi/simetrik, 10=asimetrik/deneysel)
+  visual_density: 3
+  motion_intensity: 7
+  design_variance: 6
 ---
 
 # 🎨 DESIGN.md — Proje Tasarım Anayasası (Şablon v3)

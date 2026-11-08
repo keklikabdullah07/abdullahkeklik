@@ -1,6 +1,6 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { chromium } from "playwright";
+import { chromium } from "@playwright/test";
 
 const ROOT_DIR = process.cwd();
 
@@ -11,7 +11,7 @@ async function runVisualCheck() {
   const targetUrl =
     args.find((a) => a.startsWith("--url="))?.split("=")[1] ||
     process.env.APP_URL ||
-    "http://localhost:3000";
+    "http://localhost:3042";
 
   const isOfflinePreflight = args.includes("--preflight") || args.includes("--check-driver");
 
@@ -43,7 +43,7 @@ async function runVisualCheck() {
     const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
 
-    const response = await page.goto(targetUrl, { timeout: 15000, waitUntil: "networkidle" });
+    const response = await page.goto(targetUrl, { timeout: 15000, waitUntil: "load" });
     if (!response || !response.ok()) {
       throw new Error(`Sayfa yanıt vermedi veya HTTP hata kodu döndü: ${response?.status()}`);
     }
