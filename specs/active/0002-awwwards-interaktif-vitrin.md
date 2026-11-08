@@ -3,7 +3,7 @@
 > ANEW: "No spec, no code."
 
 ## Metadata
-- **Durum:** Approved
+- **Durum:** Shipped
 - **Risk Seviyesi:** STANDARD
 - **Yazar:** Partridge & Sistem Mimarı
 - **Tarih:** 2026-11-08
@@ -32,12 +32,12 @@
 - Harici WebGL / Three.js 3D kütüphaneleri (performans ve pil tasarrufu için saf CSS/Canvas/Framer Motion kullanılacaktır).
 
 ## 3. Kabul Kriterleri (Acceptance Criteria)
-- [ ] AC-1: Arka plandaki klişe ızgara yerine fare hareketini takip eden yumuşak bir Spotlight ve logoya uyumlu metalik gradyan geçişleri bulunmalıdır.
-- [ ] AC-2: Bento kartları asimetrik düzende olmalı (2-kolon odak projesi, veri kartı, interaktif bileşen kartı) ve kartlarda canlı mikro-önizlemeler (kod terminali, telemetri nabzı, interaktif butonlar) yer almalıdır.
-- [ ] AC-3: Hero eylem butonları (CTA) yüksek kontrastlı ve dokunsal olmalı; fare üzerine gelindiğinde belirgin ve şık bir parlama efekti sunmalıdır.
-- [ ] AC-4: Hero başlığı ve manifestosu jenerik yapay zeka klişelerinden arındırılmış, özgün ve vurucu bir mühendislik anlatımı taşımalıdır.
-- [ ] AC-5: `prefers-reduced-motion: reduce` aktif olduğunda fare takip ışığı ve 3D tilt efektleri otomatik olarak zarif statik görünüme geçmelidir.
-- [ ] AC-6: `scripts/check.ps1` 5 aşamalı kanıt zinciri ve Playwright E2E testleri hatasız tamamlanmalı, görsel hakikat screenshot'ı alınmalıdır.
+- [x] AC-1: Arka plandaki klişe ızgara yerine fare hareketini takip eden yumuşak bir Spotlight ve logoya uyumlu metalik gradyan geçişleri bulunmalıdır.
+- [x] AC-2: Bento kartları asimetrik düzende olmalı (2-kolon odak projesi, veri kartı, interaktif bileşen kartı) ve kartlarda canlı mikro-önizlemeler (kod terminali, telemetri nabzı, interaktif butonlar) yer almalıdır.
+- [x] AC-3: Hero eylem butonları (CTA) yüksek kontrastlı ve dokunsal olmalı; fare üzerine gelindiğinde belirgin ve şık bir parlama efekti sunmalıdır.
+- [x] AC-4: Hero başlığı ve manifestosu jenerik yapay zeka klişelerinden arındırılmış, özgün ve vurucu bir mühendislik anlatımı taşımalıdır.
+- [x] AC-5: `prefers-reduced-motion: reduce` aktif olduğunda fare takip ışığı ve 3D tilt efektleri otomatik olarak zarif statik görünüme geçmelidir.
+- [x] AC-6: `scripts/check.ps1` 5 aşamalı kanıt zinciri ve Playwright E2E testleri hatasız tamamlanmalı, görsel hakikat screenshot'ı alınmalıdır.
 
 ## 4. Tasarım Notu (UI ise)
 - Mode: EXPERIENCE
@@ -57,8 +57,8 @@
 - [x] UNK-1: Spotlight performansı düşük cihazları yorar mı? → Çözüm: CSS custom properties (`--mouse-x`, `--mouse-y`) ve `requestAnimationFrame` ile GPU hızlandırmalı hesaplama; reduced motion'da kapatma.
 
 ## 8. Kanıt (Ship sırasında doldurulur)
-- [ ] `scripts/check.ps1` çıktısı temiz (5/5)
-- [ ] Tüm AC'ler doğrulandı
-- [ ] Playwright E2E testi geçti
-- [ ] Görsel hakikat screenshot'ı alındı
-- [ ] Spec durumu `Shipped` yapıldı
+- [x] `scripts/check.ps1` çıktısı temiz (5/5)
+- [x] Tüm AC'ler doğrulandı
+- [x] Playwright E2E testi geçti
+- [x] Görsel hakikat screenshot'ı alındı (`artifacts/visual/.../final-gate.png`)
+- [x] Spec durumu `Shipped` yapıldı

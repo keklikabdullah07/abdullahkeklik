@@ -44,3 +44,4 @@ _Henüz Drizzle veya ORM şema tablosu tespit edilmedi._
 | Spec ID | Başlık | Durum |
 |---|---|---|
 | `0001-scaffold-ve-vitrin-kabugu` | Spec 0001 — Proje İskelesi, Tasarım Sistemi ve Ana Vitrin Kabuğu | **Shipped** |
+| `0002-awwwards-interaktif-vitrin` | Spec 0002 — Awwwards Seviyesi İnteraktif Bento Vitrin ve Akışkan Mikro-Hareket | **Shipped** |

@@ -64,6 +64,9 @@ async function runVisualCheck() {
       throw new Error("Görsel İllüzyon: Sayfa yüklendi ancak body içi tamamen boş!");
     }
 
+    // Animasyonların (Framer Motion spring/reveal) oturmasını bekle
+    await page.waitForTimeout(1000);
+
     // 4. Save Screenshot Artifact
     const screenshotPath = path.join(artifactDir, "final-gate.png");
     await page.screenshot({ path: screenshotPath, fullPage: true });

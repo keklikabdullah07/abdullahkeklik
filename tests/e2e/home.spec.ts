@@ -1,13 +1,15 @@
 import { expect, test } from "@playwright/test";
 
-test.describe("Partridge Vitrin Ana Sayfası", () => {
-  test("Sayfa başarıyla yüklenmeli ve ana başlık görünür olmalıdır", async ({ page }) => {
+test.describe("Abdullah Keklik — Awwwards Seviyesi Vitrin", () => {
+  test("Sayfa başarıyla yüklenmeli, interaktif bento ve spotlight bileşenleri görünür olmalıdır", async ({
+    page,
+  }) => {
     await page.goto("/");
 
     // 1. Ana H1 Başlık Denetimi
     const mainHeading = page.getByRole("heading", { level: 1 });
     await expect(mainHeading).toBeVisible();
-    await expect(mainHeading).toContainText("Yüksek performanslı sistemler");
+    await expect(mainHeading).toContainText("Yüksek verimli mimariler");
 
     // 2. Marka Logosu ve İletişim Butonu
     const logoLink = page.getByRole("link", { name: "Abdullah Keklik Ana Sayfa" });
@@ -15,18 +17,23 @@ test.describe("Partridge Vitrin Ana Sayfası", () => {
     const connectButton = page.getByRole("link", { name: "Bağlantı Kur" });
     await expect(connectButton).toBeVisible();
 
-    // 3. Vitrin Bölümü ve Projeler
+    // 3. Yüksek Kontrastlı Parlayan CTA Butonu
+    const ctaButton = page.getByRole("link", { name: "İnteraktif Vitrini İncele" });
+    await expect(ctaButton).toBeVisible();
+
+    // 4. İnteraktif Bento Bölümü
     const showcaseHeading = page.getByRole("heading", {
-      name: "Vitrin & Çalışmalar",
+      name: "İnteraktif Bento Vitrini",
     });
     await expect(showcaseHeading).toBeVisible();
 
-    // 4. Proje Kartlarının Varlığı
-    const projectArticle = page.getByRole("article");
-    const count = await projectArticle.count();
-    expect(count).toBeGreaterThanOrEqual(4);
+    // 5. Bento Canlı Terminal Önizlemesi ve Benchmark Butonu
+    const benchmarkButton = page.getByRole("button", { name: "Benchmark Testini Başlat" });
+    await expect(benchmarkButton).toBeVisible();
+    await benchmarkButton.click();
+    await expect(page.getByText("ops/sec completed")).toBeVisible({ timeout: 3000 });
 
-    // 5. Filtre Butonları ile Etkileşim
+    // 6. Filtre Butonları ile Etkileşim
     const corporateFilter = page.getByRole("button", { name: /Kurumsal/i });
     await corporateFilter.click();
     await expect(corporateFilter).toHaveAttribute("aria-pressed", "true");

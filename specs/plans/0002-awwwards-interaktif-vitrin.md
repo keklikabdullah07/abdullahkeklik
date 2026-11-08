@@ -4,7 +4,7 @@
 
 ## Metadata
 - **Spec:** [`../active/0002-awwwards-interaktif-vitrin.md`](../active/0002-awwwards-interaktif-vitrin.md)
-- **Durum:** Approved
+- **Durum:** Done
 - **Tarih:** 2026-11-08
 - **Risk Seviyesi:** STANDARD
 

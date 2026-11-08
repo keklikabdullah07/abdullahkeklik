@@ -52,15 +52,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-canvas text-ink antialiased selection:bg-brand/30 selection:text-white">
+      <body className="bg-canvas text-ink antialiased selection:bg-brand/35 selection:text-white">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-canvas focus:font-semibold focus:rounded-md shadow-panel"
         >
           Doğrudan ana içeriğe geç
         </a>
-        <div className="relative min-h-screen flex flex-col bg-grid-pattern">
-          <div className="pointer-events-none fixed inset-0 bg-radial-vignette" />
+        <div className="relative min-h-screen flex flex-col">
           <div className="relative z-10 flex-1 flex flex-col">{children}</div>
         </div>
       </body>
