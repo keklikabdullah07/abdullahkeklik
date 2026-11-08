@@ -3,13 +3,14 @@ import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
 import { Navbar } from "@/components/Navbar";
 import { ShowcaseGrid } from "@/components/ShowcaseGrid";
+import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { SpotlightContainer } from "@/components/SpotlightContainer";
 import { initialProjects } from "@/data/projects";
 import React from "react";
 
 export default function Home() {
   return (
-    <>
+    <SmoothScrollProvider>
       <Navbar />
       <SpotlightContainer>
         <main id="main-content" className="flex-1">
@@ -19,6 +20,6 @@ export default function Home() {
         </main>
       </SpotlightContainer>
       <Footer />
-    </>
+    </SmoothScrollProvider>
   );
 }

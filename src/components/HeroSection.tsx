@@ -2,34 +2,34 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles, Terminal } from "lucide-react";
-import Image from "next/image";
 import type React from "react";
+import { BirdEmblem } from "./BirdEmblem";
+import { MagneticPill } from "./MagneticPill";
 
 export const HeroSection: React.FC = () => {
+  const techPills = [
+    "Next.js 15 (App Router)",
+    "TypeScript",
+    "Go & Rust",
+    "Framer Motion",
+    "Tailwind CSS",
+    "Distributed Systems",
+  ];
+
   return (
-    <section className="relative pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
+    <section className="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        {/* İmzalı Logo Monogramı */}
+        {/* Kuş & Yazılım Etkileşimli Monogram */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.88 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 flex justify-center"
+          className="mb-4"
         >
-          <div className="relative group p-3">
-            <div className="absolute inset-0 bg-brand/15 blur-2xl rounded-full opacity-60 group-hover:opacity-90 transition-opacity" />
-            <Image
-              src="/logo.png"
-              alt="Abdullah Keklik"
-              width={260}
-              height={147}
-              className="relative h-20 sm:h-24 w-auto object-contain filter drop-shadow-[0_8px_24px_rgba(255,255,255,0.12)]"
-              priority
-            />
-          </div>
+          <BirdEmblem />
         </motion.div>
 
-        {/* Durum ve Unvan Rozeti */}
+        {/* Durum Rozeti */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -94,28 +94,16 @@ export const HeroSection: React.FC = () => {
           </a>
         </motion.div>
 
-        {/* Teknoloji Çipleri */}
+        {/* Dokunsal / Manyetik Fiziksel Teknoloji Pulları */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.45 }}
-          className="flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-ink-subtle"
+          className="flex flex-wrap items-center justify-center gap-2.5"
         >
-          <span className="px-3 py-1 rounded-full bg-surface/60 border border-hairline hover:border-silver-glow transition-colors">
-            Next.js 15
-          </span>
-          <span className="px-3 py-1 rounded-full bg-surface/60 border border-hairline hover:border-silver-glow transition-colors">
-            TypeScript
-          </span>
-          <span className="px-3 py-1 rounded-full bg-surface/60 border border-hairline hover:border-silver-glow transition-colors">
-            Go / Rust
-          </span>
-          <span className="px-3 py-1 rounded-full bg-surface/60 border border-hairline hover:border-silver-glow transition-colors">
-            Framer Motion
-          </span>
-          <span className="px-3 py-1 rounded-full bg-surface/60 border border-hairline hover:border-silver-glow transition-colors">
-            Tailwind CSS
-          </span>
+          {techPills.map((pill) => (
+            <MagneticPill key={pill} label={pill} />
+          ))}
         </motion.div>
       </div>
     </section>

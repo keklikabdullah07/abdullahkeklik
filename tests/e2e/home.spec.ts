@@ -11,7 +11,11 @@ test.describe("Abdullah Keklik — Awwwards Seviyesi Vitrin", () => {
     await expect(mainHeading).toBeVisible();
     await expect(mainHeading).toContainText("Yüksek verimli mimariler");
 
-    // 2. Marka Logosu ve İletişim Butonu
+    // 2. Kuş ve Marka Amblemi
+    const birdEmblem = page.locator("img[alt*='Partridge Kuş Amblemi']");
+    await expect(birdEmblem).toBeVisible();
+
+    // 3. Marka Logosu ve İletişim Butonu
     const logoLink = page.getByRole("link", { name: "Abdullah Keklik Ana Sayfa" });
     await expect(logoLink).toBeVisible();
     const connectButton = page.getByRole("link", { name: "Bağlantı Kur" });
