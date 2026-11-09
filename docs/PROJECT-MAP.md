@@ -46,3 +46,4 @@ _Henüz Drizzle veya ORM şema tablosu tespit edilmedi._
 | `0001-scaffold-ve-vitrin-kabugu` | Spec 0001 — Proje İskelesi, Tasarım Sistemi ve Ana Vitrin Kabuğu | **Shipped** |
 | `0002-awwwards-interaktif-vitrin` | Spec 0002 — Awwwards Seviyesi İnteraktif Bento Vitrin ve Akışkan Mikro-Hareket | **Shipped** |
 | `0003-lenis-ve-partridge-etkilesimi` | Spec 0003 — Grail Kalitesinde Akışkan Kaydırma (Lenis) ve Kuş & Yazılım Etkileşimi | **Shipped** |
+| `0004-fizik-arenasi-ve-partikuller` | Spec 0004 — Grail Seviyesi Fizik Arenası ve Partridge Parçacık Sahnesi | **Shipped** |

@@ -37,7 +37,11 @@ test.describe("Abdullah Keklik — Awwwards Seviyesi Vitrin", () => {
     await benchmarkButton.click();
     await expect(page.getByText("ops/sec completed")).toBeVisible({ timeout: 3000 });
 
-    // 6. Filtre Butonları ile Etkileşim
+    // 6. Fiziksel Teknoloji Arenası
+    const physicsHeading = page.getByRole("heading", { name: "Fiziksel Teknoloji Totemleri" });
+    await expect(physicsHeading).toBeVisible();
+
+    // 7. Filtre Butonları ile Etkileşim
     const corporateFilter = page.getByRole("button", { name: /Kurumsal/i });
     await corporateFilter.click();
     await expect(corporateFilter).toHaveAttribute("aria-pressed", "true");
