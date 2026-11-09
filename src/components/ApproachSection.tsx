@@ -48,7 +48,7 @@ export const ApproachSection: React.FC = () => {
               >
                 <div>
                   <div className="w-10 h-10 rounded-lg bg-brand/10 border border-brand/20 text-brand flex items-center justify-center mb-5">
-                    <Icon className="w-5 h-5" aria-hidden="true" />
+                    <Icon className="w-5 h-5 text-brand" aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-semibold text-ink mb-2">{item.title}</h3>
                   <p className="text-sm text-ink-muted leading-relaxed">{item.description}</p>

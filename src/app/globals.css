@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --canvas: #090d16;
-  --canvas-alt: #faf9f6;
-  --surface: #111726;
-  --surface-raised: #1a2234;
-  --surface-sunken: #06090f;
-  --primary: #10b981;
-  --primary-hover: #059669;
-  --primary-active: #047857;
-  --primary-on-dark: #34d399;
+  --canvas: #0d111a;
+  --canvas-alt: #faf5eb;
+  --surface: #141a26;
+  --surface-raised: #1d2536;
+  --surface-sunken: #080b12;
+  --primary: #e05238;
+  --primary-hover: #d94828;
+  --primary-active: #bf3b1d;
+  --primary-on-dark: #f87154;
   --hairline: rgba(255, 255, 255, 0.08);
-  --hairline-strong: rgba(16, 185, 129, 0.5);
-  --ink: #f3f4f6;
-  --body: #9ca3af;
-  --body-muted: #6b7280;
+  --hairline-strong: rgba(224, 82, 56, 0.5);
+  --ink: #f4f5f7;
+  --body: #a1a7b5;
+  --body-muted: #71798a;
 }
 
 html {
@@ -31,13 +31,13 @@ body {
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   background-image: 
-    radial-gradient(at 15% 15%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+    radial-gradient(at 15% 15%, rgba(224, 82, 56, 0.06) 0px, transparent 55%),
     radial-gradient(at 85% 85%, rgba(255, 255, 255, 0.03) 0px, transparent 50%);
   background-attachment: fixed;
 }
 
 ::selection {
-  background-color: rgba(16, 185, 129, 0.35);
+  background-color: rgba(224, 82, 56, 0.35);
   color: #ffffff;
 }
 
@@ -60,9 +60,9 @@ body {
   }
 }
 
-/* Gümüş & Metalik Işıltı (Silver Chrome Sheen - Logoya Uyumlu) */
+/* Gümüş & Fildişi Metalik Işıltı (Logoya Uyumlu) */
 .text-silver-chrome {
-  background: linear-gradient(180deg, #ffffff 0%, #d1d5db 45%, #9ca3af 70%, #f3f4f6 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 45%, #94a3b8 70%, #faf5eb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -72,27 +72,27 @@ body {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.03);
 }
 
-/* Yüksek Kontrastlı Parlayan CTA Butonu */
+/* Kınalı Kor Ateşi Parlayan CTA Butonu */
 .btn-emerald-glow {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: #04130c;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #e05238 0%, #c4381e 100%);
+  color: #ffffff;
+  box-shadow: 0 0 22px rgba(224, 82, 56, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .btn-emerald-glow:hover {
-  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-  box-shadow: 0 0 28px rgba(16, 185, 129, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, #f87154 0%, #e05238 100%);
+  box-shadow: 0 0 30px rgba(224, 82, 56, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .btn-silver-glow {
-  background: rgba(26, 34, 52, 0.85);
+  background: rgba(20, 26, 38, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #f3f4f6;
+  color: #f4f5f7;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .btn-silver-glow:hover {
-  background: rgba(36, 48, 72, 0.95);
+  background: rgba(29, 37, 54, 0.95);
   border-color: rgba(255, 255, 255, 0.35);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }

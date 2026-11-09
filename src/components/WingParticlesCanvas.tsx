@@ -100,11 +100,13 @@ export const WingParticlesCanvas: React.FC = () => {
         ctx.rotate(p.rotation);
 
         if (p.colorType === "emerald") {
-          ctx.fillStyle = `rgba(16, 185, 129, ${p.alpha * 0.8})`;
-          ctx.shadowColor = "rgba(16, 185, 129, 0.6)";
+          // Kınalı keklik mercan tüyü
+          ctx.fillStyle = `rgba(224, 82, 56, ${p.alpha * 0.8})`;
+          ctx.shadowColor = "rgba(224, 82, 56, 0.6)";
           ctx.shadowBlur = 8;
         } else {
-          ctx.fillStyle = `rgba(243, 244, 246, ${p.alpha * 0.85})`;
+          // Fildişi / gümüş tüy
+          ctx.fillStyle = `rgba(250, 245, 235, ${p.alpha * 0.85})`;
           ctx.shadowColor = "rgba(255, 255, 255, 0.4)";
           ctx.shadowBlur = 6;
         }

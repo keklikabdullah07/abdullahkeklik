@@ -55,9 +55,9 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-ink-subtle gap-4">
-          <p>© {new Date().getFullYear()} Partridge. Tüm hakları saklıdır.</p>
+          <p>© {new Date().getFullYear()} Abdullah Keklik. Tüm hakları saklıdır.</p>
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-brand" />
+            <span className="w-2 h-2 rounded-full bg-brand shadow-[0_0_8px_#e05238]" />
             <span className="font-mono text-[11px]">ANEW 3-Katmanlı Mimari Standardı</span>
           </div>
         </div>

@@ -65,7 +65,7 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
               aria-pressed={activeFilter === "all"}
               className={`px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all ${
                 activeFilter === "all"
-                  ? "bg-brand text-canvas font-bold shadow-button"
+                  ? "bg-brand text-white font-bold shadow-[0_0_15px_rgba(224,82,56,0.5)]"
                   : "text-ink-muted hover:text-ink hover:bg-surface-raised"
               }`}
             >
@@ -75,9 +75,9 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
               type="button"
               onClick={() => setActiveFilter("individual")}
               aria-pressed={activeFilter === "individual"}
-              className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all ${
                 activeFilter === "individual"
-                  ? "bg-brand text-canvas font-bold shadow-button"
+                  ? "bg-brand text-white font-bold shadow-[0_0_15px_rgba(224,82,56,0.5)]"
                   : "text-ink-muted hover:text-ink hover:bg-surface-raised"
               }`}
             >
@@ -88,9 +88,9 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
               type="button"
               onClick={() => setActiveFilter("corporate")}
               aria-pressed={activeFilter === "corporate"}
-              className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all ${
                 activeFilter === "corporate"
-                  ? "bg-brand text-canvas font-bold shadow-button"
+                  ? "bg-brand text-white font-bold shadow-[0_0_15px_rgba(224,82,56,0.5)]"
                   : "text-ink-muted hover:text-ink hover:bg-surface-raised"
               }`}
             >
@@ -132,8 +132,8 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
                       <span
                         className={`px-2.5 py-0.5 text-[11px] font-mono font-medium rounded-full border ${
                           project.category === "corporate"
-                            ? "bg-blue-950/50 text-blue-300 border-blue-800/50"
-                            : "bg-emerald-950/50 text-emerald-300 border-emerald-800/50"
+                            ? "bg-slate-900/60 text-slate-300 border-slate-700/60"
+                            : "bg-red-950/40 text-red-300 border-red-800/40"
                         }`}
                       >
                         {project.category === "corporate"

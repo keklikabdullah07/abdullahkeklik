@@ -10,35 +10,35 @@ default_mode: "EXPERIENCE"
 default_platform: "web"
 build_path: "code"
 
-# ─── RENK PALETİ (60-30-10) ─────────────────────────────────────
-# Hakim (%60): zemin, Yüzey (%30): kart/panel, Vurgu (%10): birincil aksiyon
+# ─── RENK PALETİ (60-30-10) — KINALI KEKLİK (CHUKAR PARTRIDGE) ─────────
+# Hakim (%60): Derin Kül Obsidyeni, Yüzey (%30): Dağ Kayası Antrasiti, Vurgu (%10): Kınalı Mercan
 colors:
   # Hakim (zemin)
-  canvas: "#090D16"            # Derin Obsidyen
-  canvas_alt: "#FAF9F6"        # Keten (aydınlık mod alternatifi)
+  canvas: "#0D111A"            # Dağ Külü Obsidyeni (Keklik sırtı & göğsü)
+  canvas_alt: "#FAF5EB"        # Keten / Fildişi (Keklik kanat şeritleri)
   # Yüzey
-  surface: "#111726"           # Yükseltilmiş obsidyen kart
-  surface_raised: "#1A2234"    # Modal / popover / flyout
-  surface_sunken: "#06090F"    # Kod blokları / gömülü alanlar
+  surface: "#141A26"           # Koyu kayalık antrasiti
+  surface_raised: "#1D2536"    # Modal / popover / flyout
+  surface_sunken: "#080B12"    # Kod blokları / gömülü alanlar
   # Vurgu
-  primary: "#10B981"           # Zümrüt Yeşili (Emerald)
-  primary_hover: "#059669"
-  primary_active: "#047857"
-  primary_on_dark: "#34D399"
+  primary: "#E05238"           # Kınalı Mercan Kırmızısı (Keklik gagası ve göz halkası)
+  primary_hover: "#D94828"
+  primary_active: "#BF3B1D"
+  primary_on_dark: "#F87154"
   # Sınır
   hairline: "rgba(255, 255, 255, 0.08)" # 1px subtle sınır
-  hairline_strong: "rgba(16, 185, 129, 0.4)" # Odak / aktif sınır
+  hairline_strong: "rgba(224, 82, 56, 0.5)" # Odak / aktif sınır (Kınalı ışıltı)
   # Metin
-  ink: "#F3F4F6"               # Başlıklar (kırık beyaz)
-  body: "#9CA3AF"              # Gövde metinleri (orta gri)
-  body_muted: "#6B7280"        # İkincil metinler
-  body_disabled: "#4B5563"     # Pasif metinler
-  body_on_dark: "#F9FAFB"      # Koyu yüzeyde net metin
+  ink: "#F4F5F7"               # Başlıklar (kırık fildişi)
+  body: "#A1A7B5"              # Gövde metinleri (kül tonu gri)
+  body_muted: "#71798A"        # İkincil metinler
+  body_disabled: "#4A5263"     # Pasif metinler
+  body_on_dark: "#FAF5EB"      # Koyu yüzeyde keten beyazı metin
   # Durum
   success: "#10B981"
   warning: "#F59E0B"
   danger: "#EF4444"
-  info: "#3B82F6"
+  info: "#38BDF8"
 
 # ─── TİPOGRAFİ ─────────────────────────────────────────────────
 typography:

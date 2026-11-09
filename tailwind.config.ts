@@ -11,28 +11,28 @@ const config: Config = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: "#090D16",
-          alt: "#FAF9F6",
+          DEFAULT: "#0D111A", // Dağ Külü Obsidyeni
+          alt: "#FAF5EB",    // Keten / Fildişi
         },
         surface: {
-          DEFAULT: "#111726",
-          raised: "#1A2234",
-          sunken: "#06090F",
+          DEFAULT: "#141A26", // Dağ Kayası Antrasiti
+          raised: "#1D2536",
+          sunken: "#080B12",
         },
         brand: {
-          DEFAULT: "#10B981",
-          hover: "#059669",
-          active: "#047857",
-          glow: "#34D399",
+          DEFAULT: "#E05238", // Kınalı Keklik Kırmızısı / Mercan
+          hover: "#D94828",
+          active: "#BF3B1D",
+          glow: "#F87154",
         },
         ink: {
-          DEFAULT: "#F3F4F6",
-          muted: "#9CA3AF",
-          subtle: "#6B7280",
+          DEFAULT: "#F4F5F7",
+          muted: "#A1A7B5",
+          subtle: "#71798A",
         },
         hairline: {
           DEFAULT: "rgba(255, 255, 255, 0.08)",
-          strong: "rgba(16, 185, 129, 0.4)",
+          strong: "rgba(224, 82, 56, 0.5)",
         },
       },
       fontFamily: {

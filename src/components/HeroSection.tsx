@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
         >
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand shadow-[0_0_8px_#10b981]" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand shadow-[0_0_8px_#e05238]" />
           </span>
           <span className="font-mono text-xs tracking-wide">
             Sistem Mimarı & Creative Technologist
@@ -53,7 +53,7 @@ export const HeroSection: React.FC = () => {
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.12] mb-6 max-w-3xl"
         >
           <span className="text-silver-chrome">Yüksek verimli mimariler,</span>{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand via-brand-glow to-emerald-300">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E05238] via-[#F87154] to-[#F59E0B]">
             akışkan mikro-etkileşimler.
           </span>
         </motion.h1>

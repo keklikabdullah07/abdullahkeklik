@@ -126,17 +126,17 @@ export const PhysicsTotemArena: React.FC = () => {
         ctx.strokeStyle = "rgba(255, 255, 255, 0.22)";
         ctx.stroke();
 
-        // Yeşil Nokta & Tipografi
+        // Mercan Nokta & Tipografi
         ctx.beginPath();
         ctx.arc(-item.width / 2 + 14, 0, 3, 0, Math.PI * 2);
-        ctx.fillStyle = "#10B981";
-        ctx.shadowColor = "#10B981";
+        ctx.fillStyle = "#E05238";
+        ctx.shadowColor = "#E05238";
         ctx.shadowBlur = 6;
         ctx.fill();
         ctx.shadowBlur = 0;
 
         ctx.font = "500 12px var(--font-mono, monospace)";
-        ctx.fillStyle = "#F3F4F6";
+        ctx.fillStyle = "#FAF5EB";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText(item.label, 6, 1);
