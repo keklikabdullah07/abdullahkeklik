@@ -101,14 +101,14 @@ export const WingParticlesCanvas: React.FC = () => {
 
         if (p.colorType === "emerald") {
           // Kınalı keklik mercan tüyü
-          ctx.fillStyle = `rgba(224, 82, 56, ${p.alpha * 0.8})`;
-          ctx.shadowColor = "rgba(224, 82, 56, 0.6)";
-          ctx.shadowBlur = 8;
-        } else {
-          // Fildişi / gümüş tüy
-          ctx.fillStyle = `rgba(250, 245, 235, ${p.alpha * 0.85})`;
-          ctx.shadowColor = "rgba(255, 255, 255, 0.4)";
+          ctx.fillStyle = `rgba(232, 77, 56, ${p.alpha * 0.7})`;
+          ctx.shadowColor = "rgba(232, 77, 56, 0.5)";
           ctx.shadowBlur = 6;
+        } else {
+          // Warm Fawn / Tebeşir Keten tüy
+          ctx.fillStyle = `rgba(203, 184, 159, ${p.alpha * 0.75})`;
+          ctx.shadowColor = "rgba(246, 241, 232, 0.35)";
+          ctx.shadowBlur = 4;
         }
 
         // Tüy / Kanat elipsi

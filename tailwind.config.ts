@@ -11,28 +11,35 @@ const config: Config = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: "#0D111A", // Dağ Külü Obsidyeni
-          alt: "#FAF5EB",    // Keten / Fildişi
+          DEFAULT: "#0F1217", // Onyx Kohl (Derin İs Kömürü)
+          alt: "#F6F1E8",    // Chalk Cream (Tebeşir Keten)
         },
         surface: {
-          DEFAULT: "#141A26", // Dağ Kayası Antrasiti
-          raised: "#1D2536",
-          sunken: "#080B12",
+          DEFAULT: "#171A23", // Slate Plum gölgeli antrasit yüzey
+          raised: "#222634",
+          sunken: "#0B0D11",
+        },
+        fawn: {
+          DEFAULT: "#CBB89F", // Warm Fawn (Kuş Kanadı Tüy Beji)
+          subtle: "rgba(203, 184, 159, 0.16)",
+        },
+        plum: {
+          DEFAULT: "#3E3947", // Slate Plum (Kül Leylak)
         },
         brand: {
-          DEFAULT: "#E05238", // Kınalı Keklik Kırmızısı / Mercan
-          hover: "#D94828",
-          active: "#BF3B1D",
-          glow: "#F87154",
+          DEFAULT: "#E84D38", // Chukar Coral Red (Kınalı Mercan Kırmızısı)
+          hover: "#D73C27",
+          active: "#BF321F",
+          glow: "#E84D38",
         },
         ink: {
-          DEFAULT: "#F4F5F7",
-          muted: "#A1A7B5",
-          subtle: "#71798A",
+          DEFAULT: "#F6F1E8", // Chalk Cream
+          muted: "#9E9AA6",  // Gövde kül tonu
+          subtle: "#787480",
         },
         hairline: {
-          DEFAULT: "rgba(255, 255, 255, 0.08)",
-          strong: "rgba(224, 82, 56, 0.5)",
+          DEFAULT: "rgba(203, 184, 159, 0.16)", // Warm Fawn Hairline
+          strong: "rgba(232, 77, 56, 0.6)",
         },
       },
       fontFamily: {

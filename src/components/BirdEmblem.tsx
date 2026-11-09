@@ -54,13 +54,13 @@ export const BirdEmblem: React.FC = () => {
       className="relative flex flex-col items-center justify-center p-4 cursor-pointer select-none"
       style={{ perspective: 1200 }}
     >
-      {/* Arkadaki Kuş Halesi (Aura Glow — Kınalı Mercan & Gümüş) */}
+      {/* Arkadaki Kuş Halesi (Slate Plum & Warm Fawn Doğal Derinlik) */}
       <div
-        className="pointer-events-none absolute w-72 h-44 rounded-full blur-3xl transition-opacity duration-700 ease-out"
+        className="pointer-events-none absolute w-80 h-52 rounded-full blur-3xl transition-opacity duration-700 ease-out"
         style={{
           background: isHovered
-            ? "radial-gradient(circle, rgba(224, 82, 56, 0.28) 0%, rgba(255, 255, 255, 0.12) 40%, transparent 75%)"
-            : "radial-gradient(circle, rgba(224, 82, 56, 0.14) 0%, transparent 65%)",
+            ? "radial-gradient(circle, rgba(62, 57, 71, 0.5) 0%, rgba(203, 184, 159, 0.1) 45%, transparent 75%)"
+            : "radial-gradient(circle, rgba(62, 57, 71, 0.25) 0%, transparent 65%)",
         }}
         aria-hidden="true"
       />
@@ -73,7 +73,7 @@ export const BirdEmblem: React.FC = () => {
           translateY: isReduced ? 0 : wingLift,
           transformStyle: "preserve-3d",
         }}
-        className="relative flex flex-col items-center transition-transform duration-100 ease-out"
+        className="relative flex flex-col items-center px-8 py-5 rounded-3xl border border-[rgba(203,184,159,0.18)] bg-[#171A23]/85 backdrop-blur-md shadow-2xl transition-all duration-300 hover:border-[rgba(203,184,159,0.38)]"
       >
         {/* Kuş Monogramı */}
         <div className="relative group">
@@ -82,7 +82,7 @@ export const BirdEmblem: React.FC = () => {
             alt="Abdullah Keklik — Partridge Kuş Amblemi"
             width={240}
             height={157}
-            className="h-24 sm:h-28 w-auto object-contain filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.8)]"
+            className="h-24 sm:h-28 w-auto object-contain filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]"
             priority
           />
 
@@ -91,7 +91,7 @@ export const BirdEmblem: React.FC = () => {
             <div
               className="pointer-events-none absolute inset-0 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style={{
-                background: `radial-gradient(120px circle at ${lightPos.x}% ${lightPos.y}%, rgba(255, 255, 255, 0.9), transparent 60%)`,
+                background: `radial-gradient(120px circle at ${lightPos.x}% ${lightPos.y}%, rgba(255, 255, 255, 0.7), transparent 60%)`,
               }}
               aria-hidden="true"
             />
@@ -99,11 +99,11 @@ export const BirdEmblem: React.FC = () => {
         </div>
 
         {/* Tipografik İsim İmzası */}
-        <div className="mt-3 flex items-center gap-2">
-          <span className="font-mono text-sm tracking-[0.28em] uppercase text-silver-chrome font-semibold">
+        <div className="mt-3.5 flex items-center gap-2">
+          <span className="font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-[#F6F1E8] font-semibold">
             abdullahkeklik
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-brand shadow-[0_0_8px_#e05238]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-brand shadow-[0_0_6px_#e84d38]" />
         </div>
       </motion.div>
     </div>

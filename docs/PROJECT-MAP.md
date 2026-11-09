@@ -48,3 +48,4 @@ _Henüz Drizzle veya ORM şema tablosu tespit edilmedi._
 | `0003-lenis-ve-partridge-etkilesimi` | Spec 0003 — Grail Kalitesinde Akışkan Kaydırma (Lenis) ve Kuş & Yazılım Etkileşimi | **Shipped** |
 | `0004-fizik-arenasi-ve-partikuller` | Spec 0004 — Grail Seviyesi Fizik Arenası ve Partridge Parçacık Sahnesi | **Shipped** |
 | `0005-kinali-keklik-renk-paleti` | Spec 0005 — Kınalı Keklik (Chukar Partridge) Doğal Palet Dönüşümü | **Shipped** |
+| `0006-chukar-editoryal-tasarim` | Spec 0006 — Chukar Marka Kimliği ve Editoryal Tasarım Dönüşümü | **Shipped** |

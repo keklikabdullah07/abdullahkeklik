@@ -10,30 +10,33 @@ default_mode: "EXPERIENCE"
 default_platform: "web"
 build_path: "code"
 
-# ─── RENK PALETİ (60-30-10) — KINALI KEKLİK (CHUKAR PARTRIDGE) ─────────
-# Hakim (%60): Derin Kül Obsidyeni, Yüzey (%30): Dağ Kayası Antrasiti, Vurgu (%10): Kınalı Mercan
+# ─── RENK PALETİ (60-30-10) — CHUKAR (KINALI KEKLİK EDİTORYAL PALET) ──────
+# Hakim (%60): Onyx Kohl, Yüzey (%30): Slate Plum & Antrasit, Vurgu (%10): Coral Red
 colors:
   # Hakim (zemin)
-  canvas: "#0D111A"            # Dağ Külü Obsidyeni (Keklik sırtı & göğsü)
-  canvas_alt: "#FAF5EB"        # Keten / Fildişi (Keklik kanat şeritleri)
+  canvas: "#0F1217"            # Onyx Kohl (Derin İs Kömürü zemin)
+  canvas_alt: "#F6F1E8"        # Chalk Cream (Tebeşir Keten)
   # Yüzey
-  surface: "#141A26"           # Koyu kayalık antrasiti
-  surface_raised: "#1D2536"    # Modal / popover / flyout
-  surface_sunken: "#080B12"    # Kod blokları / gömülü alanlar
+  surface: "#171A23"           # Slate Plum & Antrasit mat yüzey
+  surface_raised: "#222634"    # Modal / popover
+  surface_sunken: "#0B0D11"    # Gömülü alanlar
+  # Destekleyici Organik Tonlar
+  warm_fawn: "#CBB89F"         # Warm Fawn (Kuş Kanadı Tüy Beji / Kum)
+  slate_plum: "#3E3947"        # Slate Plum (Kül Leylak)
   # Vurgu
-  primary: "#E05238"           # Kınalı Mercan Kırmızısı (Keklik gagası ve göz halkası)
-  primary_hover: "#D94828"
-  primary_active: "#BF3B1D"
-  primary_on_dark: "#F87154"
+  primary: "#E84D38"           # Chukar Coral Red (Kınalı Mercan Kırmızısı)
+  primary_hover: "#D73C27"
+  primary_active: "#BF321F"
+  primary_on_dark: "#E84D38"
   # Sınır
-  hairline: "rgba(255, 255, 255, 0.08)" # 1px subtle sınır
-  hairline_strong: "rgba(224, 82, 56, 0.5)" # Odak / aktif sınır (Kınalı ışıltı)
+  hairline: "rgba(203, 184, 159, 0.16)" # Warm Fawn subtle sınır
+  hairline_strong: "rgba(232, 77, 56, 0.6)" # Odak / aktif sınır
   # Metin
-  ink: "#F4F5F7"               # Başlıklar (kırık fildişi)
-  body: "#A1A7B5"              # Gövde metinleri (kül tonu gri)
-  body_muted: "#71798A"        # İkincil metinler
-  body_disabled: "#4A5263"     # Pasif metinler
-  body_on_dark: "#FAF5EB"      # Koyu yüzeyde keten beyazı metin
+  ink: "#F6F1E8"               # Başlıklar (Chalk Cream)
+  body: "#9E9AA6"              # Gövde metinleri (Kül tonu)
+  body_muted: "#787480"        # İkincil metinler
+  body_disabled: "#4A4750"     # Pasif metinler
+  body_on_dark: "#F6F1E8"      # Koyu yüzeyde keten beyazı metin
   # Durum
   success: "#10B981"
   warning: "#F59E0B"

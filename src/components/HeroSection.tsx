@@ -34,28 +34,27 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-silver-glow bg-surface/90 backdrop-blur-md text-xs text-ink mb-8 shadow-sm"
+          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-fawn-subtle bg-surface/90 backdrop-blur-md text-xs text-ink mb-8 shadow-sm"
         >
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand shadow-[0_0_8px_#e05238]" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand shadow-[0_0_6px_#e84d38]" />
           </span>
-          <span className="font-mono text-xs tracking-wide">
+          <span className="font-mono text-xs tracking-wide text-fawn font-medium">
             Sistem Mimarı & Creative Technologist
           </span>
         </motion.div>
 
-        {/* Karakterli ve Özgün Başlık */}
+        {/* Karakterli ve Editoryal Başlık */}
         <motion.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.12] mb-6 max-w-3xl"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.14] mb-6 max-w-3xl"
         >
-          <span className="text-silver-chrome">Yüksek verimli mimariler,</span>{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E05238] via-[#F87154] to-[#F59E0B]">
-            akışkan mikro-etkileşimler.
-          </span>
+          <span className="text-[#F6F1E8]">Yüksek verimli mimariler,</span>{" "}
+          <br className="hidden sm:inline" />
+          <span className="text-brand">akışkan mikro-etkileşimler.</span>
         </motion.h1>
 
         <motion.p
@@ -69,7 +68,7 @@ export const HeroSection: React.FC = () => {
           dönüştürüyorum.
         </motion.p>
 
-        {/* Yüksek Kontrastlı Parlayan CTA Butonları */}
+        {/* Chukar Dokunsal Mercan & Keten CTA Butonları */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,16 +77,16 @@ export const HeroSection: React.FC = () => {
         >
           <a
             href="#showcase"
-            className="btn-emerald-glow inline-flex items-center gap-2.5 px-7 py-3.5 text-sm font-bold rounded-lg transition-all active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand cursor-pointer"
+            className="btn-coral inline-flex items-center gap-2.5 px-7 py-3.5 text-sm font-bold rounded-xl transition-all active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand cursor-pointer"
           >
-            <Sparkles className="w-4 h-4 fill-current text-canvas" aria-hidden="true" />
-            <span className="tracking-wide text-canvas">İnteraktif Vitrini İncele</span>
-            <ArrowDown className="w-4 h-4 text-canvas" aria-hidden="true" />
+            <Sparkles className="w-4 h-4 fill-current text-white" aria-hidden="true" />
+            <span className="tracking-wide text-white">İnteraktif Vitrini İncele</span>
+            <ArrowDown className="w-4 h-4 text-white" aria-hidden="true" />
           </a>
 
           <a
             href="#contact"
-            className="btn-silver-glow inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-lg transition-all active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand cursor-pointer"
+            className="btn-fawn-outline inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl transition-all active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand cursor-pointer"
           >
             <Terminal className="w-4 h-4 text-brand" aria-hidden="true" />
             <span>İletişime Geç</span>

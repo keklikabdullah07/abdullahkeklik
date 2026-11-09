@@ -39,17 +39,17 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
   };
 
   return (
-    <section id="showcase" className="py-20 md:py-28 border-t border-hairline relative">
+    <section id="showcase" className="py-20 md:py-28 border-t border-fawn-subtle relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık ve Filtre Menüsü */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-brand uppercase tracking-wider mb-2">
+            <div className="flex items-center gap-2 text-xs font-mono text-brand uppercase tracking-wider mb-2 font-bold">
               <Layers className="w-3.5 h-3.5 text-brand" aria-hidden="true" />
               <span>Awwwards Standardında Mühendislik</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink tracking-tight">
-              <span className="text-silver-chrome">İnteraktif Bento</span> Vitrini
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F6F1E8] tracking-tight">
+              İnteraktif Bento Vitrini
             </h2>
             <p className="text-sm text-ink-muted mt-2 max-w-xl leading-relaxed">
               Yalnızca kod değil; çalışan mikro-terminal demoları, canlı telemetri dalgaları ve
@@ -58,14 +58,14 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
           </div>
 
           {/* Filtre Menüsü */}
-          <div className="flex items-center gap-1.5 p-1 rounded-xl border border-silver-glow bg-surface/80 backdrop-blur-md self-start md:self-auto shadow-sm">
+          <div className="flex items-center gap-1.5 p-1 rounded-xl border border-fawn-subtle bg-surface/90 backdrop-blur-md self-start md:self-auto shadow-sm">
             <button
               type="button"
               onClick={() => setActiveFilter("all")}
               aria-pressed={activeFilter === "all"}
               className={`px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all ${
                 activeFilter === "all"
-                  ? "bg-brand text-white font-bold shadow-[0_0_15px_rgba(224,82,56,0.5)]"
+                  ? "bg-brand text-white font-bold shadow-[0_2px_10px_rgba(232,77,56,0.35)]"
                   : "text-ink-muted hover:text-ink hover:bg-surface-raised"
               }`}
             >
@@ -77,7 +77,7 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
               aria-pressed={activeFilter === "individual"}
               className={`flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all ${
                 activeFilter === "individual"
-                  ? "bg-brand text-white font-bold shadow-[0_0_15px_rgba(224,82,56,0.5)]"
+                  ? "bg-brand text-white font-bold shadow-[0_2px_10px_rgba(232,77,56,0.35)]"
                   : "text-ink-muted hover:text-ink hover:bg-surface-raised"
               }`}
             >
@@ -90,7 +90,7 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
               aria-pressed={activeFilter === "corporate"}
               className={`flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all ${
                 activeFilter === "corporate"
-                  ? "bg-brand text-white font-bold shadow-[0_0_15px_rgba(224,82,56,0.5)]"
+                  ? "bg-brand text-white font-bold shadow-[0_2px_10px_rgba(232,77,56,0.35)]"
                   : "text-ink-muted hover:text-ink hover:bg-surface-raised"
               }`}
             >
@@ -119,23 +119,14 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  className={`group relative flex flex-col justify-between p-6 sm:p-7 rounded-xl bg-surface/90 border border-hairline hover:border-silver-glow transition-all shadow-panel hover:shadow-[0_12px_36px_rgba(0,0,0,0.6)] ${
+                  className={`group relative flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-[#171A23] border border-fawn-subtle hover:border-[rgba(203,184,159,0.4)] transition-all duration-300 shadow-panel hover:shadow-[0_12px_36px_-12px_rgba(15,18,23,0.8)] ${
                     project.bentoSpan ?? "col-span-1"
                   }`}
                 >
-                  {/* Kart Arka Plan Hover Işığı */}
-                  <div className="pointer-events-none absolute -inset-px rounded-xl bg-gradient-to-b from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
                   <div className="relative z-10">
                     {/* Üst Kategori ve Metrik Barı */}
                     <div className="flex items-center justify-between gap-2 mb-4">
-                      <span
-                        className={`px-2.5 py-0.5 text-[11px] font-mono font-medium rounded-full border ${
-                          project.category === "corporate"
-                            ? "bg-slate-900/60 text-slate-300 border-slate-700/60"
-                            : "bg-red-950/40 text-red-300 border-red-800/40"
-                        }`}
-                      >
+                      <span className="px-2.5 py-1 text-[11px] font-mono font-medium rounded-md bg-[#3E3947]/70 text-[#CBB89F] border border-[rgba(203,184,159,0.2)]">
                         {project.category === "corporate"
                           ? "Kurumsal Çözüm"
                           : "Açık Kaynak / Bireysel"}
@@ -149,7 +140,7 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
                     </div>
 
                     {/* Proje Başlığı ve Tagline */}
-                    <h3 className="text-xl sm:text-2xl font-bold text-ink tracking-tight mb-1.5 group-hover:text-brand transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#F6F1E8] tracking-tight mb-1.5 group-hover:text-brand transition-colors">
                       {project.title}
                     </h3>
 
@@ -169,7 +160,7 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2.5 py-0.5 text-[11px] font-mono text-ink-subtle bg-surface-sunken/80 rounded border border-hairline"
+                          className="px-2.5 py-0.5 text-[11px] font-mono text-[#CBB89F] bg-[#0B0D11] rounded border border-fawn-subtle"
                         >
                           {tag}
                         </span>
@@ -177,7 +168,7 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
                     </div>
 
                     {/* Aksiyon Butonları */}
-                    <div className="flex items-center justify-between pt-4 border-t border-hairline/80">
+                    <div className="flex items-center justify-between pt-4 border-t border-fawn-subtle">
                       <div className="flex items-center gap-2">
                         {project.githubUrl && (
                           <a
@@ -212,7 +203,7 @@ export const ShowcaseGrid: React.FC<ShowcaseGridProps> = ({ projects }) => {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${project.title} Canlı İncele`}
-                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-brand bg-brand/10 hover:bg-brand/20 border border-brand/30 rounded-md transition-all ml-auto"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-[#F6F1E8] hover:text-brand bg-[#0B0D11] hover:bg-[#1F2330] border border-fawn-subtle rounded-md transition-all ml-auto"
                         >
                           <span>Canlı İncele</span>
                           <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />

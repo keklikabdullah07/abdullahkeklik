@@ -57,7 +57,7 @@ export const SpotlightContainer: React.FC<SpotlightContainerProps> = ({
           className="pointer-events-none absolute -inset-px transition-opacity duration-500 ease-out z-0"
           style={{
             opacity,
-            background: `radial-gradient(650px circle at ${position.x}px ${position.y}px, rgba(224, 82, 56, 0.12), rgba(255, 255, 255, 0.04) 40%, transparent 80%)`,
+            background: `radial-gradient(650px circle at ${position.x}px ${position.y}px, rgba(203, 184, 159, 0.08), rgba(62, 57, 71, 0.04) 40%, transparent 80%)`,
           }}
           aria-hidden="true"
         />

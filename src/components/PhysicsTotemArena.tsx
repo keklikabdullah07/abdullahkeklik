@@ -115,28 +115,28 @@ export const PhysicsTotemArena: React.FC = () => {
         ctx.translate(x, y);
         ctx.rotate(angle);
 
-        // Pul Gövdesi (Derin Obsidyen Cam)
+        // Pul Gövdesi (Slate Plum & Onyx Kohl)
         ctx.beginPath();
         ctx.roundRect(-item.width / 2, -item.height / 2, item.width, item.height, 18);
-        ctx.fillStyle = "rgba(17, 23, 38, 0.92)";
+        ctx.fillStyle = "rgba(23, 26, 35, 0.95)";
         ctx.fill();
 
-        // Gümüş Sınır Çizgisi
+        // Warm Fawn Sınır Çizgisi
         ctx.lineWidth = 1.25;
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.22)";
+        ctx.strokeStyle = "rgba(203, 184, 159, 0.35)";
         ctx.stroke();
 
-        // Mercan Nokta & Tipografi
+        // Chukar Mercan Nokta & Tipografi
         ctx.beginPath();
         ctx.arc(-item.width / 2 + 14, 0, 3, 0, Math.PI * 2);
-        ctx.fillStyle = "#E05238";
-        ctx.shadowColor = "#E05238";
+        ctx.fillStyle = "#E84D38";
+        ctx.shadowColor = "#E84D38";
         ctx.shadowBlur = 6;
         ctx.fill();
         ctx.shadowBlur = 0;
 
         ctx.font = "500 12px var(--font-mono, monospace)";
-        ctx.fillStyle = "#FAF5EB";
+        ctx.fillStyle = "#F6F1E8";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText(item.label, 6, 1);
@@ -193,16 +193,16 @@ export const PhysicsTotemArena: React.FC = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 border-t border-hairline relative overflow-hidden bg-surface-sunken/40">
+    <section className="py-20 md:py-28 border-t border-fawn-subtle relative overflow-hidden bg-surface-sunken/40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-brand uppercase tracking-wider mb-2">
+            <div className="flex items-center gap-2 text-xs font-mono text-brand uppercase tracking-wider mb-2 font-bold">
               <Sparkles className="w-3.5 h-3.5 text-brand" aria-hidden="true" />
               <span>Grail Fiziği & Somut Zanaat</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
-              <span className="text-silver-chrome">Fiziksel Teknoloji</span> Totemleri
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#F6F1E8] tracking-tight">
+              Fiziksel Teknoloji Totemleri
             </h2>
             <p className="text-sm text-ink-muted mt-1.5 max-w-xl">
               Statik etiketler yerine; yerçekimine ve farenize tepki veren yaşayan pullar. Tutun,
@@ -214,7 +214,7 @@ export const PhysicsTotemArena: React.FC = () => {
             <button
               type="button"
               onClick={handleSpawnMore}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-hairline bg-surface hover:bg-surface-raised text-xs font-mono text-ink-muted hover:text-ink transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-fawn-subtle bg-[#171A23] hover:bg-[#222634] text-xs font-mono text-[#CBB89F] hover:text-[#F6F1E8] transition-colors shadow-sm"
             >
               <Plus className="w-3.5 h-3.5 text-brand" />
               <span>Pul Düşür</span>
@@ -223,7 +223,7 @@ export const PhysicsTotemArena: React.FC = () => {
             <button
               type="button"
               onClick={handleReset}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-hairline bg-surface hover:bg-surface-raised text-xs font-mono text-ink-muted hover:text-ink transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-fawn-subtle bg-[#171A23] hover:bg-[#222634] text-xs font-mono text-[#CBB89F] hover:text-[#F6F1E8] transition-colors shadow-sm"
             >
               <RotateCcw className="w-3.5 h-3.5 text-brand" />
               <span>Sıfırla</span>
@@ -234,9 +234,9 @@ export const PhysicsTotemArena: React.FC = () => {
         {/* Matter.js Fizik Sahnesi Konteyneri */}
         <div
           ref={sceneRef}
-          className="relative w-full h-[360px] rounded-2xl border border-silver-glow bg-surface/60 backdrop-blur-xl shadow-panel overflow-hidden cursor-grab active:cursor-grabbing"
+          className="relative w-full h-[360px] rounded-2xl border border-fawn-subtle bg-[#171A23]/80 backdrop-blur-xl shadow-panel overflow-hidden cursor-grab active:cursor-grabbing"
         >
-          <div className="absolute top-4 left-5 pointer-events-none flex items-center gap-2 text-[11px] font-mono text-ink-subtle">
+          <div className="absolute top-4 left-5 pointer-events-none flex items-center gap-2 text-[11px] font-mono text-[#CBB89F]">
             <span className="w-2 h-2 rounded-full bg-brand animate-pulse" />
             <span>Matter.js 2D Rigid Body Physics ({activeCount} Totem)</span>
           </div>

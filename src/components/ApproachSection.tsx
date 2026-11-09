@@ -24,13 +24,13 @@ export const ApproachSection: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 md:py-24 border-t border-hairline bg-surface/30">
+    <section id="experience" className="py-16 md:py-24 border-t border-fawn-subtle bg-surface/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs font-mono text-brand uppercase tracking-wider">
+          <span className="text-xs font-mono text-brand uppercase tracking-wider font-bold">
             Mühendislik Anayasası
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-ink tracking-tight mt-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#F6F1E8] tracking-tight mt-2">
             Ödün Verilmeyen Standartlar
           </h2>
           <p className="text-sm text-ink-muted mt-2">
@@ -44,13 +44,13 @@ export const ApproachSection: React.FC = () => {
             return (
               <div
                 key={item.title}
-                className="p-6 rounded-lg bg-surface border border-hairline hover:border-brand/30 transition-all flex flex-col justify-between"
+                className="p-7 rounded-2xl bg-[#171A23] border border-fawn-subtle hover:border-[rgba(203,184,159,0.4)] transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-lg bg-brand/10 border border-brand/20 text-brand flex items-center justify-center mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-[#3E3947]/60 border border-[rgba(203,184,159,0.2)] text-brand flex items-center justify-center mb-5">
                     <Icon className="w-5 h-5 text-brand" aria-hidden="true" />
                   </div>
-                  <h3 className="text-lg font-semibold text-ink mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-[#F6F1E8] mb-2">{item.title}</h3>
                   <p className="text-sm text-ink-muted leading-relaxed">{item.description}</p>
                 </div>
               </div>

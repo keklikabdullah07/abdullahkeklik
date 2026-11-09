@@ -45,8 +45,8 @@ export const MagneticPill: React.FC<MagneticPillProps> = ({ label }) => {
       onMouseLeave={handleMouseLeave}
       className="inline-block"
     >
-      <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface/80 hover:bg-surface-raised border border-hairline hover:border-silver-glow text-xs font-mono text-ink-muted hover:text-ink transition-all cursor-default shadow-sm hover:shadow-[0_4px_16px_rgba(255,255,255,0.06)] active:scale-95">
-        <span className="w-1.5 h-1.5 rounded-full bg-brand/60" />
+      <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface/85 hover:bg-surface-raised border border-fawn-subtle hover:border-[rgba(203,184,159,0.38)] text-xs font-mono text-[#CBB89F] hover:text-ink transition-all cursor-default shadow-sm hover:shadow-[0_4px_16px_rgba(203,184,159,0.08)] active:scale-95">
+        <span className="w-1.5 h-1.5 rounded-full bg-brand" />
         <span>{label}</span>
       </span>
     </motion.div>
