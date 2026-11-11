@@ -77,7 +77,10 @@ capabilities:
 ### 6. Kanıt Kapısı ve Görsel Hakikat (Evidence Over Claims & Visual Ground Truth)
 - "Hallettim / çalışıyor" soyut iddiası yasaktır. `./scripts/check` (Typecheck + Lint + Test) çıktısı yeşil olmadan hiçbir görev tamamlanmış sayılamaz.
 - **JSDOM Görsel İllüzyon Yasağı:** Vitest/Jest/JSDOM ortamındaki birim testler sadece sanal veri ağacını doğrular; layout, paint, SVG isim uzayı veya CSS hesaplaması yapmaz. JSDOM testi tek başına bir arayüzün (UI/SVG/Canvas) ekranda çalıştığının kanıtı **SAYILAMAZ**.
-- **Token Tasarrufu & Tek Seferlik Nihai Kontrol Prensibi:** AI, geliştirme sürecinin her adımında sürekli tarayıcı açıp context ve token tüketmez! Kodlama esnasında hızlı ve maliyetsiz birim testler koşturulur. Görsel tarayıcı kontrolü **yalnızca tüm iş tamamlandıktan sonra (Final Gate / Checkpoint)** kullanıcıya teslim etmeden önce **TEK SEFERLİK** yapılır.
+- **Akıllı Görsel Doğrulama ve Yüksek-ROI Bağlam Prensibi:** Token tasarrufu bahanesiyle kalite, animasyon ve görsel denetim asla budanamaz; ancak kontrolsüz token saçılması ve kör bağlam şişkinliği de kesinlikle yasaktır.
+  1. *Kör İsraf Yasağı:* Her ufak CSS rötuşunda veya ara adımda rastgele devasa ekran görüntüleri alıp context şişirilmez; veri ve bileşen mantığı önce hızlı yerel testlerle çözülür.
+  2. *Hedefli Görsel Hakikat (Targeted Visual Ground Truth):* Kritik bir bileşen, animasyon koreografisi veya sayfa düzeni kurulduğunda Playwright / headless browser ile hedefe odaklı görsel doğrulama yapılır.
+  3. *Mod ve Görev Uyumu:* Ağır kreatif/animasyon kuralları yalnızca ilgili yüzeylerde (EXPERIENCE / PERSUADE) devreye girer; backend, migration veya CLI görevlerinde bağlama asla gereksiz UI yükü bindirilmez.
 - **Sahte Gate Yasağı:** `scripts/check` içine `echo "e2e skipped"` gibi sahte başarı döndüren adımlar koymak yasaktır. UI içeren işlerde son kapıda tek seferlik bir headless Chromium (Playwright `toBeVisible()`, `boundingBox() > 0`) veya Browser MCP ekran görüntüsü kontrolü ile sayfanın boş kalmadığı ve bileşenlerin gerçekten göründüğü kanıtlanır.
 
 ### 7. Değişiklik Risk Kademeleri (Risk Tiers)

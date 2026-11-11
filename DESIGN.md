@@ -165,6 +165,8 @@ Her yüzey için ayrı mode, ayrı yoğunluk, ayrı davranış seçilir.
 | Portfolyo, vitrin, showcase | EXPERIENCE | Galeri, portfolyo | 1-3 |
 
 > **Karar verme:** Ziyaretçi bu sayfada ne yapmak için geliyor? "Anlamak için" → READ, "Karar verip aksiyon almak için" → PERSUADE, "Görev tamamlamak için" → OPERATE, "Deneyimlemek için" → EXPERIENCE.
+> 
+> 🏆 **Awwwards & Hareket Standartları:** Eğer yüzey modu `EXPERIENCE` veya `PERSUADE` seçildiyse, doğrudan `docs/guides/04_Awwwards_Kreatif_Frontend_ve_Hareket_Mimarisi.md` rehberi açılır. Lenis momentum scroll, GSAP ScrollTrigger, SplitType kinetik tipografi, SVG noise katmanı, manyetik butonlar ve spotlight kartlar bu rehberdeki somut şablonlarla inşa edilir.
 
 ---
 
@@ -352,9 +354,16 @@ Proje tipine göre bir ilham profili seç. Seçilen profilin DESIGN.md dosyasın
   ```markdown
   UI: PERSUADE · VISUAL_DENSITY=4 · kehribar CTA · keten zemin
   ```
-- **Toplam token bütçesi (UI oturumu):** `AGENTS.md` (~2K) + `DESIGN.md` (~1.5K) + SPEC stili (~50) = **~3.5K token tasarım bağlamı**.
+- **Akıllı Yükleme Matrisi (Kör İsraf Yok, Hedefli Güç Var):**
+  - **OPERATE / READ Modu:** Ağır WebGL/Three.js kuralları bağlamı kirletmez. Temiz tipografi, 15 anti-slop kuralı, yüksek a11y ve hızlı mikro hover/state kuralları geçerlidir.
+  - **EXPERIENCE / PERSUADE Modu:** Awwwards seviyesi motorlar (`Lenis`, `GSAP ScrollTrigger`, `SplitType`, `overdrive`, `delight`) devreye girer. Arayüzü sıradanlıktan koparıp ödüllü ligine çıkaracak yatırımdan asla kaçınılmaz.
+- **Token Harcama Kriteri (ROI İlkesi):** Boş felsefe, tekrarlı boilerplateler ve her ara adımda körlemesine alınan dev screenshot yığınları yasaktır; kaliteyi doğrudan belirleyen fizik parametreleri, font eşleşmeleri ve mikro-etkileşim kodları tam bütçeyle kullanılır.
 
-> **impeccable entegrasyonu:** ANEW'in `VERIFY` fazında ajan şu komutları çağırabilir:
+> **impeccable 24 Komutluk Tam Alet Çantası (İhtiyaç Anında Çağrılır):**
+> - `.agents/skills/impeccable/reference/` altındaki 24 komutun tamamı (`craft`, `shape`, `init`, `document`, `extract`, `critique`, `audit`, `polish`, `bolder`, `quieter`, `distill`, `harden`, `onboard`, `animate`, `colorize`, `typeset`, `layout`, `delight`, `overdrive`, `clarify`, `adapt`, `optimize`, `live`, `generate`) eksiksiz aktiftir.
+> - İhtiyaç duyulan komut tekil dosya olarak yüklenir (~1.5K token); böylece hem 24 süper gücün tamamı kullanılır hem de gereksiz bağlam şişkinliği oluşmaz.
+> - Awwwards seviyesi için özellikle `/impeccable overdrive`, `/impeccable animate`, `/impeccable bolder` ve `/impeccable delight` kombinasyonu esastır.
+> - Ayrıca doğrulama ve son cila için aşağıdaki 4 temel komut aktif kullanılır:
 > - `impeccable audit <yüzey>` → teknik kalite (a11y, performance, responsive)
 > - `impeccable harden <yüzey>` → error handling, i18n, edge cases
 > - `impeccable polish <yüzey>` → son geçiş, design system alignment
