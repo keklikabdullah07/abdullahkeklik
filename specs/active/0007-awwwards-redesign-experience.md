@@ -1,6 +1,6 @@
 # Spec 0007 — Partridge Awwwards Seviyesi Yeniden Tasarımı ve Kinetik Deneyim Yüzeyi
 
-> **Durum:** Approved (Kullanıcı tarafından onaylandı)
+> **Durum:** Shipped (Tamamlandı ve developer dalına birleştirildi)
 > **Risk Seviyesi:** HIGH (Ana vitrin ve tüm bileşenlerin Awwwards standartlarında yeniden tasarımı)
 > **Yazar:** Partridge Agent & Co-Architect
 > **Tarih:** 2026-11-11
@@ -29,14 +29,14 @@ Mevcut vitrin sayfası işlevsel bileşenlere (Matter.js, Lenis, Parçacıklar) 
 ---
 
 ## 3. Kabul Kriterleri (Acceptance Criteria)
-- [ ] **AC-1:** Sayfa yüklendiğinde zarif bir preloader/curtain reveal animasyonu çalışmalı, tamamlandığında sayfa içeriği akıcı bir şekilde sahneye girmelidir.
-- [ ] **AC-2:** Hero başlığı ve bölüm başlıkları `KineticHeading` (SplitType maskeli reveal) ile harf/satır bazında akıcı biçimde sahnelenmelidir.
-- [ ] **AC-3:** Arka planda `NoiseOverlay` (SVG film grain) dokusu bulunmalı, düz dijital CSS hissiyatı organik bir sinematik derinliğe dönüşmelidir.
-- [ ] **AC-4:** Showcase Grid kartları imleç takipli `Spotlight` aydınlatmasına ve etkileşimli mikro-detaylara sahip olmalıdır.
-- [ ] **AC-5:** Manyetik butonlar (`MagneticButton` / `MagneticPill`) imleci yumuşak bir yay fiziğiyle takip etmeli ve fare ayrıldığında elastik şekilde geri dönmelidir.
-- [ ] **AC-6:** `prefers-reduced-motion: reduce` aktifken tüm GSAP kinetik hareketleri ve parçacık fırlamaları yumuşak statik/fade görünümüne geçmelidir.
-- [ ] **AC-7:** `./scripts/check` (Typecheck + Lint + Unit testler) 0 hata ile yeşil sonuç vermelidir.
-- [ ] **AC-8:** Headless Playwright testi ile sayfa boş kalmadığı (`toBeVisible()`, `boundingBox() > 0`) ve 60 FPS bütçesine uyulduğu görsel olarak doğrulanmalıdır.
+- [x] **AC-1:** Sayfa yüklendiğinde zarif bir preloader/curtain reveal animasyonu çalışmalı, tamamlandığında sayfa içeriği akıcı bir şekilde sahneye girmelidir.
+- [x] **AC-2:** Hero başlığı ve bölüm başlıkları `KineticHeading` (SplitType maskeli reveal) ile harf/satır bazında akıcı biçimde sahnelenmelidir.
+- [x] **AC-3:** Arka planda `NoiseOverlay` (SVG film grain) dokusu bulunmalı, düz dijital CSS hissiyatı organik bir sinematik derinliğe dönüşmelidir.
+- [x] **AC-4:** Showcase Grid kartları imleç takipli `Spotlight` aydınlatmasına ve etkileşimli mikro-detaylara sahip olmalıdır.
+- [x] **AC-5:** Manyetik butonlar (`MagneticButton` / `MagneticPill`) imleci yumuşak bir yay fiziğiyle takip etmeli ve fare ayrıldığında elastik şekilde geri dönmelidir.
+- [x] **AC-6:** `prefers-reduced-motion: reduce` aktifken tüm GSAP kinetik hareketleri ve parçacık fırlamaları yumuşak statik/fade görünümüne geçmelidir.
+- [x] **AC-7:** `./scripts/check` (Typecheck + Lint + Unit testler) 0 hata ile yeşil sonuç vermelidir.
+- [x] **AC-8:** Headless Playwright testi ile sayfa boş kalmadığı (`toBeVisible()`, `boundingBox() > 0`) ve 60 FPS bütçesine uyulduğu görsel olarak doğrulanmalıdır.
 
 ---
 
