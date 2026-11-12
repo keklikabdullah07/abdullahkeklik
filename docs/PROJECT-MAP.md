@@ -49,4 +49,4 @@ _Henüz Drizzle veya ORM şema tablosu tespit edilmedi._
 | `0004-fizik-arenasi-ve-partikuller` | Spec 0004 — Grail Seviyesi Fizik Arenası ve Partridge Parçacık Sahnesi | **Shipped** |
 | `0005-kinali-keklik-renk-paleti` | Spec 0005 — Kınalı Keklik (Chukar Partridge) Doğal Palet Dönüşümü | **Shipped** |
 | `0006-chukar-editoryal-tasarim` | Spec 0006 — Chukar Marka Kimliği ve Editoryal Tasarım Dönüşümü | **Shipped** |
-| `0007-awwwards-redesign-experience` | Spec 0007 — Partridge Awwwards Seviyesi Yeniden Tasarımı ve Kinetik Deneyim Yüzeyi | **Approved (Kullanıcı tarafından onaylandı)** |
+| `0007-awwwards-redesign-experience` | Spec 0007 — Partridge Awwwards Seviyesi Yeniden Tasarımı ve Kinetik Deneyim Yüzeyi | **Shipped (Tamamlandı ve developer dalına birleştirildi)** |
