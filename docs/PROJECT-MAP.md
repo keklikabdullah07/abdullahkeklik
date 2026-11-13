@@ -50,3 +50,4 @@ _Henüz Drizzle veya ORM şema tablosu tespit edilmedi._
 | `0005-kinali-keklik-renk-paleti` | Spec 0005 — Kınalı Keklik (Chukar Partridge) Doğal Palet Dönüşümü | **Shipped** |
 | `0006-chukar-editoryal-tasarim` | Spec 0006 — Chukar Marka Kimliği ve Editoryal Tasarım Dönüşümü | **Shipped** |
 | `0007-awwwards-redesign-experience` | Spec 0007 — Partridge Awwwards Seviyesi Yeniden Tasarımı ve Kinetik Deneyim Yüzeyi | **Shipped (Tamamlandı ve developer dalına birleştirildi)** |
+| `0008-tasarim-sifirlama-ve-yalin-tuval` | Spec 0008 — Tasarım Sıfırlama ve Yalın Başlangıç Tuvali | **Approved (Kullanıcı doğrudan "tasarımla ilgili ne bulduysan kaldır baştan başlayacağız" talimatı verdi)** |

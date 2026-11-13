@@ -15,34 +15,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abdullah Keklik — Senior Software Engineer & Creative Technologist",
-  description:
-    "Yüksek performanslı sistemler, mimari ve akıcı kullanıcı deneyimleri üreten yazılımcı vitrini.",
-  keywords: [
-    "Abdullah Keklik",
-    "Software Engineer",
-    "Full-Stack",
-    "Portfolio",
-    "Next.js",
-    "TypeScript",
-    "Architecture",
-  ],
-  authors: [{ name: "Abdullah Keklik" }],
-  openGraph: {
-    title: "Abdullah Keklik — Senior Software Engineer & Creative Technologist",
-    description: "Yüksek performanslı sistemler ve akıcı kullanıcı deneyimleri inşa ediyorum.",
-    type: "website",
-    locale: "tr_TR",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: "Partridge",
+  description: "Geliştirici Vitrini",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#090D16",
-  colorScheme: "dark",
+  themeColor: "#0a0a0a",
+  colorScheme: "dark light",
 };
 
 export default function RootLayout({
@@ -52,16 +31,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-canvas text-ink antialiased selection:bg-brand/35 selection:text-white">
+      <body className="antialiased">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-canvas focus:font-semibold focus:rounded-md shadow-panel"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-neutral-900 focus:text-white focus:rounded"
         >
           Doğrudan ana içeriğe geç
         </a>
-        <div className="relative min-h-screen flex flex-col">
-          <div className="relative z-10 flex-1 flex flex-col">{children}</div>
-        </div>
+        {children}
       </body>
     </html>
   );
