@@ -1,12 +1,20 @@
+import { CuratedWorks } from "@/components/CuratedWorks";
+import { EditorialHero } from "@/components/EditorialHero";
+import { GrandFinaleContact } from "@/components/GrandFinaleContact";
+import { Header } from "@/components/Header";
+import { TypographicManifesto } from "@/components/TypographicManifesto";
 import type React from "react";
 
 export default function Home() {
   return (
-    <main id="main-content" className="min-h-screen p-8 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold tracking-tight">Partridge</h1>
-      <p className="mt-4 text-base text-neutral-500">
-        Tasarım sıfırlandı. Yeni arayüz için hazır tuval.
-      </p>
-    </main>
+    <div className="min-h-screen bg-canvas text-ink flex flex-col selection:bg-primary selection:text-primary-contrast">
+      <Header />
+      <main id="main-content" className="flex-1 flex flex-col justify-center">
+        <EditorialHero />
+        <CuratedWorks />
+        <TypographicManifesto />
+      </main>
+      <GrandFinaleContact />
+    </div>
   );
 }
