@@ -53,8 +53,11 @@ export function Header() {
           <a href="#manifesto" className="text-ink-body hover:text-primary transition-colors py-1">
             [02] MANİFESTO
           </a>
+          <a href="#about" className="text-ink-body hover:text-primary transition-colors py-1">
+            [03] HAKKIMDA
+          </a>
           <a href="#contact" className="text-ink-body hover:text-primary transition-colors py-1">
-            [03] İLETİŞİM
+            [04] İLETİŞİM
           </a>
         </nav>
 
