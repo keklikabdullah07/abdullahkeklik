@@ -65,39 +65,6 @@ export function EditorialHero() {
           </div>
         </div>
       </div>
-
-      {/* Onaylanan 5 Renk Paleti İmzası (Görsel Zemin Doğrulaması) */}
-      <div className="pt-8 border-t border-hairline grid grid-cols-2 sm:grid-cols-5 gap-3">
-        <div className="p-3 rounded-lg bg-canvas border border-hairline">
-          <div className="text-[10px] font-mono text-ink-muted uppercase">ZEMİN</div>
-          <div className="text-xs font-mono font-medium text-ink mt-1">#F4EFE6</div>
-          <div className="text-[11px] text-ink-muted">Nahit Taşı & Keten</div>
-        </div>
-
-        <div className="p-3 rounded-lg bg-surface border border-hairline">
-          <div className="text-[10px] font-mono text-ink-muted uppercase">YÜZEY / KART</div>
-          <div className="text-xs font-mono font-medium text-ink mt-1">#EAE1D2</div>
-          <div className="text-[11px] text-ink-muted">Sıcak Kumtaşı</div>
-        </div>
-
-        <div className="p-3 rounded-lg bg-surface border border-hairline">
-          <div className="text-[10px] font-mono text-ink-muted uppercase">TİPOGRAFİ</div>
-          <div className="text-xs font-mono font-medium text-ink mt-1">#1C1613</div>
-          <div className="text-[11px] text-ink-muted">Kavrulmuş Espresso</div>
-        </div>
-
-        <div className="p-3 rounded-lg bg-primary text-primary-contrast">
-          <div className="text-[10px] font-mono opacity-80 uppercase">BİRİNCİL VURGU</div>
-          <div className="text-xs font-mono font-medium mt-1">#C8532B</div>
-          <div className="text-[11px] opacity-90">Kınalı Keklik Kınası</div>
-        </div>
-
-        <div className="p-3 rounded-lg bg-surface border border-hairline">
-          <div className="text-[10px] font-mono text-amber uppercase">İKİNCİL VURGU</div>
-          <div className="text-xs font-mono font-medium text-ink mt-1">#D88934</div>
-          <div className="text-[11px] text-ink-muted">Mezopotamya Kehribarı</div>
-        </div>
-      </div>
     </section>
   );
 }
