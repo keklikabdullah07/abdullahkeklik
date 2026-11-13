@@ -4,113 +4,117 @@
 # Markdown bölümlerde {tokens.path.to.value} referansı kullan.
 # Hex sadece burada yazılır, başka yerde tekrar etmez.
 
-name: ""                        # Proje adı (örn: "KidsCare Veli Paneli")
-version: "v3.0"                # Bu şablon versiyonu (kararları değil)
-default_mode: "PERSUADE"       # PERSUADE | OPERATE | READ | EXPERIENCE (proje genelinde yön)
-default_platform: "web"        # web | ios | android | adaptive
-build_path: "code"             # code | comp (Persuade/Experience için geçerli)
+name: "Abdullah Keklik"
+version: "v4.0"
+default_mode: "EXPERIENCE"
+default_platform: "web"
+build_path: "code"
 
-# ─── RENK PALETİ (60-30-10) ─────────────────────────────────────
-# Hakim (%60): zemin, Yüzey (%30): kart/panel, Vurgu (%10): birincil aksiyon
+# ─── RENK PALETİ (60-30-10) — SICAK MEZOPOTAMYA & KINALI KEKLİK PALETİ ──────
+# Hakim (%60): Nahit Taşı & Keten (#F4EFE6)
+# Yüzey & Tipografi (%30): Kumtaşı (#EAE1D2) & Kavrulmuş Espresso (#1C1613)
+# Vurgu (%10): Kınalı Keklik Kınası (#C8532B) & Mezopotamya Kehribarı (#D88934)
 colors:
   # Hakim (zemin)
-  canvas: ""
-  canvas_alt: ""               # alternatif zemin (örn: parchment dark modda)
+  canvas: "#F4EFE6"            # Nahit Taşı & Keten Kemik zemin
+  canvas_alt: "#181311"        # İsli Gece Toprağı (Grand Finale zemin)
   # Yüzey
-  surface: ""                  # kart/panel (canvas'tan farklı olmalı)
-  surface_raised: ""           # modal, popover
-  surface_sunken: ""           # input, inset
-  # Vurgu
-  primary: ""                  # birincil aksiyon
-  primary_hover: ""
-  primary_active: ""
-  primary_on_dark: ""          # koyu yüzeylerde vurgu
+  surface: "#EAE1D2"           # Sıcak Kumtaşı mat yüzey / kartlar
+  surface_raised: "#F0E8DC"    # Hafif yükseltilmiş kart
+  surface_sunken: "#DFD5C4"    # Gömülü alanlar
+  # Vurgular
+  primary: "#C8532B"           # Kınalı Keklik Kınası & Terracotta (Primary CTA)
+  primary_hover: "#A94220"
+  primary_active: "#8F3517"
+  primary_on_dark: "#FAF6F0"
+  amber: "#D88934"             # Mezopotamya Kehribarı (Rozet & Canlı Durum)
   # Sınır
-  hairline: ""                 # 1px border
-  hairline_strong: ""          # focus, aktif state
+  hairline: "rgba(200, 83, 43, 0.16)" # Pişmiş Toprak kılcal hat
+  hairline_warm: "rgba(28, 22, 19, 0.08)" # Sıcak taş ayracı
+  hairline_strong: "rgba(200, 83, 43, 0.5)" # Odak / aktif sınır
   # Metin
-  ink: ""                      # başlık
-  body: ""                     # gövde
-  body_muted: ""               # yardımcı metin
-  body_disabled: ""            # pasif
-  body_on_dark: ""             # koyu yüzeyde metin
+  ink: "#1C1613"               # Başlıklar & Dev İsim (Kavrulmuş Espresso)
+  body: "#4A4038"              # Gövde metinleri (Keten Vizonu & Sıcak Kül)
+  body_muted: "#85776B"        # İkincil metinler & Künye (Mineral Taşı)
+  body_disabled: "#A3978B"     # Pasif metinler
+  body_on_dark: "#FAF6F0"      # Koyu yüzeyde keten beyazı metin
   # Durum
-  success: ""
-  warning: ""
-  danger: ""
-  info: ""
+  success: "#2E7D32"
+  warning: "#D88934"
+  danger: "#C8532B"
+  info: "#4A7C9B"
 
 # ─── TİPOGRAFİ ─────────────────────────────────────────────────
 typography:
-  display:                      # hero, büyük başlıklar
-    family: ""
-    weights: []                # [400, 600, 800]
-    min_size: ""
-    max_size: ""
-    letter_spacing: ""
-  headline:                     # h1, h2
-    family: ""
-    weights: []
-  title:                        # h3, panel başlıkları
-    family: ""
-    weights: []
-  body:                         # paragraf
-    family: ""
-    weights: []
-    size: ""                   # 16 veya 17 (Apple tercihi)
-    line_height: ""
-  caption:                      # yardımcı, etiket
-    family: ""
-    weights: []
-    size: ""
-  mono:                         # kod, teknik
-    family: ""
-    weights: []
+  display:
+    family: "var(--font-display, Inter, sans-serif)"
+    weights: [600, 700, 800]
+    min_size: "2.25rem"
+    max_size: "4rem"
+    letter_spacing: "-0.02em"
+  headline:
+    family: "var(--font-display, Inter, sans-serif)"
+    weights: [600, 700]
+  title:
+    family: "var(--font-display, Inter, sans-serif)"
+    weights: [600]
+  body:
+    family: "var(--font-sans, Inter, sans-serif)"
+    weights: [400, 600]
+    size: "17"
+    line_height: "1.65"
+  caption:
+    family: "var(--font-sans, Inter, sans-serif)"
+    weights: [500]
+    size: "13"
+  mono:
+    family: "var(--font-mono, JetBrains Mono, monospace)"
+    weights: [400, 500]
 
 # ─── KENARLIK & BOŞLUK ─────────────────────────────────────────
 rounded:
   none: "0"
-  xs: ""                       # küçük chip
-  sm: ""                       # buton, input
-  md: ""                       # kart
-  lg: ""                       # büyük kart, modal
-  pill: "9999"                 # tam yuvarlak
-  full: "9999"
+  xs: "4px"
+  sm: "6px"
+  md: "10px"
+  lg: "16px"
+  pill: "9999px"
+  full: "9999px"
 
 spacing:
-  xxs: ""
-  xs: ""
-  sm: ""
-  md: ""
-  lg: ""
-  xl: ""
-  xxl: ""
-  section: ""                  # bölüm dikey padding
+  xxs: "4px"
+  xs: "8px"
+  sm: "12px"
+  md: "16px"
+  lg: "24px"
+  xl: "32px"
+  xxl: "48px"
+  section: "80px"
 
 # ─── GÖLGE ─────────────────────────────────────────────────────
 shadow:
   none: "none"
-  hairline: ""                 # 1px subtle
-  panel: ""                    # modal, popover
-  product: ""                  # ürün fotoğrafı (Apple kalıbı: rgba(0,0,0,0.22) 3px 5px 30px)
-  button_press: ""             # dokunsal buton alt dudağı (3px solid)
+  hairline: "0 0 0 1px rgba(255, 255, 255, 0.08)"
+  panel: "0 10px 30px -10px rgba(0, 0, 0, 0.5)"
+  product: "0 20px 40px -15px rgba(0, 0, 0, 0.6)"
+  button_press: "0 2px 0 0 rgba(4, 120, 87, 0.8)"
 
 # ─── HAREKET ───────────────────────────────────────────────────
 motion:
-  duration_fast: ""            # 100ms
-  duration_base: ""            # 200ms
-  duration_slow: ""            # 400ms
-  easing_default: ""           # ease-out
-  easing_emphasis: ""          # cubic-bezier(0.4, 0, 0.2, 1)
-  scale_press: ""              # 0.96 (dokunsal buton basılma)
-  translate_press: ""          # translateY(3px) (3D buton)
-  reduced_motion: ""           # prefers-reduced-motion: reduce davranışı
+  duration_fast: "120ms"
+  duration_base: "220ms"
+  duration_slow: "450ms"
+  easing_default: "cubic-bezier(0.16, 1, 0.3, 1)"
+  easing_emphasis: "cubic-bezier(0.4, 0, 0.2, 1)"
+  scale_press: "0.98"
+  translate_press: "translateY(1px)"
+  reduced_motion: "none"
 
 # ─── YOĞUNLUK & HAREKET DİALLERİ ───────────────────────────────
 dials:
-  visual_density: 5            # 1-10 (1=blog sparse, 10=finansal terminal)
-  motion_intensity: 5          # 1-10 (1=statik, 10=parallax, scroll-driven)
-  design_variance: 5           # 1-10 (1=merkezi/simetrik, 10=asimetrik/deneysel)
+  visual_density: 3
+  motion_intensity: 7
+  design_variance: 6
 ---
 
 # 🎨 DESIGN.md — Proje Tasarım Anayasası (Şablon v3)
@@ -162,6 +166,8 @@ Her yüzey için ayrı mode, ayrı yoğunluk, ayrı davranış seçilir.
 | Portfolyo, vitrin, showcase | EXPERIENCE | Galeri, portfolyo | 1-3 |
 
 > **Karar verme:** Ziyaretçi bu sayfada ne yapmak için geliyor? "Anlamak için" → READ, "Karar verip aksiyon almak için" → PERSUADE, "Görev tamamlamak için" → OPERATE, "Deneyimlemek için" → EXPERIENCE.
+> 
+> 🏆 **Awwwards & Hareket Standartları:** Eğer yüzey modu `EXPERIENCE` veya `PERSUADE` seçildiyse, doğrudan `docs/guides/04_Awwwards_Kreatif_Frontend_ve_Hareket_Mimarisi.md` rehberi açılır. Lenis momentum scroll, GSAP ScrollTrigger, SplitType kinetik tipografi, SVG noise katmanı, manyetik butonlar ve spotlight kartlar bu rehberdeki somut şablonlarla inşa edilir.
 
 ---
 
@@ -349,9 +355,16 @@ Proje tipine göre bir ilham profili seç. Seçilen profilin DESIGN.md dosyasın
   ```markdown
   UI: PERSUADE · VISUAL_DENSITY=4 · kehribar CTA · keten zemin
   ```
-- **Toplam token bütçesi (UI oturumu):** `AGENTS.md` (~2K) + `DESIGN.md` (~1.5K) + SPEC stili (~50) = **~3.5K token tasarım bağlamı**.
+- **Akıllı Yükleme Matrisi (Kör İsraf Yok, Hedefli Güç Var):**
+  - **OPERATE / READ Modu:** Ağır WebGL/Three.js kuralları bağlamı kirletmez. Temiz tipografi, 15 anti-slop kuralı, yüksek a11y ve hızlı mikro hover/state kuralları geçerlidir.
+  - **EXPERIENCE / PERSUADE Modu:** Awwwards seviyesi motorlar (`Lenis`, `GSAP ScrollTrigger`, `SplitType`, `overdrive`, `delight`) devreye girer. Arayüzü sıradanlıktan koparıp ödüllü ligine çıkaracak yatırımdan asla kaçınılmaz.
+- **Token Harcama Kriteri (ROI İlkesi):** Boş felsefe, tekrarlı boilerplateler ve her ara adımda körlemesine alınan dev screenshot yığınları yasaktır; kaliteyi doğrudan belirleyen fizik parametreleri, font eşleşmeleri ve mikro-etkileşim kodları tam bütçeyle kullanılır.
 
-> **impeccable entegrasyonu:** ANEW'in `VERIFY` fazında ajan şu komutları çağırabilir:
+> **impeccable 24 Komutluk Tam Alet Çantası (İhtiyaç Anında Çağrılır):**
+> - `.agents/skills/impeccable/reference/` altındaki 24 komutun tamamı (`craft`, `shape`, `init`, `document`, `extract`, `critique`, `audit`, `polish`, `bolder`, `quieter`, `distill`, `harden`, `onboard`, `animate`, `colorize`, `typeset`, `layout`, `delight`, `overdrive`, `clarify`, `adapt`, `optimize`, `live`, `generate`) eksiksiz aktiftir.
+> - İhtiyaç duyulan komut tekil dosya olarak yüklenir (~1.5K token); böylece hem 24 süper gücün tamamı kullanılır hem de gereksiz bağlam şişkinliği oluşmaz.
+> - Awwwards seviyesi için özellikle `/impeccable overdrive`, `/impeccable animate`, `/impeccable bolder` ve `/impeccable delight` kombinasyonu esastır.
+> - Ayrıca doğrulama ve son cila için aşağıdaki 4 temel komut aktif kullanılır:
 > - `impeccable audit <yüzey>` → teknik kalite (a11y, performance, responsive)
 > - `impeccable harden <yüzey>` → error handling, i18n, edge cases
 > - `impeccable polish <yüzey>` → son geçiş, design system alignment
