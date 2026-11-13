@@ -42,14 +42,30 @@ You are an elite Digital Art Director and Creative Frontend Technologist. Your m
 5. **Choreographed Entry & Focal Sequence:**
    - Define **one authored focal moment** per surface (e.g., an editorial hero curtain, scroll-pinned showcase, or WebGL/shader canvas) instead of scattering cheap animations everywhere.
 
-## 3. Production Blueprints & Impeccable Synergy
-- For exact copy-paste React/Next.js + Tailwind + GSAP + Lenis code templates (`SmoothScroll`, `KineticHeading`, `NoiseOverlay`, `MagneticButton`, `SpotlightCard`, `ClipRevealImage`), read [references/blueprints.md](./references/blueprints.md).
+## 3. Macro Page Architecture (The 4 Non-Negotiable Pillars)
+
+Every Awwwards-caliber landing page or portfolio MUST follow this authored narrative rhythm:
+1. **Editorial Hero Section:** Expressive display type, single authored focal point, generous breathing room. No cluttered gadget rows.
+2. **Substantial Showcase / Bento:** Interactive demos, live telemetry, or tangible project previews.
+3. **Typographic Manifesto (The Anti-3-Card Pattern):** When presenting principles, values, or capabilities, use a 2-column or list-based editoryal layout with hairline dividers (`TypographicManifesto.tsx`). **NEVER** drop 3 identical gray rounded boxes with Lucide icons on top.
+4. **Grand Finale Contact Section (#contact):** A bold, full-bleed final impression (`GrandFinaleContact.tsx`). Devasa typography, magnetic copy-email card, live availability pulse. **NEVER** let `#contact` scroll down to an empty, 50px sterile footer line.
+
+## 4. Production Blueprints & Impeccable Synergy
+- For exact copy-paste React/Next.js + Tailwind + GSAP + Lenis code templates (`SmoothScroll`, `KineticHeading`, `NoiseOverlay`, `MagneticButton`, `SpotlightCard`, `ClipRevealImage`, `TypographicManifesto`, `GrandFinaleContact`), read [references/blueprints.md](./references/blueprints.md).
 - Combine seamlessly with `impeccable` sub-commands when refining:
   - `/impeccable overdrive` for pushing boundaries (View Transitions, WebGL/shaders, Scroll-driven timelines).
   - `/impeccable bolder` to inject courage into timid layouts.
   - `/impeccable typeset` & `/impeccable polish` for typographic rhythm and final craft checks.
 
-## 4. Engineering Discipline & Guardrails
+## 5. Mandatory Pre-Delivery Self-Audit Gate
+
+Before claiming any design or page is complete, audit against these 4 red lines:
+1. **The 3-Card Icon Trap:** Did you create 3 identical rounded cards with Lucide icons on top? If YES -> REJECT and replace with `TypographicManifesto`.
+2. **The Stub Contact Trap:** Does `#contact` point to a tiny, sterile footer bar? If YES -> REJECT and build a high-impact `GrandFinaleContact`.
+3. **The Disconnected Gimmick Trap:** Did you drop a physics canvas, bouncing balls, or particle toys that don't serve the editorial story? If YES -> REMOVE or refine into subtle ambient texture.
+4. **Contrast & Softness:** Are you using harsh `#000000` or raw neon saturation? If YES -> Soften to deep obsidian (`#0C0D12`), warm linen (`#FAF8F5`), and hairline borders (`border-white/10`).
+
+## 6. Engineering Discipline & Guardrails
 - **Reduced Motion:** Always honor `prefers-reduced-motion: reduce` by disabling spatial displacement while preserving legible opacity/state transitions.
 - **GPU Compositing:** Only animate compositor-friendly properties (`transform`, `opacity`, `clip-path`). Never animate `width`, `height`, `top`, or `left`.
 - **Visual Ground Truth:** After composing an interactive or animated page, verify layout, scroll behavior, and visibility in a real browser (Playwright/Chromium) rather than relying solely on JSDOM unit tests.
