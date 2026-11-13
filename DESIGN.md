@@ -4,44 +4,45 @@
 # Markdown bölümlerde {tokens.path.to.value} referansı kullan.
 # Hex sadece burada yazılır, başka yerde tekrar etmez.
 
-name: "Partridge"
-version: "v3.0"
+name: "Abdullah Keklik"
+version: "v4.0"
 default_mode: "EXPERIENCE"
 default_platform: "web"
 build_path: "code"
 
-# ─── RENK PALETİ (60-30-10) — CHUKAR (KINALI KEKLİK EDİTORYAL PALET) ──────
-# Hakim (%60): Onyx Kohl, Yüzey (%30): Slate Plum & Antrasit, Vurgu (%10): Coral Red
+# ─── RENK PALETİ (60-30-10) — SICAK MEZOPOTAMYA & KINALI KEKLİK PALETİ ──────
+# Hakim (%60): Nahit Taşı & Keten (#F4EFE6)
+# Yüzey & Tipografi (%30): Kumtaşı (#EAE1D2) & Kavrulmuş Espresso (#1C1613)
+# Vurgu (%10): Kınalı Keklik Kınası (#C8532B) & Mezopotamya Kehribarı (#D88934)
 colors:
   # Hakim (zemin)
-  canvas: "#0F1217"            # Onyx Kohl (Derin İs Kömürü zemin)
-  canvas_alt: "#F6F1E8"        # Chalk Cream (Tebeşir Keten)
+  canvas: "#F4EFE6"            # Nahit Taşı & Keten Kemik zemin
+  canvas_alt: "#181311"        # İsli Gece Toprağı (Grand Finale zemin)
   # Yüzey
-  surface: "#171A23"           # Slate Plum & Antrasit mat yüzey
-  surface_raised: "#222634"    # Modal / popover
-  surface_sunken: "#0B0D11"    # Gömülü alanlar
-  # Destekleyici Organik Tonlar
-  warm_fawn: "#CBB89F"         # Warm Fawn (Kuş Kanadı Tüy Beji / Kum)
-  slate_plum: "#3E3947"        # Slate Plum (Kül Leylak)
-  # Vurgu
-  primary: "#E84D38"           # Chukar Coral Red (Kınalı Mercan Kırmızısı)
-  primary_hover: "#D73C27"
-  primary_active: "#BF321F"
-  primary_on_dark: "#E84D38"
+  surface: "#EAE1D2"           # Sıcak Kumtaşı mat yüzey / kartlar
+  surface_raised: "#F0E8DC"    # Hafif yükseltilmiş kart
+  surface_sunken: "#DFD5C4"    # Gömülü alanlar
+  # Vurgular
+  primary: "#C8532B"           # Kınalı Keklik Kınası & Terracotta (Primary CTA)
+  primary_hover: "#A94220"
+  primary_active: "#8F3517"
+  primary_on_dark: "#FAF6F0"
+  amber: "#D88934"             # Mezopotamya Kehribarı (Rozet & Canlı Durum)
   # Sınır
-  hairline: "rgba(203, 184, 159, 0.16)" # Warm Fawn subtle sınır
-  hairline_strong: "rgba(232, 77, 56, 0.6)" # Odak / aktif sınır
+  hairline: "rgba(200, 83, 43, 0.16)" # Pişmiş Toprak kılcal hat
+  hairline_warm: "rgba(28, 22, 19, 0.08)" # Sıcak taş ayracı
+  hairline_strong: "rgba(200, 83, 43, 0.5)" # Odak / aktif sınır
   # Metin
-  ink: "#F6F1E8"               # Başlıklar (Chalk Cream)
-  body: "#9E9AA6"              # Gövde metinleri (Kül tonu)
-  body_muted: "#787480"        # İkincil metinler
-  body_disabled: "#4A4750"     # Pasif metinler
-  body_on_dark: "#F6F1E8"      # Koyu yüzeyde keten beyazı metin
+  ink: "#1C1613"               # Başlıklar & Dev İsim (Kavrulmuş Espresso)
+  body: "#4A4038"              # Gövde metinleri (Keten Vizonu & Sıcak Kül)
+  body_muted: "#85776B"        # İkincil metinler & Künye (Mineral Taşı)
+  body_disabled: "#A3978B"     # Pasif metinler
+  body_on_dark: "#FAF6F0"      # Koyu yüzeyde keten beyazı metin
   # Durum
-  success: "#10B981"
-  warning: "#F59E0B"
-  danger: "#EF4444"
-  info: "#38BDF8"
+  success: "#2E7D32"
+  warning: "#D88934"
+  danger: "#C8532B"
+  info: "#4A7C9B"
 
 # ─── TİPOGRAFİ ─────────────────────────────────────────────────
 typography:

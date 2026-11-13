@@ -5,6 +5,12 @@ export default defineConfig({
   test: {
     environment: "node",
     include: ["scripts/**/*.test.ts", "tests/unit/**/*.test.ts"],
+    fileParallelism: false,
+    poolOptions: {
+      threads: {
+        singleThread: true,
+      },
+    },
   },
   resolve: {
     alias: {
