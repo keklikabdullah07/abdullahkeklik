@@ -42,6 +42,22 @@ export function Header() {
           </div>
         </div>
 
+        {/* Orta Alan: Editoryal Menü (Lenis Smooth Scroll Anchor) */}
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-mono tracking-wider">
+          <a
+            href="#curated-works"
+            className="text-ink-body hover:text-primary transition-colors py-1"
+          >
+            [01] İŞLER
+          </a>
+          <a href="#manifesto" className="text-ink-body hover:text-primary transition-colors py-1">
+            [02] MANİFESTO
+          </a>
+          <a href="#contact" className="text-ink-body hover:text-primary transition-colors py-1">
+            [03] İLETİŞİM
+          </a>
+        </nav>
+
         {/* Sağ Alan: Kınalı Keklik Amblemi & Stüdyo Rozeti */}
         <div className="flex items-center gap-4">
           <div className="hidden md:flex flex-col text-right">
