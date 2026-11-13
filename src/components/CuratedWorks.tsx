@@ -3,6 +3,7 @@
 import { initialProjects } from "@/data/projects";
 import type { Project } from "@/types/project";
 import { ArrowUpRight, Sparkles, Terminal } from "lucide-react";
+import Link from "next/link";
 import type React from "react";
 import { useEffect, useState } from "react";
 
@@ -49,11 +50,12 @@ export function CuratedWorks() {
           const isHovered = activeProject?.id === project.id;
 
           return (
-            <div
+            <Link
+              href={`/works/${project.slug}`}
               key={project.id}
               onMouseEnter={() => setActiveProject(project)}
               onMouseLeave={() => setActiveProject(null)}
-              className={`group relative py-8 md:py-10 transition-colors duration-300 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer ${
+              className={`group relative py-8 md:py-10 transition-colors duration-300 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer block ${
                 isHovered ? "bg-surface/40 px-4 -mx-4 rounded-lg" : ""
               }`}
             >
@@ -111,7 +113,7 @@ export function CuratedWorks() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
