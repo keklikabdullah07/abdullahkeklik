@@ -17,4 +17,8 @@ export interface Project {
   year?: string;
   client?: string;
   discipline?: string;
+  challenge?: string;
+  solution?: string;
+  impact?: string[];
+  deliverables?: string[];
 }
