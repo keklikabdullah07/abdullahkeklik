@@ -1,4 +1,5 @@
 import { CuratedWorks } from "@/components/CuratedWorks";
+import { EditorialBio } from "@/components/EditorialBio";
 import { EditorialHero } from "@/components/EditorialHero";
 import { GrandFinaleContact } from "@/components/GrandFinaleContact";
 import { Header } from "@/components/Header";
@@ -13,6 +14,7 @@ export default function Home() {
         <EditorialHero />
         <CuratedWorks />
         <TypographicManifesto />
+        <EditorialBio />
       </main>
       <GrandFinaleContact />
     </div>
