@@ -21,10 +21,10 @@ Abdullah Keklik editoryal vitrininde; metalik kalligrafik imza (`public/logo-mon
 - **İzole Geliştirme İlkesi:** Kullanıcı onay verip beğenene kadar bu özellik `main` dalına veya uzak depoya push edilmez; yerelde canlı test edilir.
 
 ## 3. Kabul Kriterleri (Acceptance Criteria)
-- [ ] `public/avatar.webp` ve `public/logo-monogram.png` varlıkları projeye dahil edilmeli.
-- [ ] `src/components/InteractiveMedallion.tsx` bileşeni oluşturulmalı.
-- [ ] 3D çift taraflı kart çevrilme mekanizması (Monogram ↔ Avatar) çalışmalı.
-- [ ] Header sağ üst köşede konumlandırılmalı.
-- [ ] Otomatik periyodik dönüş ve kullanıcı hover/click etkileşimi çalışmalı.
-- [ ] `./scripts/check` 5 aşamada yeşil olmalı.
-- [ ] Headless Chromium ile canlı görsel doğrulama yapılmalı.
+- [x] `public/avatar.webp` ve `public/logo-monogram.png` varlıkları projeye dahil edilmeli.
+- [x] `src/components/InteractiveMedallion.tsx` bileşeni oluşturulmalı.
+- [x] 3D çift taraflı kart çevrilme mekanizması (Monogram ↔ Avatar) çalışmalı.
+- [x] Header sağ üst köşede konumlandırılmalı.
+- [x] Otomatik periyodik dönüş ve kullanıcı hover/click etkileşimi çalışmalı.
+- [x] `./scripts/check` 5 aşamada yeşil olmalı.
+- [x] Headless Chromium ile canlı görsel doğrulama yapılmalı.
