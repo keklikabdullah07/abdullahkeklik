@@ -36,7 +36,7 @@ export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) 
       className={`relative inline-flex flex-col items-center group select-none ${className}`}
       aria-label="Abdullah Keklik 3D Heykelsi Madalyon Sekansı"
     >
-      {/* 3D Video Çerçevesi — Donanım İvmeli Taşırma Koruması ve Perspektif Payı */}
+      {/* Çare 1: Dairesiz, Sert Çerçeveden Arındırılmış Havada Asılı 3D Heykel */}
       <div
         role="button"
         tabIndex={0}
@@ -48,36 +48,42 @@ export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) 
           }
         }}
         title="3D madalyon döngüsünü duraklatmak veya oynatmak için tıklayın"
-        style={{
-          WebkitMaskImage: "-webkit-radial-gradient(white, black)",
-          maskImage: "radial-gradient(circle, white 100%, transparent 100%)",
-          transform: "translateZ(0)",
-          isolation: "isolate",
-        }}
-        className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[420px] xl:h-[420px] rounded-full overflow-hidden border-2 border-hairline/80 ring-2 ring-primary/40 shadow-warm hover:shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-primary bg-canvas-alt"
+        className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] xl:w-[460px] xl:h-[460px] flex items-center justify-center cursor-pointer focus:outline-none group"
       >
-        {/* Video: scale-100 ile madalyonun 3D dönüş açısındaki perspektif payı korunur, daire dışına taşmaz */}
-        <video
-          ref={videoRef}
-          src="/3D_medallion_animation_sequence_1ec22850_1080p.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          tabIndex={-1}
-          className="w-full h-full object-cover scale-100 select-none pointer-events-none"
-        />
-
-        {/* Kenar Işık Kırılması & İnce Çerçeve Vurgusu Katmanı */}
+        {/* Arkada Heykelsi Işık Aurası & Zemin Kaynaşması */}
         <div
-          className="absolute inset-0 rounded-full pointer-events-none ring-1 ring-inset ring-white/10 bg-gradient-to-tr from-primary/10 via-transparent to-amber/15 opacity-60 mix-blend-overlay group-hover:opacity-80 transition-opacity duration-300"
+          className="absolute inset-6 rounded-full bg-gradient-to-tr from-ink/10 via-primary/10 to-amber/10 blur-3xl pointer-events-none opacity-60 group-hover:opacity-90 transition-opacity duration-700"
           aria-hidden="true"
         />
 
+        {/* Video Maskesi: Yumuşak Kademeli Radyal Sönümleme (Sert Kesim ve Taşma Yok) */}
+        <div
+          className="relative w-full h-full flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105 active:scale-95"
+          style={{
+            WebkitMaskImage:
+              "radial-gradient(circle at center, black 52%, rgba(0,0,0,0.85) 64%, rgba(0,0,0,0.3) 74%, transparent 84%)",
+            maskImage:
+              "radial-gradient(circle at center, black 52%, rgba(0,0,0,0.85) 64%, rgba(0,0,0,0.3) 74%, transparent 84%)",
+            transform: "translateZ(0)",
+            isolation: "isolate",
+          }}
+        >
+          <video
+            ref={videoRef}
+            src="/3D_medallion_animation_sequence_1ec22850_1080p.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            tabIndex={-1}
+            className="w-full h-full object-cover scale-[1.04] select-none pointer-events-none"
+          />
+        </div>
+
         {/* Canlılık ve Durum Rozeti */}
         <div
-          className={`absolute bottom-3 right-3 md:bottom-5 md:right-5 w-4 h-4 md:w-5 md:h-5 rounded-full border-2 border-canvas shadow-md transition-colors duration-300 ${
+          className={`absolute bottom-4 right-4 md:bottom-8 md:right-8 w-3.5 h-3.5 md:w-4 md:h-4 rounded-full border-2 border-canvas shadow-md transition-colors duration-300 ${
             isPlaying ? "bg-amber" : "bg-ink-muted"
           }`}
           title={isPlaying ? "Canlı 3D Döngü Aktif" : "Duraklatıldı"}
@@ -85,7 +91,7 @@ export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) 
       </div>
 
       {/* Editoryal Mikro-Etiket */}
-      <div className="mt-4 flex items-center gap-2 text-[11px] font-mono text-ink-muted uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
+      <div className="mt-2 flex items-center gap-2 text-[11px] font-mono text-ink-muted uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
         <span className="w-1.5 h-1.5 rounded-full bg-primary/70" />
         <span>3D HEYKELSİ DİJİTAL MADALYON</span>
       </div>
