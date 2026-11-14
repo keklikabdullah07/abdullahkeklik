@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChukarLogo } from "./ChukarLogo";
+import { InteractiveMedallion } from "./InteractiveMedallion";
 
 export function Header() {
   const [timeString, setTimeString] = useState<string>("17:47");
@@ -70,9 +70,7 @@ export function Header() {
             <span className="text-[11px] font-mono text-ink-muted">CREATIVE TECHNOLOGIST</span>
           </div>
 
-          <div className="p-2 rounded-lg bg-surface border border-hairline/60 flex items-center justify-center">
-            <ChukarLogo size={32} />
-          </div>
+          <InteractiveMedallion size={44} />
         </div>
       </div>
     </header>
