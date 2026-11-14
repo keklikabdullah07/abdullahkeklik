@@ -36,7 +36,7 @@ export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) 
       className={`relative inline-flex flex-col items-center group select-none ${className}`}
       aria-label="Abdullah Keklik 3D Heykelsi Madalyon Sekansı"
     >
-      {/* 3D Video Çerçevesi — Çerçeve ve Video Birebir Sıfıra Sıfır Oturtulmuş Form */}
+      {/* 3D Video Çerçevesi — Donanım İvmeli Taşırma Koruması ve Perspektif Payı */}
       <div
         role="button"
         tabIndex={0}
@@ -48,9 +48,15 @@ export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) 
           }
         }}
         title="3D madalyon döngüsünü duraklatmak veya oynatmak için tıklayın"
+        style={{
+          WebkitMaskImage: "-webkit-radial-gradient(white, black)",
+          maskImage: "radial-gradient(circle, white 100%, transparent 100%)",
+          transform: "translateZ(0)",
+          isolation: "isolate",
+        }}
         className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[420px] xl:h-[420px] rounded-full overflow-hidden border-2 border-hairline/80 ring-2 ring-primary/40 shadow-warm hover:shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-primary bg-canvas-alt"
       >
-        {/* Video: scale-[1.28] ile dikey videodaki 3D madalyon dairesi dış çerçeveye sıfıra sıfır oturur */}
+        {/* Video: scale-100 ile madalyonun 3D dönüş açısındaki perspektif payı korunur, daire dışına taşmaz */}
         <video
           ref={videoRef}
           src="/3D_medallion_animation_sequence_1ec22850_1080p.mp4"
@@ -60,7 +66,7 @@ export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) 
           playsInline
           preload="auto"
           tabIndex={-1}
-          className="w-full h-full object-cover scale-[1.28] select-none pointer-events-none"
+          className="w-full h-full object-cover scale-100 select-none pointer-events-none"
         />
 
         {/* Kenar Işık Kırılması & İnce Çerçeve Vurgusu Katmanı */}
