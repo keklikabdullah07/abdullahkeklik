@@ -23,8 +23,8 @@ export function EditorialHero() {
 
       {/* Ana Heykelsi Tipografi ve 3D Madalyon Alanı */}
       <div className="my-16 md:my-24">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-ink leading-[0.92] select-none">
+        <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10 lg:gap-16">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-ink leading-[0.92] select-none text-left w-full lg:w-auto">
             ABDULLAH
             <br />
             <span className="inline-block relative">
@@ -33,7 +33,7 @@ export function EditorialHero() {
             </span>
           </h1>
 
-          <div className="self-start lg:self-center lg:pr-4">
+          <div className="flex-shrink-0 flex items-center justify-center">
             <HeroMedallionVideo />
           </div>
         </div>
