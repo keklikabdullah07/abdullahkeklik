@@ -19,6 +19,7 @@
 | Rota | Tip / Metotlar | Dosya |
 |---|---|---|
 | `/` | `PAGE (UI)` | `src/app/page.tsx` |
+| `/works/[slug]` | `PAGE (UI)` | `src/app/works/[slug]/page.tsx` |
 
 ---
 
@@ -51,3 +52,5 @@ _Henüz Drizzle veya ORM şema tablosu tespit edilmedi._
 | `0006-chukar-editoryal-tasarim` | Spec 0006 — Chukar Marka Kimliği ve Editoryal Tasarım Dönüşümü | **Shipped** |
 | `0007-awwwards-redesign-experience` | Spec 0007 — Partridge Awwwards Seviyesi Yeniden Tasarımı ve Kinetik Deneyim Yüzeyi | **Shipped (Tamamlandı ve developer dalına birleştirildi)** |
 | `0008-tasarim-sifirlama-ve-yalin-tuval` | Spec 0008 — Tasarım Sıfırlama ve Yalın Başlangıç Tuvali | **Approved (Kullanıcı doğrudan "tasarımla ilgili ne bulduysan kaldır baştan başlayacağız" talimatı verdi)** |
+| `0009-git-projeleri-ve-editoryal-vitrin` | Spec 0009 — Canlı Git Projeleri ve Editoryal Vitrin Dönüşümü | **Proposed (Kullanıcı onayı bekleniyor)** |
+| `0014-hero-3d-medallion-video` | Şartname 0014: Hero Alanı 3D Animasyonlu Medalyon Video Entegrasyonu | **Approved (Kullanıcı "onaylıyorum" teyidi verdi)** |
