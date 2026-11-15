@@ -1,3 +1,4 @@
+import { EditorialPreloader } from "@/components/EditorialPreloader";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { LanguageProvider } from "@/context/LanguageContext";
 import type { Metadata, Viewport } from "next";
@@ -68,6 +69,7 @@ export default function RootLayout({
     <html lang="tr" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="antialiased font-sans">
         <LanguageProvider>
+          <EditorialPreloader />
           <SmoothScrollProvider>
             <a
               href="#main-content"
