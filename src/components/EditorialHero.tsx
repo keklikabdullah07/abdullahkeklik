@@ -24,11 +24,11 @@ export function EditorialHero() {
       {/* Ana Heykelsi Tipografi ve 3D Madalyon Alanı */}
       <div className="my-16 md:my-24">
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10 lg:gap-16">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter text-ink leading-[0.92] select-none text-left w-full lg:w-auto">
-            <span className="block font-sans font-bold tracking-tighter text-ink">ABDULLAH</span>
-            <span className="inline-flex items-baseline font-serif italic font-normal tracking-tight text-ink/95">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[6rem] tracking-tight text-ink leading-[0.95] select-none text-left w-full lg:w-auto font-syne">
+            <span className="block font-extrabold tracking-tight text-ink">ABDULLAH</span>
+            <span className="inline-flex items-baseline font-semibold tracking-tight text-ink/90">
               <span>KEKLİK</span>
-              <span className="inline-block w-3.5 h-3.5 md:w-5 md:h-5 rounded-full bg-primary ml-2.5 md:ml-4 not-italic align-baseline shadow-sm" />
+              <span className="inline-block w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary ml-2 md:ml-3.5 align-baseline shadow-sm" />
             </span>
           </h1>
 

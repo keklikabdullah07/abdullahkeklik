@@ -20,6 +20,28 @@ const cormorant = localFont({
   display: "swap",
 });
 
+const syne = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Syne-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Syne-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Syne-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-syne",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Abdullah Keklik — Creative Technologist & Digital Studio",
   description:
@@ -37,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className={cormorant.variable}>
+    <html lang="tr" className={`${cormorant.variable} ${syne.variable}`}>
       <body className="antialiased">
         <SmoothScrollProvider>
           <a

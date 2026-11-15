@@ -83,7 +83,7 @@ export function EditorialBio() {
             <span className="w-1.5 h-1.5 rounded-full bg-amber" />
             <span>SECTION [03] — BIOGRAPHY &amp; ETHOS</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ink font-sans leading-[1.05]">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ink font-syne leading-[1.05]">
             Zanaat, Kökler &amp;
             <br />
             <span className="text-ink-body font-light">İki Dünyanın Kesişimi</span>

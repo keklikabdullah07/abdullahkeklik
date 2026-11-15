@@ -41,7 +41,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "var(--font-sans)", "-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
+        display: ["var(--font-syne)", "var(--font-display)", "var(--font-sans)", "-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
+        syne: ["var(--font-syne)", "-apple-system", "sans-serif"],
         sans: ["var(--font-sans)", "-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)", "Cormorant Garamond", "Georgia", "serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
