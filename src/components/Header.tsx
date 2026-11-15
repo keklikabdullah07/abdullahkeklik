@@ -47,6 +47,7 @@ export function Header() {
                   height={44}
                   className="object-contain w-full h-full filter drop-shadow-[0_2px_10px_rgba(200,83,43,0.15)]"
                   priority
+                  unoptimized
                 />
               </div>
 
