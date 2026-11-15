@@ -49,27 +49,10 @@ export function EditorialHero() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="relative w-full pt-16 md:pt-28 pb-20 md:pb-32 px-6 md:px-12 max-w-7xl mx-auto flex flex-col justify-between"
+      className="relative w-full pt-10 md:pt-16 pb-20 md:pb-28 px-6 md:px-12 max-w-7xl mx-auto flex flex-col justify-between"
     >
-      {/* Üst İndeks Künyesi */}
-      <motion.div
-        variants={itemVariants}
-        className="flex flex-wrap items-center justify-between gap-4 border-b border-hairline pb-6 text-xs font-mono text-ink-muted uppercase tracking-wider"
-      >
-        <div className="flex items-center gap-3">
-          <span className="px-2 py-0.5 rounded bg-surface border border-hairline text-ink font-medium">
-            INDEX / 2026
-          </span>
-          <span>FOLIO OF ABDULLAH KEKLİK</span>
-        </div>
-        <div className="flex items-center gap-6">
-          <span className="hidden sm:inline">DISCIPLINE: CREATIVE TECH & DESIGN</span>
-          <span className="text-primary font-medium">[ARCHIVE V4]</span>
-        </div>
-      </motion.div>
-
       {/* Ana Heykelsi Tipografi ve 3D Madalyon Alanı */}
-      <div className="my-16 md:my-24">
+      <div className="my-8 md:my-14">
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10 lg:gap-16">
           <motion.h1
             variants={itemVariants}
