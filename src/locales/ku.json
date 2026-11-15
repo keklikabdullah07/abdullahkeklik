@@ -33,10 +33,10 @@
   "curatedWorks": {
     "sectionBadge": "BEŞ [02] — XEBATÊN HILBIJARTÎ Û REPO",
     "title": "Projeyên Hilbijartî Û Arşîva Gitê",
-    "subtitle": "Di dîsîplîna arşîvê ya Nippon Design Center de; depoyên çavkaniya vekirî û mîmariyên sîstemê yên bi C#, TypeScript, Rust û Go hatine ristin.",
+    "subtitle": "Di dîsîplîna arşîvê ya Nippon Design Center de; depoyên çavkaniya vekirî û mîmariyên sîstemê yên bi C#, TypeScript û Rust hatine ristin.",
     "tabAll": "HEMÛ",
-    "tabGithub": "GITHUB / ÇAVKANIYA VEKIRÎ",
-    "tabGitlab": "GITLAB / SAZÎBÛN",
+    "tabSystems": "SÎSTEM Û EWLEHÎ",
+    "tabWeb": "WEB Û TÊKILÎ",
     "caseStudyTitle": "Lêkolîna Berfireh a Projeyê"
   },
   "manifesto": {

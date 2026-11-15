@@ -18,7 +18,7 @@ import type React from "react";
 import { useEffect, useState } from "react";
 import { EASE_EDITORIAL, RevealOnScroll } from "./MotionWrapper";
 
-type FilterCategory = "all" | "github" | "gitlab";
+type FilterCategory = "all" | "systems" | "web";
 
 export function CuratedWorks() {
   const { t } = useI18n();
@@ -36,16 +36,19 @@ export function CuratedWorks() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  const isSystemsProject = (p: Project) =>
+    p.language === "Rust" || p.language === "C#" || p.tags.includes("Cryptography");
+
   const filteredProjects = initialProjects.filter((project) => {
     if (selectedFilter === "all") return true;
-    if (selectedFilter === "github") return project.source === "github";
-    if (selectedFilter === "gitlab") return project.source === "gitlab";
+    if (selectedFilter === "systems") return isSystemsProject(project);
+    if (selectedFilter === "web") return !isSystemsProject(project);
     return true;
   });
 
   const countAll = initialProjects.length;
-  const countGithub = initialProjects.filter((p) => p.source === "github").length;
-  const countGitlab = initialProjects.filter((p) => p.source === "gitlab").length;
+  const countSystems = initialProjects.filter(isSystemsProject).length;
+  const countWeb = initialProjects.filter((p) => !isSystemsProject(p)).length;
 
   return (
     <section
@@ -96,54 +99,46 @@ export function CuratedWorks() {
 
           <button
             type="button"
-            onClick={() => setSelectedFilter("github")}
+            onClick={() => setSelectedFilter("systems")}
             className={`relative px-3 sm:px-4 py-2 rounded-md font-mono text-xs uppercase tracking-wider transition-colors duration-200 flex items-center gap-2 ${
-              selectedFilter === "github"
+              selectedFilter === "systems"
                 ? "text-primary-contrast font-semibold"
                 : "bg-surface hover:bg-surface-raised text-ink-muted hover:text-ink border border-hairline"
             }`}
           >
-            {selectedFilter === "github" && (
+            {selectedFilter === "systems" && (
               <motion.span
                 layoutId="activeFilterPill"
                 className="absolute inset-0 bg-primary rounded-md shadow-xs -z-0"
                 transition={{ duration: 0.35, ease: EASE_EDITORIAL }}
               />
             )}
-            <Github className="w-3.5 h-3.5 relative z-10" />
-            <span className="relative z-10">GITHUB</span>
-            <span className="hidden sm:inline relative z-10">
-              {t.curatedWorks.tabGithub.replace("GITHUB", "")}
-            </span>
+            <Terminal className="w-3.5 h-3.5 relative z-10" />
+            <span className="relative z-10">{t.curatedWorks.tabSystems}</span>
             <span className="relative z-10 opacity-80">
-              [{String(countGithub).padStart(2, "0")}]
+              [{String(countSystems).padStart(2, "0")}]
             </span>
           </button>
 
           <button
             type="button"
-            onClick={() => setSelectedFilter("gitlab")}
+            onClick={() => setSelectedFilter("web")}
             className={`relative px-3 sm:px-4 py-2 rounded-md font-mono text-xs uppercase tracking-wider transition-colors duration-200 flex items-center gap-2 ${
-              selectedFilter === "gitlab"
+              selectedFilter === "web"
                 ? "text-canvas font-semibold"
                 : "bg-surface hover:bg-surface-raised text-ink-muted hover:text-ink border border-hairline"
             }`}
           >
-            {selectedFilter === "gitlab" && (
+            {selectedFilter === "web" && (
               <motion.span
                 layoutId="activeFilterPill"
                 className="absolute inset-0 bg-amber rounded-md shadow-xs -z-0"
                 transition={{ duration: 0.35, ease: EASE_EDITORIAL }}
               />
             )}
-            <GitBranch className="w-3.5 h-3.5 relative z-10" />
-            <span className="relative z-10">GITLAB</span>
-            <span className="hidden sm:inline relative z-10">
-              {t.curatedWorks.tabGitlab.replace("GITLAB", "")}
-            </span>
-            <span className="relative z-10 opacity-80">
-              [{String(countGitlab).padStart(2, "0")}]
-            </span>
+            <Code2 className="w-3.5 h-3.5 relative z-10" />
+            <span className="relative z-10">{t.curatedWorks.tabWeb}</span>
+            <span className="relative z-10 opacity-80">[{String(countWeb).padStart(2, "0")}]</span>
           </button>
         </div>
       </RevealOnScroll>
@@ -272,7 +267,7 @@ export function CuratedWorks() {
             <span className="flex items-center gap-1.5 text-primary font-medium">
               <Terminal className="w-3.5 h-3.5" />
               <span>
-                {activeProject.source === "gitlab" ? "GITLAB ENTERPRISE" : "GITHUB REPOSITORY"}
+                {activeProject.source === "gitlab" ? "GITLAB REPOSITORY" : "GITHUB REPOSITORY"}
               </span>
             </span>
             <span className="font-semibold">{activeProject.year}</span>

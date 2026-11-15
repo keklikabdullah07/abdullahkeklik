@@ -33,10 +33,10 @@
   "curatedWorks": {
     "sectionBadge": "SECTION [02] — SELECTED WORKS & REPOSITORIES",
     "title": "Selected Works & Git Archive",
-    "subtitle": "In Nippon Design Center archive discipline: open-source repositories and enterprise system architectures crafted with C#, TypeScript, Rust, and Go.",
+    "subtitle": "In Nippon Design Center archive discipline: open-source repositories and high-performance system architectures crafted with C#, TypeScript, and Rust.",
     "tabAll": "ALL",
-    "tabGithub": "GITHUB / OPEN SOURCE",
-    "tabGitlab": "GITLAB / ENTERPRISE",
+    "tabSystems": "SYSTEMS & SECURITY",
+    "tabWeb": "WEB & INTERACTION",
     "caseStudyTitle": "Detailed Case Study"
   },
   "manifesto": {
