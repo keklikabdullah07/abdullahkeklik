@@ -37,8 +37,8 @@ export interface TranslationDictionary {
     title: string;
     subtitle: string;
     tabAll: string;
-    tabGithub: string;
-    tabGitlab: string;
+    tabSystems: string;
+    tabWeb: string;
     caseStudyTitle: string;
   };
   manifesto: {

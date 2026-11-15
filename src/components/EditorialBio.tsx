@@ -51,24 +51,24 @@ interface Milestone {
 const milestones: Milestone[] = [
   {
     year: "2026",
-    role: "Creative Technologist & Bağımsız Stüdyo",
+    role: "Creative Technologist & Bağımsız Mühendis",
     organization: "Abdullah Keklik Studio · Urfa / Global",
     description:
-      "Awwwards kalitesinde yaşayan dijital vitrinler, yüksek performanslı web stüdyoları ve Chukar açık kaynak kural işleme motoru üzerine odaklanma.",
+      "Awwwards kalitesinde yaşayan editoryal vitrinler, tipografik tasarım sistemleri ve sıfır-GC Chukar açık kaynak kural motoru mimarisi.",
   },
   {
     year: "2025",
-    role: "Kıdemli Sistem & Etkileşim Mimarı",
-    organization: "Dağıtık Lojistik & Kreatif Girişimler",
+    role: "Sistem & Etkileşim Mühendisliği",
+    organization: "Açık Kaynak & Bağımsız Girişimler",
     description:
-      "Günde 10M+ paket işleyen IoT telemetri omurgası (OmniLogistics), BloodSeal (.NET 9 C# Güvenlik Çekirdeği) ve weCAN ekosistemi.",
+      "C# .NET 9 ile kriptografik veri mühürleme omurgası (BloodSeal) ve gerçek zamanlı işbirliği ekosistemi (weCAN) geliştirilmesi.",
   },
   {
     year: "2024",
-    role: "Fintech Altyapı & Tasarım Mühendisi",
-    organization: "FinPulse Banking Solutions",
+    role: "Frontend Mimarisi & Analitik Arayüzler",
+    organization: "Özel Tasarım & Web Çözümleri",
     description:
-      "Idempotent açık bankacılık ödeme ağ geçitleri, PSD2 regülasyon uyumu ve taktil arayüz bileşen kütüphanelerinin geliştirilmesi.",
+      "KidsCare çocuk gelişim pedagoji arayüzü, Ismail Portfoy finansal analiz paneli ve Next.js tabanlı taktil bileşen mimarileri.",
   },
 ];
 

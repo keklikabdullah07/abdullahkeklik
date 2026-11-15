@@ -33,10 +33,10 @@
   "curatedWorks": {
     "sectionBadge": "SECTION [02] — SELECTED WORKS & REPOSITORIES",
     "title": "Seçilmiş Projeler & Git Arşivi",
-    "subtitle": "Nippon Design Center arşiv disiplininde; C#, TypeScript, Rust ve Go ile geliştirilmiş açık kaynak depolar ve kurumsal sistem mimarileri.",
+    "subtitle": "Nippon Design Center arşiv disiplininde; C#, TypeScript ve Rust ile geliştirilmiş açık kaynak depolar ve yüksek performanslı sistem mimarileri.",
     "tabAll": "TÜMÜ",
-    "tabGithub": "GITHUB / AÇIK KAYNAK",
-    "tabGitlab": "GITLAB / KURUMSAL",
+    "tabSystems": "SİSTEM & GÜVENLİK",
+    "tabWeb": "WEB & ARAYÜZ",
     "caseStudyTitle": "Detaylı Vaka İncelemesi"
   },
   "manifesto": {

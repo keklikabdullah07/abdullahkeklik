@@ -2,23 +2,27 @@ import { initialProjects } from "@/data/projects";
 import { describe, expect, it } from "vitest";
 
 describe("Vitrin Projeleri Veri Bütünlüğü ve Git Entegrasyonu", () => {
-  it("en az 4 adet vitrin projesi tanımlanmış olmalıdır", () => {
-    expect(initialProjects.length).toBeGreaterThanOrEqual(4);
+  it("en az 5 adet gerçek vitrin projesi tanımlanmış olmalıdır", () => {
+    expect(initialProjects.length).toBeGreaterThanOrEqual(5);
   });
 
-  it("hem GitHub hem de GitLab kaynaklı projeler bulunmalıdır", () => {
+  it("tüm projeler keklikabdullah07 GitHub reposuna ait ve doğrulanabilir olmalıdır", () => {
     const githubProjects = initialProjects.filter((p) => p.source === "github");
-    const gitlabProjects = initialProjects.filter((p) => p.source === "gitlab");
+    expect(githubProjects.length).toBe(initialProjects.length);
 
-    expect(githubProjects.length).toBeGreaterThan(0);
-    expect(gitlabProjects.length).toBeGreaterThan(0);
+    for (const project of initialProjects) {
+      expect(project.githubUrl).toBeDefined();
+      expect(project.githubUrl).toContain("github.com/keklikabdullah07/");
+    }
   });
 
-  it("keklikabdullah07 gerçek kullanıcı adına ait repolar mevcut olmalıdır", () => {
-    const userRepos = initialProjects.filter(
-      (p) => p.githubUrl?.includes("keklikabdullah07") || p.gitlabUrl?.includes("keklikabdullah07"),
-    );
-    expect(userRepos.length).toBeGreaterThanOrEqual(6);
+  it("kurgusal veya uydurma demo URL'leri bulunmamalıdır", () => {
+    for (const project of initialProjects) {
+      if (project.demoUrl) {
+        expect(project.demoUrl).not.toContain("omnilogistics");
+        expect(project.demoUrl).not.toContain("engine.abdullahkeklik.dev");
+      }
+    }
   });
 
   it("her projenin zorunlu alanları, dili ve etiketleri eksiksiz olmalıdır", () => {
@@ -29,7 +33,8 @@ describe("Vitrin Projeleri Veri Bütünlüğü ve Git Entegrasyonu", () => {
       expect(project.tagline).toBeTruthy();
       expect(project.description).toBeTruthy();
       expect(project.tags.length).toBeGreaterThan(0);
-      expect(project.githubUrl || project.gitlabUrl).toBeDefined();
+      expect(project.client).toBeTruthy();
+      expect(project.discipline).toBeTruthy();
     }
   });
 });

@@ -9,10 +9,7 @@ describe("EditorialPreloader Component & Architecture", () => {
   });
 
   it("kaynak kodda Awwwards shutter ease eğrisi mevcuttur", () => {
-    const sourcePath = path.resolve(
-      process.cwd(),
-      "src/components/EditorialPreloader.tsx",
-    );
+    const sourcePath = path.resolve(process.cwd(), "src/components/EditorialPreloader.tsx");
     expect(fs.existsSync(sourcePath)).toBe(true);
 
     const source = fs.readFileSync(sourcePath, "utf-8");
@@ -21,10 +18,7 @@ describe("EditorialPreloader Component & Architecture", () => {
   });
 
   it("kaynak kodda telemetri, sessionStorage ve erişilebilirlik öznitelikleri tanımlıdır", () => {
-    const sourcePath = path.resolve(
-      process.cwd(),
-      "src/components/EditorialPreloader.tsx",
-    );
+    const sourcePath = path.resolve(process.cwd(), "src/components/EditorialPreloader.tsx");
     const source = fs.readFileSync(sourcePath, "utf-8");
 
     // Telemetri ve marka
