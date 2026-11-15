@@ -37,15 +37,15 @@ export function Header() {
           <div className="flex items-center gap-3 sm:gap-4">
             <Link
               href="/"
-              className="group flex items-center gap-2.5 sm:gap-3 text-ink hover:text-primary transition-colors"
+              className="group flex items-center gap-3 sm:gap-4 text-ink hover:text-primary transition-colors"
             >
-              <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-lg overflow-hidden shrink-0 border border-hairline/80 bg-surface flex items-center justify-center p-0.5 group-hover:border-primary/50 group-hover:ring-1 group-hover:ring-primary/20 transition-all duration-300">
+              <div className="relative h-9 w-[55px] sm:h-11 sm:w-[67px] shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/partridgelogo.png"
-                  alt="Abdullah Keklik Marka Logosu"
-                  width={32}
-                  height={32}
-                  className="object-contain w-full h-full"
+                  src="/logo-monogram-ar.png"
+                  alt="Abdullah Keklik Parlak Siyah ve Bakır AR Monogramı"
+                  width={67}
+                  height={44}
+                  className="object-contain w-full h-full filter drop-shadow-[0_2px_10px_rgba(200,83,43,0.15)]"
                   priority
                 />
               </div>

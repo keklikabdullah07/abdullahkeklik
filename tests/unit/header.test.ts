@@ -8,14 +8,14 @@ describe("Header Component & Brand Lockup", () => {
     expect(typeof Header).toBe("function");
   });
 
-  it("Header kaynak kodunda partridgelogo.png ve ABDULLAH KEKLİK marka kilidi mevcuttur", () => {
+  it("Header kaynak kodunda AR monogramı ve ABDULLAH KEKLİK marka kilidi mevcuttur", () => {
     const headerPath = path.resolve(process.cwd(), "src/components/Header.tsx");
     expect(fs.existsSync(headerPath)).toBe(true);
 
     const source = fs.readFileSync(headerPath, "utf-8");
-    expect(source).toContain("/partridgelogo.png");
+    expect(source).toContain("logo-monogram-ar.png");
     expect(source).toContain("ABDULLAH KEKLİK");
-    expect(source).toContain("Abdullah Keklik Marka Logosu");
+    expect(source).toContain("Parlak Siyah ve Bakır AR Monogramı");
   });
 
   it("Header içinde dizin butonu ve erişilebilirlik öznitelikleri mevcuttur", () => {
