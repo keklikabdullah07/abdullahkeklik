@@ -1,6 +1,24 @@
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const cormorant = localFont({
+  src: [
+    {
+      path: "../../public/fonts/CormorantGaramond-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/CormorantGaramond-SemiBoldItalic.ttf",
+      weight: "600",
+      style: "italic",
+    },
+  ],
+  variable: "--font-serif",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Abdullah Keklik — Creative Technologist & Digital Studio",
@@ -19,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="tr" className={cormorant.variable}>
       <body className="antialiased">
         <SmoothScrollProvider>
           <a

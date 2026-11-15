@@ -59,7 +59,7 @@ const milestones: Milestone[] = [
     role: "Kıdemli Sistem & Etkileşim Mimarı",
     organization: "Dağıtık Lojistik & Kreatif Girişimler",
     description:
-      "Günde 10M+ paket işleyen IoT telemetri omurgası (OmniLogistics) ve %100 WCAG AA uyumlu Kinesis Tactile Design System tasarımı.",
+      "Günde 10M+ paket işleyen IoT telemetri omurgası (OmniLogistics), BloodSeal (.NET 9 C# Güvenlik Çekirdeği) ve weCAN ekosistemi.",
   },
   {
     year: "2024",
