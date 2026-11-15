@@ -4,6 +4,7 @@ import { ArrowUpRight, Check, Copy, Mail } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
 import { ChukarLogo } from "./ChukarLogo";
+import { RevealOnScroll } from "./MotionWrapper";
 
 export function GrandFinaleContact() {
   const [copied, setCopied] = useState(false);
@@ -42,51 +43,53 @@ export function GrandFinaleContact() {
         </div>
 
         {/* Delta Cafés Cesaretinde Devasa Başlık */}
-        <div className="my-20 md:my-28">
-          <p className="text-sm md:text-base font-mono text-primary uppercase tracking-wider mb-6">
-            BİRLİKTE ÜRETELİM / COMMISSIONS &amp; COLLABORATIONS
-          </p>
+        <RevealOnScroll>
+          <div className="my-20 md:my-28">
+            <p className="text-sm md:text-base font-mono text-primary uppercase tracking-wider mb-6">
+              BİRLİKTE ÜRETELİM / COMMISSIONS &amp; COLLABORATIONS
+            </p>
 
-          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-canvas leading-[0.95] select-none font-sans">
-            LET&apos;S CRAFT
-            <br />
-            <span className="text-canvas/40 hover:text-primary transition-colors duration-300">
-              TOGETHER.
-            </span>
-          </h2>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-canvas leading-[0.95] select-none font-sans">
+              LET&apos;S CRAFT
+              <br />
+              <span className="text-canvas/40 hover:text-primary transition-colors duration-300">
+                TOGETHER.
+              </span>
+            </h2>
 
-          {/* İletişim Aksiyon Alanı: Doğrudan Mailto ve Kopyala Butonları */}
-          <div className="mt-12 md:mt-16 flex flex-wrap items-center gap-4 sm:gap-6">
-            <a
-              href={`mailto:${email}`}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-md bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-contrast font-mono text-xs md:text-sm uppercase tracking-wider transition-all duration-200 shadow-md active:translate-y-[1px]"
-            >
-              <Mail className="w-4 h-4" />
-              <span>E-POSTA GÖNDER</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
+            {/* İletişim Aksiyon Alanı: Doğrudan Mailto ve Kopyala Butonları */}
+            <div className="mt-12 md:mt-16 flex flex-wrap items-center gap-4 sm:gap-6">
+              <a
+                href={`mailto:${email}`}
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-md bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-contrast font-mono text-xs md:text-sm uppercase tracking-wider transition-all duration-200 shadow-md active:translate-y-[1px]"
+              >
+                <Mail className="w-4 h-4" />
+                <span>E-POSTA GÖNDER</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
 
-            <button
-              type="button"
-              onClick={handleCopyEmail}
-              className="inline-flex items-center gap-2.5 px-6 py-4 rounded-md bg-white/5 hover:bg-white/10 active:bg-white/15 border border-white/10 text-canvas font-mono text-xs md:text-sm uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
-            >
-              {copied ? (
-                <>
-                  <Check className="w-4 h-4 text-emerald-400" />
-                  <span className="text-emerald-400">ADRES KOPYALANDI!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4 text-canvas/60" />
-                  <span>
-                    ADRESİ KOPYALA <span className="hidden sm:inline">({email})</span>
-                  </span>
-                </>
-              )}
-            </button>
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className="inline-flex items-center gap-2.5 px-6 py-4 rounded-md bg-white/5 hover:bg-white/10 active:bg-white/15 border border-white/10 text-canvas font-mono text-xs md:text-sm uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span className="text-emerald-400">ADRES KOPYALANDI!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 text-canvas/60" />
+                    <span>
+                      ADRESİ KOPYALA <span className="hidden sm:inline">({email})</span>
+                    </span>
+                  </>
+                )}
+              </button>
+            </div>
           </div>
-        </div>
+        </RevealOnScroll>
 
         {/* Alt Künye, Kınalı Keklik Mührü & Ağ Bağlantıları */}
         <div className="pt-12 border-t border-white/10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end text-xs font-mono text-canvas/60">
