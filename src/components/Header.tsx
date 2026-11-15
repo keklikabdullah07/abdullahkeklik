@@ -1,14 +1,13 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowDownRight, Menu, X } from "lucide-react";
+import { Compass, Menu, Sparkles } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { InteractiveMedallion } from "./InteractiveMedallion";
-import { EASE_EDITORIAL } from "./MotionWrapper";
+import { EditorialDirectoryModal } from "./EditorialDirectoryModal";
 
 export function Header() {
-  const [timeString, setTimeString] = useState<string>("17:47");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [timeString, setTimeString] = useState<string>("16:32");
+  const [directoryOpen, setDirectoryOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const updateTime = () => {
@@ -26,177 +25,73 @@ export function Header() {
     return () => clearInterval(interval);
   }, []);
 
-  // Escape tuşuyla mobil menüyü kapatma
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setMobileMenuOpen(false);
-      }
-    };
-    if (mobileMenuOpen) {
-      window.addEventListener("keydown", handleKeyDown);
-    }
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [mobileMenuOpen]);
-
-  const navigateTo = (anchor: string) => {
-    setMobileMenuOpen(false);
-    const element = document.querySelector(anchor);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <header className="w-full border-b border-hairline bg-canvas/80 backdrop-blur-md sticky top-0 z-40 transition-colors">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-        {/* Sol Alan: Künye, Konum & Canlı Saat */}
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-amber animate-pulse" />
-            <span className="text-xs font-mono uppercase tracking-widest text-ink-muted">
-              URFA 37°09&apos;N
+    <>
+      <header className="w-full border-b border-hairline/60 bg-canvas/80 backdrop-blur-md sticky top-0 z-40 transition-colors">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between gap-6">
+          {/* Sol Kanat: Heykelsi Marka & Zanaat Kimliği */}
+          <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              className="group flex items-baseline gap-2 text-ink hover:text-primary transition-colors"
+            >
+              <span className="font-bold text-base md:text-lg tracking-tight font-sans">
+                ABDULLAH KEKLİK
+              </span>
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary" />
+            </Link>
+
+            <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded bg-surface border border-hairline text-[10px] font-mono text-ink-muted uppercase tracking-wider">
+              CREATIVE TECH &amp; SYSTEMS
             </span>
           </div>
 
-          <div className="hidden sm:flex items-center gap-2 border-l border-hairline pl-6">
-            <span className="text-xs font-mono text-ink-muted uppercase">LOCAL:</span>
-            <span className="text-xs font-mono text-ink font-medium tracking-wider">
-              {timeString}
-            </span>
-          </div>
-        </div>
-
-        {/* Orta Alan: Editoryal Menü (Lenis Smooth Scroll Anchor) */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-mono tracking-wider">
-          <a
-            href="#curated-works"
-            className="text-ink-body hover:text-primary transition-colors py-1"
-          >
-            [01] İŞLER
-          </a>
-          <a href="#manifesto" className="text-ink-body hover:text-primary transition-colors py-1">
-            [02] MANİFESTO
-          </a>
-          <a href="#about" className="text-ink-body hover:text-primary transition-colors py-1">
-            [03] HAKKIMDA
-          </a>
-          <a href="#contact" className="text-ink-body hover:text-primary transition-colors py-1">
-            [04] İLETİŞİM
-          </a>
-        </nav>
-
-        {/* Sağ Alan: Kınalı Keklik Amblemi & Stüdyo Rozeti & Mobil Menü Butonu */}
-        <div className="flex items-center gap-3 sm:gap-4">
-          <div className="hidden md:flex flex-col text-right">
-            <span className="text-xs font-mono uppercase tracking-wider text-ink font-semibold">
-              ABDULLAH KEKLİK
-            </span>
-            <span className="text-[11px] font-mono text-ink-muted">CREATIVE TECHNOLOGIST</span>
+          {/* Orta Alan: Cömert Negatif Alan & Muted Telemetri */}
+          <div className="hidden md:flex items-center gap-3 text-xs font-mono text-ink-muted">
+            <span>37°09&apos;N</span>
+            <span className="text-hairline">·</span>
+            <span>URFA, MESOPOTAMIA</span>
+            <span className="text-hairline">·</span>
+            <span className="text-ink font-medium tabular-nums">{timeString} TRT</span>
           </div>
 
-          <InteractiveMedallion size={44} />
-
-          {/* Mobil Menü Aç/Kapat Butonu */}
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2.5 rounded-lg border border-hairline bg-surface hover:bg-surface-raised active:bg-surface-sunken text-ink transition-colors flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            aria-expanded={mobileMenuOpen}
-            aria-label={mobileMenuOpen ? "Navigasyon menüsünü kapat" : "Navigasyon menüsünü aç"}
-          >
-            {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobil Editoryal Dizin Perdesi */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.35, ease: EASE_EDITORIAL }}
-            className="md:hidden border-t border-hairline bg-canvas/98 backdrop-blur-xl px-6 py-8 overflow-hidden"
-          >
-            <div className="flex flex-col gap-6">
-              <div className="text-[11px] font-mono text-ink-muted uppercase tracking-widest border-b border-hairline pb-2 flex items-center justify-between">
-                <span>EDİTORYAL DİZİN / DIRECTORY</span>
-                <span className="text-primary font-medium">INDEX 2026</span>
-              </div>
-
-              <nav className="flex flex-col gap-3 text-sm font-mono">
-                <button
-                  type="button"
-                  onClick={() => navigateTo("#curated-works")}
-                  className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
-                >
-                  <span>[01] SEÇİLMİŞ İŞLER &amp; ARŞİV</span>
-                  <ArrowDownRight className="w-4 h-4 text-primary" />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => navigateTo("#manifesto")}
-                  className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
-                >
-                  <span>[02] MANİFESTO &amp; ZANAAT</span>
-                  <ArrowDownRight className="w-4 h-4 text-primary" />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => navigateTo("#about")}
-                  className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
-                >
-                  <span>[03] ZANAAT &amp; BİYOGRAFİ</span>
-                  <ArrowDownRight className="w-4 h-4 text-primary" />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => navigateTo("#contact")}
-                  className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
-                >
-                  <span>[04] İLETİŞİM &amp; COMMISSIONS</span>
-                  <ArrowDownRight className="w-4 h-4 text-primary" />
-                </button>
-              </nav>
-
-              {/* Mobil Sosyal & Künye Alanı */}
-              <div className="pt-3 border-t border-hairline flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-ink-muted">
-                <div className="flex items-center gap-3">
-                  <a
-                    href="https://github.com/keklikabdullah07"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    GITHUB
-                  </a>
-                  <span>·</span>
-                  <a
-                    href="https://gitlab.com/keklikabdullah07"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    GITLAB
-                  </a>
-                  <span>·</span>
-                  <a
-                    href="https://www.linkedin.com/in/keklikabdullah/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    LINKEDIN
-                  </a>
-                </div>
-                <span className="text-primary font-medium">[OPEN TO WORK]</span>
-              </div>
+          {/* Sağ Kanat: Durum Boncuğu, İletişim & DIRECTORY [04] Tetikleyici */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Canlı Durum Boncuğu (Masaüstü) */}
+            <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface/80 border border-hairline text-[11px] font-mono text-ink-muted">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              <span>OPEN TO COMMISSIONS</span>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+
+            {/* Hızlı İletişim Butonu */}
+            <a
+              href="#contact"
+              className="hidden sm:inline-flex items-center px-4 py-2 rounded-md bg-surface hover:bg-surface-raised border border-hairline text-ink font-mono text-xs uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
+            >
+              <span>İLETİŞİM</span>
+            </a>
+
+            {/* Awwwards Seviyesi: DIRECTORY [04] Heykelsi Tetikleyici */}
+            <button
+              type="button"
+              onClick={() => setDirectoryOpen(true)}
+              className="group flex items-center gap-2.5 px-4 py-2 rounded-md bg-ink text-canvas hover:bg-primary hover:text-primary-contrast transition-all duration-200 active:scale-95 shadow-xs font-mono text-xs tracking-wider uppercase"
+              aria-label="Editoryal dizini aç"
+              aria-expanded={directoryOpen}
+            >
+              <Menu className="w-3.5 h-3.5 group-hover:rotate-90 transition-transform duration-300" />
+              <span>DIRECTORY [04]</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Tam Ekran Editoryal Dizin Perdesi */}
+      <EditorialDirectoryModal
+        isOpen={directoryOpen}
+        onClose={() => setDirectoryOpen(false)}
+        timeString={timeString}
+      />
+    </>
   );
 }
