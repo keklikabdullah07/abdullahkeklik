@@ -79,7 +79,9 @@ export function GrandFinaleContact() {
               ) : (
                 <>
                   <Copy className="w-4 h-4 text-canvas/60" />
-                  <span>ADRESİ KOPYALA ({email})</span>
+                  <span>
+                    ADRESİ KOPYALA <span className="hidden sm:inline">({email})</span>
+                  </span>
                 </>
               )}
             </button>
