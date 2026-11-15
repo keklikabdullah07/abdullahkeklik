@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "@/context/LanguageContext";
 import { initialProjects } from "@/data/projects";
 import type { Project, ProjectSource } from "@/types/project";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -20,6 +21,7 @@ import { EASE_EDITORIAL, RevealOnScroll } from "./MotionWrapper";
 type FilterCategory = "all" | "github" | "gitlab";
 
 export function CuratedWorks() {
+  const { t } = useI18n();
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [selectedFilter, setSelectedFilter] = useState<FilterCategory>("all");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -56,16 +58,15 @@ export function CuratedWorks() {
           <div>
             <div className="flex items-center gap-2 text-xs font-mono text-ink-muted uppercase tracking-widest mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-              <span>SECTION [02] — SELECTED WORKS &amp; REPOSITORIES</span>
+              <span>{t.curatedWorks.sectionBadge}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink font-sans">
-              Seçilmiş Projeler &amp; Git Arşivi
+              {t.curatedWorks.title}
             </h2>
           </div>
 
           <p className="text-sm font-sans text-ink-muted max-w-md leading-relaxed">
-            Nippon Design Center arşiv disiplininde; C#, TypeScript, Rust ve Go ile geliştirilmiş
-            açık kaynak depolar ve kurumsal sistem mimarileri.
+            {t.curatedWorks.subtitle}
           </p>
         </div>
       </RevealOnScroll>
@@ -89,7 +90,7 @@ export function CuratedWorks() {
                 transition={{ duration: 0.35, ease: EASE_EDITORIAL }}
               />
             )}
-            <span className="relative z-10">TÜMÜ</span>
+            <span className="relative z-10">{t.curatedWorks.tabAll}</span>
             <span className="relative z-10 opacity-70">[{String(countAll).padStart(2, "0")}]</span>
           </button>
 
@@ -111,7 +112,9 @@ export function CuratedWorks() {
             )}
             <Github className="w-3.5 h-3.5 relative z-10" />
             <span className="relative z-10">GITHUB</span>
-            <span className="hidden sm:inline relative z-10">/ AÇIK KAYNAK</span>
+            <span className="hidden sm:inline relative z-10">
+              {t.curatedWorks.tabGithub.replace("GITHUB", "")}
+            </span>
             <span className="relative z-10 opacity-80">
               [{String(countGithub).padStart(2, "0")}]
             </span>
@@ -135,7 +138,9 @@ export function CuratedWorks() {
             )}
             <GitBranch className="w-3.5 h-3.5 relative z-10" />
             <span className="relative z-10">GITLAB</span>
-            <span className="hidden sm:inline relative z-10">/ KURUMSAL</span>
+            <span className="hidden sm:inline relative z-10">
+              {t.curatedWorks.tabGitlab.replace("GITLAB", "")}
+            </span>
             <span className="relative z-10 opacity-80">
               [{String(countGitlab).padStart(2, "0")}]
             </span>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "@/context/LanguageContext";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
 import type React from "react";
@@ -7,6 +8,7 @@ import { HeroMedallionVideo } from "./HeroMedallionVideo";
 import { EASE_EDITORIAL } from "./MotionWrapper";
 
 export function EditorialHero() {
+  const { t } = useI18n();
   const shouldReduceMotion = useReducedMotion();
 
   const containerVariants = {
@@ -89,23 +91,19 @@ export function EditorialHero() {
         >
           <div className="md:col-span-7">
             <p className="text-xl sm:text-2xl md:text-3xl font-normal text-ink-body leading-relaxed font-sans">
-              Mezopotamya&apos;nın kadim taş işçiliği ve sakin mimarisini, çağdaş dijital etkileşim
-              mühendisliğiyle buluşturan yaşayan portfolyo.
+              {t.hero.quote}
             </p>
           </div>
 
           <div className="md:col-span-5 flex flex-col justify-between gap-6 md:border-l md:border-hairline md:pl-8">
-            <p className="text-sm text-ink-muted leading-relaxed">
-              Jenerik yapay zeka şablonları yerine; sessiz lüks, cömert negatif alan, saf tipografi
-              ve pürüzsüz eylemsiz kaydırma disiplini.
-            </p>
+            <p className="text-sm text-ink-muted leading-relaxed">{t.hero.description}</p>
 
             <div className="flex items-center gap-4 pt-2">
               <a
                 href="#curated-works"
                 className="inline-flex items-center gap-3 px-6 py-3.5 rounded-md bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-contrast font-mono text-xs uppercase tracking-wider transition-all duration-200 shadow-sm active:translate-y-[1px]"
               >
-                <span>ARŞİVİ KEŞFET</span>
+                <span>{t.hero.exploreCta}</span>
                 <ArrowDownRight className="w-4 h-4" />
               </a>
 
@@ -113,7 +111,7 @@ export function EditorialHero() {
                 href="#contact"
                 className="inline-flex items-center px-6 py-3.5 rounded-md bg-surface hover:bg-surface-raised border border-hairline text-ink font-mono text-xs uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
               >
-                <span>İLETİŞİM</span>
+                <span>{t.hero.contactCta}</span>
               </a>
             </div>
           </div>

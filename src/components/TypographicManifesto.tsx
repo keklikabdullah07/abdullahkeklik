@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "@/context/LanguageContext";
 import { ArrowUpRight, Compass, Cpu, Layers, Sparkles } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
@@ -59,6 +60,7 @@ const disciplines: Discipline[] = [
 ];
 
 export function TypographicManifesto() {
+  const { t } = useI18n();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
@@ -73,23 +75,16 @@ export function TypographicManifesto() {
           <RevealOnScroll>
             <div className="flex items-center gap-2 text-xs font-mono text-ink-muted uppercase tracking-widest mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-amber" />
-              <span>SECTION [03] — ETHOS &amp; CRAFT</span>
+              <span>{t.manifesto.sectionBadge}</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-ink font-sans leading-[1.08]">
-              Bin yıllık taş işçiliği ile modern web kodları.
+              {t.manifesto.title}
             </h2>
 
             <div className="mt-8 space-y-5 text-sm sm:text-base font-sans text-ink-body leading-relaxed">
-              <p>
-                Mezopotamya&apos;nın ilk yazılı taş tabletlerindeki dingin geometriyi; modern web
-                mühendisliği, sıfır-çöp bellek disiplini ve masaüstü sınıfı etkileşimlerle
-                harmanlıyoruz.
-              </p>
-              <p className="text-ink-muted text-sm">
-                Yapay zekanın ürettiği tekdüze mor gradyanlar ve 3 kutucuklu klişeler yerine; sessiz
-                lüks, taktil sıcaklık ve tavizsiz mühendislik kalitesi.
-              </p>
+              <p>{t.manifesto.p1}</p>
+              <p className="text-ink-muted text-sm">{t.manifesto.p2}</p>
             </div>
 
             {/* Künye & Felsefe İmzası */}

@@ -1,49 +1,12 @@
 "use client";
 
+import { useI18n } from "@/context/LanguageContext";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Compass, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 import type React from "react";
 import { useEffect } from "react";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { EASE_EDITORIAL } from "./MotionWrapper";
-
-interface DirectoryItem {
-  number: string;
-  label: string;
-  sublabel: string;
-  anchor: string;
-  meta: string;
-}
-
-const directoryItems: DirectoryItem[] = [
-  {
-    number: "01",
-    label: "SEÇİLMİŞ İŞLER & ARŞİV",
-    sublabel: "Açık kaynak depolar, IoT telemetri ve sistem mimarileri",
-    anchor: "#curated-works",
-    meta: "08 PROJE / GITHUB & GITLAB",
-  },
-  {
-    number: "02",
-    label: "MANİFESTO & ZANAAT",
-    sublabel: "Mezopotamya taş işçiliği ve çağdaş web mühendisliği",
-    anchor: "#manifesto",
-    meta: "04 MÜHENDİSLİK DİSİPLİNİ",
-  },
-  {
-    number: "03",
-    label: "BİYOGRAFİ & KÖKLER",
-    sublabel: "Kınalı Keklik sezgisi, çalışma prensipleri ve zaman çizelgesi",
-    anchor: "#about",
-    meta: "2024 — 2026 KRONOLOJİ",
-  },
-  {
-    number: "04",
-    label: "İLETİŞİM & COMMISSIONS",
-    sublabel: "Yeni projeler, sistem danışmanlığı ve iş birlikleri",
-    anchor: "#contact",
-    meta: "Q1-Q2 2026 AÇIK",
-  },
-];
 
 interface EditorialDirectoryModalProps {
   isOpen: boolean;
@@ -56,6 +19,39 @@ export function EditorialDirectoryModal({
   onClose,
   timeString,
 }: EditorialDirectoryModalProps) {
+  const { t } = useI18n();
+
+  const directoryItems = [
+    {
+      number: "01",
+      label: t.directoryModal.worksLabel,
+      sublabel: t.directoryModal.worksSub,
+      anchor: "#curated-works",
+      meta: t.directoryModal.worksMeta,
+    },
+    {
+      number: "02",
+      label: t.directoryModal.manifestoLabel,
+      sublabel: t.directoryModal.manifestoSub,
+      anchor: "#manifesto",
+      meta: t.directoryModal.manifestoMeta,
+    },
+    {
+      number: "03",
+      label: t.directoryModal.bioLabel,
+      sublabel: t.directoryModal.bioSub,
+      anchor: "#about",
+      meta: t.directoryModal.bioMeta,
+    },
+    {
+      number: "04",
+      label: t.directoryModal.contactLabel,
+      sublabel: t.directoryModal.contactSub,
+      anchor: "#contact",
+      meta: t.directoryModal.contactMeta,
+    },
+  ];
+
   // ESC tuşunu dinle
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -89,7 +85,7 @@ export function EditorialDirectoryModal({
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label="Editoryal Dizin"
+          aria-label={t.directoryModal.title}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -100,7 +96,7 @@ export function EditorialDirectoryModal({
           <div className="flex items-center justify-between border-b border-hairline pb-6 text-xs font-mono uppercase tracking-wider text-ink-muted">
             <div className="flex items-center gap-4">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-ink font-semibold">EDİTORYAL DİZİN / ARCHITECTURAL INDEX</span>
+              <span className="text-ink font-semibold">{t.directoryModal.title}</span>
               <span className="hidden md:inline text-ink-muted">· [FOLIO 2026]</span>
             </div>
 
@@ -110,7 +106,7 @@ export function EditorialDirectoryModal({
               className="group flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface hover:bg-surface-raised border border-hairline text-ink transition-all duration-200 active:scale-95"
             >
               <span className="text-[11px] font-mono tracking-widest text-ink-muted group-hover:text-primary transition-colors">
-                KAPAT [ESC]
+                {t.directoryModal.close}
               </span>
               <div className="w-5 h-5 rounded-full bg-canvas border border-hairline flex items-center justify-center text-ink group-hover:text-primary transition-colors">
                 <X className="w-3 h-3" />
@@ -164,6 +160,14 @@ export function EditorialDirectoryModal({
                 </motion.div>
               ))}
             </div>
+
+            {/* Modal İçi Dil Seçimi */}
+            <div className="mt-12 pt-8 border-t border-hairline/60 flex flex-wrap items-center justify-between gap-4">
+              <span className="text-xs font-mono uppercase tracking-wider text-ink-muted">
+                {t.directoryModal.selectLanguage}:
+              </span>
+              <LanguageSwitcher size="md" />
+            </div>
           </div>
 
           {/* Alt Künye & Canlı Telemetri */}
@@ -171,7 +175,9 @@ export function EditorialDirectoryModal({
             <div className="flex items-center gap-4">
               <span>URFA 37°09&apos;N</span>
               <span>·</span>
-              <span>LOCAL TIME: {timeString} TRT</span>
+              <span>
+                LOCAL TIME: {timeString} {t.header.localTime}
+              </span>
             </div>
 
             <div className="flex items-center gap-6">

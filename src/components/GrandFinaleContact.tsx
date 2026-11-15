@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "@/context/LanguageContext";
 import { ArrowUpRight, Check, Copy, Mail } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
@@ -7,6 +8,7 @@ import { ChukarLogo } from "./ChukarLogo";
 import { RevealOnScroll } from "./MotionWrapper";
 
 export function GrandFinaleContact() {
+  const { t } = useI18n();
   const [copied, setCopied] = useState(false);
   const email = "keklikabdullah07@gmail.com";
 
@@ -33,11 +35,11 @@ export function GrandFinaleContact() {
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-8 text-xs font-mono uppercase tracking-widest text-canvas/60">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span>SECTION [04] — GRAND FINALE &amp; CONTACT</span>
+            <span>{t.contact.sectionBadge}</span>
           </div>
 
           <div className="flex items-center gap-6">
-            <span className="hidden sm:inline">Q1-Q2 2026 FOR NEW COMMISSIONS</span>
+            <span className="hidden sm:inline">{t.contact.statusBadge}</span>
             <span className="text-amber font-medium">[OPEN TO WORK]</span>
           </div>
         </div>
@@ -46,7 +48,7 @@ export function GrandFinaleContact() {
         <RevealOnScroll>
           <div className="my-20 md:my-28">
             <p className="text-sm md:text-base font-mono text-primary uppercase tracking-wider mb-6">
-              BİRLİKTE ÜRETELİM / COMMISSIONS &amp; COLLABORATIONS
+              {t.contact.tagline}
             </p>
 
             <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-canvas leading-[0.95] select-none font-sans">
@@ -64,7 +66,7 @@ export function GrandFinaleContact() {
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-md bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-contrast font-mono text-xs md:text-sm uppercase tracking-wider transition-all duration-200 shadow-md active:translate-y-[1px]"
               >
                 <Mail className="w-4 h-4" />
-                <span>E-POSTA GÖNDER</span>
+                <span>{t.contact.sendEmail}</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
 
@@ -76,13 +78,13 @@ export function GrandFinaleContact() {
                 {copied ? (
                   <>
                     <Check className="w-4 h-4 text-emerald-400" />
-                    <span className="text-emerald-400">ADRES KOPYALANDI!</span>
+                    <span className="text-emerald-400">{t.contact.copied}</span>
                   </>
                 ) : (
                   <>
                     <Copy className="w-4 h-4 text-canvas/60" />
                     <span>
-                      ADRESİ KOPYALA <span className="hidden sm:inline">({email})</span>
+                      {t.contact.copyEmail} <span className="hidden sm:inline">({email})</span>
                     </span>
                   </>
                 )}
@@ -99,10 +101,8 @@ export function GrandFinaleContact() {
               <ChukarLogo size={36} />
             </div>
             <div>
-              <div className="text-canvas font-medium tracking-wide">ABDULLAH KEKLİK STUDIO</div>
-              <div className="text-canvas/50 text-[11px] mt-0.5">
-                37°09&apos;N / 38°47&apos;E — URFA, MESOPOTAMIA
-              </div>
+              <div className="text-canvas font-medium tracking-wide">{t.contact.footerTitle}</div>
+              <div className="text-canvas/50 text-[11px] mt-0.5">{t.contact.footerLoc}</div>
             </div>
           </div>
 
@@ -140,7 +140,7 @@ export function GrandFinaleContact() {
           {/* Sağ: Telif & Mühür */}
           <div className="md:col-span-3 text-left md:text-right text-[11px] text-canvas/40">
             <div>© 2026 ABDULLAH KEKLİK</div>
-            <div className="mt-0.5 text-primary/80 font-medium">CRAFTED WITH ANCIENT PATIENCE</div>
+            <div className="mt-0.5 text-primary/80 font-medium">{t.contact.footerPatience}</div>
           </div>
         </div>
       </div>
