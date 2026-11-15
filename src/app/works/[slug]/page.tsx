@@ -272,7 +272,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
               <div>
                 <span className="text-xs font-mono text-primary uppercase tracking-widest block mb-2">
-                  SIRADAKİ ARŞİV PROJESİ [{nextProjectNumber}/04] →
+                  SIRADAKİ ARŞİV PROJESİ [{nextProjectNumber}/{totalProjects}] →
                 </span>
                 <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink group-hover:text-primary transition-colors font-sans">
                   {nextProject.title}
