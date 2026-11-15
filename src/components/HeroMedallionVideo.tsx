@@ -9,6 +9,7 @@ interface HeroMedallionVideoProps {
 
 export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
   // prefers-reduced-motion kontrolü
@@ -18,6 +19,140 @@ export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) 
       videoRef.current.pause();
       setIsPlaying(false);
     }
+  }, []);
+
+  // Videonun arka planda aktif oynatılması
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.play().catch(() => {});
+    }
+  }, []);
+
+  // WebGL Donanım İvmeli Canlı Yeşil Ekran (Chroma Key) Gölgelendiricisi
+  useEffect(() => {
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+    if (!video || !canvas) return;
+
+    const gl = canvas.getContext("webgl", {
+      alpha: true,
+      premultipliedAlpha: false,
+      antialias: true,
+    });
+
+    if (!gl) return;
+
+    // 1. Vertex Shader (16:9 videonun tam ortasındaki 1080x1080 kareyi çeker)
+    const vsSource = `
+      attribute vec2 a_position;
+      varying vec2 v_texCoord;
+      void main() {
+        gl_Position = vec4(a_position, 0.0, 1.0);
+        vec2 norm = a_position * 0.5 + 0.5;
+        // 16:9 yatay videodan merkez kareyi kırp (420px ofset)
+        float xMin = 0.21875;
+        float xRange = 0.5625;
+        v_texCoord = vec2(xMin + norm.x * xRange, 1.0 - norm.y);
+      }
+    `;
+
+    // 2. Fragment Shader (Yeşil ekranı algılayıp şeffaflaştırır ve kenar yeşilliğini de-spill eder)
+    const fsSource = `
+      precision mediump float;
+      uniform sampler2D u_texture;
+      varying vec2 v_texCoord;
+      void main() {
+        vec4 color = texture2D(u_texture, v_texCoord);
+        float maxRB = max(color.r, color.b);
+        float greenDiff = color.g - maxRB;
+        
+        // Yumuşak kenarlı şeffaflık eşiği
+        float alpha = 1.0 - smoothstep(0.10, 0.24, greenDiff);
+        
+        // Kenarlara vuran yeşil parlamayı temizle (De-spill)
+        if (greenDiff > 0.0) {
+          color.g = maxRB;
+        }
+        
+        gl_FragColor = vec4(color.rgb * alpha, alpha);
+      }
+    `;
+
+    const createShader = (type: number, source: string) => {
+      const shader = gl.createShader(type);
+      if (!shader) return null;
+      gl.shaderSource(shader, source);
+      gl.compileShader(shader);
+      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        gl.deleteShader(shader);
+        return null;
+      }
+      return shader;
+    };
+
+    const vs = createShader(gl.VERTEX_SHADER, vsSource);
+    const fs = createShader(gl.FRAGMENT_SHADER, fsSource);
+    if (!vs || !fs) return;
+
+    const program = gl.createProgram();
+    if (!program) return;
+    gl.attachShader(program, vs);
+    gl.attachShader(program, fs);
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return;
+
+    gl.useProgram(program);
+
+    // Dörtgen (Quad) geometri
+    const positionBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+    gl.bufferData(
+      gl.ARRAY_BUFFER,
+      new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]),
+      gl.STATIC_DRAW,
+    );
+
+    const aPosition = gl.getAttribLocation(program, "a_position");
+    gl.enableVertexAttribArray(aPosition);
+    gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
+
+    // Video Dokusu
+    const texture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+
+    let animationFrameId: number;
+
+    const render = () => {
+      if (video.readyState >= 2) {
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, video);
+        gl.viewport(0, 0, canvas.width, canvas.height);
+        gl.clearColor(0, 0, 0, 0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+      }
+      animationFrameId = requestAnimationFrame(render);
+    };
+
+    render();
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      gl.deleteTexture(texture);
+      gl.deleteProgram(program);
+      gl.deleteShader(vs);
+      gl.deleteShader(fs);
+      gl.deleteBuffer(positionBuffer);
+    };
   }, []);
 
   const togglePlayback = () => {
@@ -33,121 +168,45 @@ export function HeroMedallionVideo({ className = "" }: HeroMedallionVideoProps) 
 
   return (
     <div
-      className={`relative inline-flex flex-col items-center select-none ${className}`}
+      className={`relative inline-flex items-center justify-center select-none ${className}`}
       aria-label="Abdullah Keklik 3D Heykelsi Madalyon Sekansı"
     >
-      {/* Lüks Mimari & Editoryal Muhafaza Kasası (Museum Specimen Housing) */}
-      <div className="relative p-6 sm:p-8 md:p-10 flex items-center justify-center">
-        {/* 1. Dört Köşe Mimari Zanaat Braketleri (L-Brackets) */}
-        <div
-          className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-primary/60 transition-transform duration-500 hover:scale-110"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-primary/60 transition-transform duration-500 hover:scale-110"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-primary/60 transition-transform duration-500 hover:scale-110"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-primary/60 transition-transform duration-500 hover:scale-110"
-          aria-hidden="true"
-        />
+      {/* 
+        Tarayıcının kareleri çözmeyi durdurmaması için 'hidden' değil,
+        ekranda görünmeyen ama aktif kod çözen (hardware decode) katman
+      */}
+      <video
+        ref={videoRef}
+        src="/medallion_portal_green_635683c6.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        tabIndex={-1}
+        className="absolute opacity-0 pointer-events-none -z-50 w-1 h-1 overflow-hidden"
+      />
 
-        {/* 2. Dış Konsantrik Yörünge Kadranı (Dashed Precision Orbit) */}
-        <div
-          className="absolute inset-2 sm:inset-3 md:inset-4 rounded-full border border-dashed border-ink/20 pointer-events-none animate-[spin_80s_linear_infinite]"
-          aria-hidden="true"
+      {/* Şeffaf WebGL Kanvası */}
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={togglePlayback}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            togglePlayback();
+          }
+        }}
+        title="3D madalyon döngüsünü duraklatmak veya oynatmak için tıklayın"
+        className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[420px] xl:h-[420px] group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-transform duration-500 hover:scale-[1.02]"
+      >
+        <canvas
+          ref={canvasRef}
+          width={800}
+          height={800}
+          className="w-full h-full object-contain pointer-events-none drop-shadow-[0_15px_35px_rgba(28,22,19,0.12)]"
         />
-
-        {/* 3. İnce Dairesel Kılavuz Çizgisi */}
-        <div
-          className="absolute inset-5 sm:inset-6 md:inset-7 rounded-full border border-hairline/80 pointer-events-none"
-          aria-hidden="true"
-        />
-
-        {/* 4. Kardinal Pusula Noktaları (Kına / Terracotta Vurgular) */}
-        <div
-          className="absolute top-2 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary shadow-xs"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute bottom-2 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary shadow-xs"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute left-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-xs"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-xs"
-          aria-hidden="true"
-        />
-
-        {/* 5. Üst Editoryal İndeks Rozeti */}
-        <div className="absolute -top-3 left-8 px-3 py-1 rounded bg-surface border border-hairline shadow-xs flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-ink-muted">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />
-          <span>SPECIMEN {"//"} 3D-TOTEM</span>
-        </div>
-
-        {/* 6. Ana Madalyon Gövdesi & Çift Katmanlı Zanaat Bezel Çerçevesi */}
-        <div
-          role="button"
-          tabIndex={0}
-          onClick={togglePlayback}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              togglePlayback();
-            }
-          }}
-          title="3D madalyon döngüsünü duraklatmak veya oynatmak için tıklayın"
-          className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[420px] xl:h-[420px] rounded-full p-2.5 md:p-3 bg-surface/90 border border-hairline ring-1 ring-primary/40 shadow-[0_25px_60px_-15px_rgba(28,22,19,0.2)] hover:shadow-[0_30px_70px_-10px_rgba(200,83,43,0.3)] transition-all duration-500 group cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-primary"
-        >
-          {/* İç Donanım İvmeli Video Maskesi: Taşma Yapmayan Sıfır Hata Daire */}
-          <div
-            className="relative w-full h-full rounded-full overflow-hidden bg-canvas-alt shadow-inner"
-            style={{
-              WebkitMaskImage: "-webkit-radial-gradient(white, black)",
-              maskImage: "radial-gradient(circle, white 100%, transparent 100%)",
-              transform: "translateZ(0)",
-              isolation: "isolate",
-            }}
-          >
-            <video
-              ref={videoRef}
-              src="/3D_medallion_animation_sequence_1ec22850_1080p.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              tabIndex={-1}
-              className="w-full h-full object-cover scale-[1.05] select-none pointer-events-none group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
-            />
-
-            {/* Zanaat Cam & Işık Kırılması Katmanı */}
-            <div
-              className="absolute inset-0 rounded-full pointer-events-none bg-gradient-to-tr from-primary/10 via-transparent to-amber/15 opacity-40 mix-blend-overlay group-hover:opacity-70 transition-opacity duration-300"
-              aria-hidden="true"
-            />
-          </div>
-
-          {/* Canlılık ve Durum Rozeti */}
-          <div
-            className={`absolute bottom-3 right-3 md:bottom-5 md:right-5 w-4 h-4 md:w-5 md:h-5 rounded-full border-2 border-canvas shadow-md transition-colors duration-300 ${
-              isPlaying ? "bg-amber" : "bg-ink-muted"
-            }`}
-            title={isPlaying ? "Canlı 3D Döngü Aktif" : "Duraklatıldı"}
-          />
-        </div>
-
-        {/* 7. Alt Teknik Koordinat Rozeti */}
-        <div className="absolute -bottom-3 right-8 px-3 py-1 rounded bg-surface border border-hairline shadow-xs text-[10px] font-mono text-ink-muted tracking-wider">
-          <span className="text-primary font-medium">360° DYNAMIC</span> {"//"} URFA 37°09&apos;N
-        </div>
       </div>
     </div>
   );
