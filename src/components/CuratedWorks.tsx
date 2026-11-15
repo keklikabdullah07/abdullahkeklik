@@ -83,28 +83,30 @@ export function CuratedWorks() {
         <button
           type="button"
           onClick={() => setSelectedFilter("github")}
-          className={`px-4 py-2 rounded-md font-mono text-xs uppercase tracking-wider transition-all duration-200 flex items-center gap-2 ${
+          className={`px-3 sm:px-4 py-2 rounded-md font-mono text-xs uppercase tracking-wider transition-all duration-200 flex items-center gap-2 ${
             selectedFilter === "github"
               ? "bg-primary text-primary-contrast font-semibold shadow-xs"
               : "bg-surface hover:bg-surface-raised text-ink-muted hover:text-ink border border-hairline"
           }`}
         >
           <Github className="w-3.5 h-3.5" />
-          <span>AÇIK KAYNAK / GITHUB</span>
+          <span>GITHUB</span>
+          <span className="hidden sm:inline">/ AÇIK KAYNAK</span>
           <span className="opacity-70">[{String(countGithub).padStart(2, "0")}]</span>
         </button>
 
         <button
           type="button"
           onClick={() => setSelectedFilter("gitlab")}
-          className={`px-4 py-2 rounded-md font-mono text-xs uppercase tracking-wider transition-all duration-200 flex items-center gap-2 ${
+          className={`px-3 sm:px-4 py-2 rounded-md font-mono text-xs uppercase tracking-wider transition-all duration-200 flex items-center gap-2 ${
             selectedFilter === "gitlab"
               ? "bg-amber text-canvas font-semibold shadow-xs"
               : "bg-surface hover:bg-surface-raised text-ink-muted hover:text-ink border border-hairline"
           }`}
         >
           <GitBranch className="w-3.5 h-3.5" />
-          <span>KURUMSAL ALTYAPI</span>
+          <span>GITLAB</span>
+          <span className="hidden sm:inline">/ KURUMSAL</span>
           <span className="opacity-70">[{String(countGitlab).padStart(2, "0")}]</span>
         </button>
       </div>
