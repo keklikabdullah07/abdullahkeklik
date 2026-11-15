@@ -1,8 +1,8 @@
 "use client";
 
 import { Award, Check, Compass, Cpu, Feather, History, Shield, Sparkles } from "lucide-react";
+import Image from "next/image";
 import React from "react";
-import { ChukarLogo } from "./ChukarLogo";
 
 interface Principle {
   number: string;
@@ -100,15 +100,40 @@ export function EditorialBio() {
       <div className="py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start border-b border-hairline">
         {/* Sol: Büyük Alıntı & Amblem */}
         <div className="lg:col-span-5 space-y-8">
-          <div className="p-4 rounded-xl bg-surface border border-hairline inline-flex items-center gap-3">
-            <ChukarLogo size={36} />
-            <div>
-              <span className="text-xs font-mono uppercase tracking-wider text-ink font-semibold block">
-                MEZOPOTAMYA KİMLİĞİ
-              </span>
-              <span className="text-[11px] font-mono text-ink-muted">
-                37°09&apos;N · NAHİT TAŞI DİSİPLİNİ
-              </span>
+          {/* Müze Kalitesinde Zanaat Plaketi & Lüks Kınalı Keklik Amblemi */}
+          <div className="p-6 rounded-2xl bg-surface border border-hairline shadow-warm flex flex-col sm:flex-row items-center sm:items-start gap-6 group hover:border-primary/50 transition-all duration-300">
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 rounded-xl overflow-hidden bg-canvas border border-hairline/80 shadow-md ring-1 ring-primary/20 group-hover:ring-primary/60 transition-all duration-500">
+              <Image
+                src="/chukar_partridge_luxury_emblem.jpg"
+                alt="Kınalı Keklik (Chukar Partridge) Lüks Zanaat Amblemi"
+                fill
+                sizes="(max-width: 640px) 112px, 128px"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-amber/10 pointer-events-none"
+                aria-hidden="true"
+              />
+            </div>
+
+            <div className="flex flex-col justify-between h-full py-1 text-center sm:text-left">
+              <div>
+                <div className="flex items-center justify-center sm:justify-start gap-2 text-[10px] font-mono text-primary uppercase tracking-widest mb-1.5 font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  <span>SPECIMEN [01] · KINALI KEKLİK TOTEMİ</span>
+                </div>
+                <h3 className="text-lg font-bold text-ink font-sans">Mezopotamya Kültürel Mührü</h3>
+                <p className="text-xs font-sans text-ink-muted mt-1 leading-relaxed">
+                  Urfa Nahit taşı oymacılığı ve antik güneş kadranlarından ilham alan heykelsi marka
+                  totemi.
+                </p>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-hairline/60 flex items-center justify-center sm:justify-start gap-3 text-[11px] font-mono text-ink-muted">
+                <span>37°09&apos;N</span>
+                <span className="inline-block w-1 h-1 rounded-full bg-hairline" />
+                <span>NAHİT TAŞI &amp; BRONZ</span>
+              </div>
             </div>
           </div>
 

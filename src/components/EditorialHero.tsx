@@ -2,6 +2,7 @@
 
 import { ArrowDownRight } from "lucide-react";
 import type React from "react";
+import { HeroMedallionVideo } from "./HeroMedallionVideo";
 
 export function EditorialHero() {
   return (
@@ -20,16 +21,22 @@ export function EditorialHero() {
         </div>
       </div>
 
-      {/* Ana Heykelsi Tipografi Alanı */}
+      {/* Ana Heykelsi Tipografi ve 3D Madalyon Alanı */}
       <div className="my-16 md:my-24">
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-ink leading-[0.92] select-none">
-          ABDULLAH
-          <br />
-          <span className="inline-block relative">
-            KEKLİK
-            <span className="inline-block w-4 h-4 md:w-6 md:h-6 rounded-full bg-primary ml-3 md:ml-6 align-baseline" />
-          </span>
-        </h1>
+        <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10 lg:gap-16">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-ink leading-[0.92] select-none text-left w-full lg:w-auto">
+            ABDULLAH
+            <br />
+            <span className="inline-block relative">
+              KEKLİK
+              <span className="inline-block w-4 h-4 md:w-6 md:h-6 rounded-full bg-primary ml-3 md:ml-6 align-baseline" />
+            </span>
+          </h1>
+
+          <div className="flex-shrink-0 flex items-center justify-center">
+            <HeroMedallionVideo />
+          </div>
+        </div>
 
         {/* Editoryal Manifesto & Zanaat Açıklaması */}
         <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">

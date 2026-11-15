@@ -7,7 +7,7 @@ import { ChukarLogo } from "./ChukarLogo";
 
 export function GrandFinaleContact() {
   const [copied, setCopied] = useState(false);
-  const email = "contact@abdullahkeklik.dev";
+  const email = "keklikabdullah07@gmail.com";
 
   const handleCopyEmail = async () => {
     try {
@@ -104,7 +104,7 @@ export function GrandFinaleContact() {
           {/* Orta: Ağ Bağlantıları */}
           <div className="md:col-span-4 flex flex-wrap gap-4 sm:gap-6 uppercase">
             <a
-              href="https://github.com"
+              href="https://github.com/keklikabdullah07"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors flex items-center gap-1"
@@ -113,21 +113,21 @@ export function GrandFinaleContact() {
               <ArrowUpRight className="w-3 h-3 opacity-60" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://gitlab.com/keklikabdullah07"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors flex items-center gap-1"
+            >
+              <span>GITLAB</span>
+              <ArrowUpRight className="w-3 h-3 opacity-60" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/keklikabdullah/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors flex items-center gap-1"
             >
               <span>LINKEDIN</span>
-              <ArrowUpRight className="w-3 h-3 opacity-60" />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors flex items-center gap-1"
-            >
-              <span>X (TWITTER)</span>
               <ArrowUpRight className="w-3 h-3 opacity-60" />
             </a>
           </div>
