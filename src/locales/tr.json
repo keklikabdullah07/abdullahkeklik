@@ -1,0 +1,79 @@
+{
+  "header": {
+    "discipline": "CREATIVE TECH & SYSTEMS",
+    "openToWork": "OPEN TO COMMISSIONS",
+    "contact": "İLETİŞİM",
+    "directory": "DIRECTORY [04]",
+    "localTime": "TRT",
+    "location": "URFA, MESOPOTAMIA"
+  },
+  "directoryModal": {
+    "title": "EDİTORYAL DİZİN / ARCHITECTURAL INDEX",
+    "close": "KAPAT [ESC]",
+    "worksLabel": "SEÇİLMİŞ İŞLER & ARŞİV",
+    "worksSub": "Açık kaynak depolar, IoT telemetri ve sistem mimarileri",
+    "worksMeta": "08 PROJE / GITHUB & GITLAB",
+    "manifestoLabel": "MANİFESTO & ZANAAT",
+    "manifestoSub": "Mezopotamya taş işçiliği ve çağdaş web mühendisliği",
+    "manifestoMeta": "04 MÜHENDİSLİK DİSİPLİNİ",
+    "bioLabel": "BİYOGRAFİ & KÖKLER",
+    "bioSub": "Kınalı Keklik sezgisi, çalışma prensipleri ve zaman çizelgesi",
+    "bioMeta": "2024 — 2026 KRONOLOJİ",
+    "contactLabel": "İLETİŞİM & COMMISSIONS",
+    "contactSub": "Yeni projeler, sistem danışmanlığı ve iş birlikleri",
+    "contactMeta": "Q1-Q2 2026 AÇIK",
+    "selectLanguage": "DİL SEÇİMİ / LANGUAGE"
+  },
+  "hero": {
+    "quote": "Mezopotamya'nın kadim taş işçiliği ve sakin mimarisini, çağdaş dijital etkileşim mühendisliğiyle buluşturan yaşayan portfolyo.",
+    "description": "Jenerik yapay zeka şablonları yerine; sessiz lüks, cömert negatif alan, saf tipografi ve pürüzsüz eylemsiz kaydırma disiplini.",
+    "exploreCta": "ARŞİVİ KEŞFET",
+    "contactCta": "İLETİŞİM"
+  },
+  "curatedWorks": {
+    "sectionBadge": "SECTION [02] — SELECTED WORKS & REPOSITORIES",
+    "title": "Seçilmiş Projeler & Git Arşivi",
+    "subtitle": "Nippon Design Center arşiv disiplininde; C#, TypeScript, Rust ve Go ile geliştirilmiş açık kaynak depolar ve kurumsal sistem mimarileri.",
+    "tabAll": "TÜMÜ",
+    "tabGithub": "GITHUB / AÇIK KAYNAK",
+    "tabGitlab": "GITLAB / KURUMSAL",
+    "caseStudyTitle": "Detaylı Vaka İncelemesi"
+  },
+  "manifesto": {
+    "sectionBadge": "SECTION [03] — ETHOS & CRAFT",
+    "title": "Bin yıllık taş işçiliği ile modern web kodları.",
+    "p1": "Mezopotamya'nın ilk yazılı taş tabletlerindeki dingin geometriyi; modern web mühendisliği, sıfır-çöp bellek disiplini ve masaüstü sınıfı etkileşimlerle harmanlıyoruz.",
+    "p2": "Yapay zekanın ürettiği tekdüze mor gradyanlar ve 3 kutucuklu klişeler yerine; sessiz lüks, taktil sıcaklık ve tavizsiz mühendislik kalitesi."
+  },
+  "bio": {
+    "sectionBadge": "SECTION [03] — BIOGRAPHY & ETHOS",
+    "title1": "Zanaat, Kökler &",
+    "title2": "İki Dünyanın Kesişimi",
+    "subtitle": "Kod yazabilen bir tasarımcı. Tipografik sezgisi ve görsel estetik gözü olan bir sistem mühendisi.",
+    "specimenLabel": "SPECIMEN [01] · KINALI KEKLİK TOTEMİ",
+    "totemTitle": "Mezopotamya Kültürel Mührü",
+    "totemDesc": "Urfa Nahit taşı oymacılığı ve antik güneş kadranlarından ilham alan heykelsi marka totemi.",
+    "totemMeta": "NAHİT TAŞI & BRONZ",
+    "quote": "Tasarım fazlalıklardan arınmaktır. Urfa'nın kadim taş duvarları bize tek bir şeyi öğretir:",
+    "quoteHighlight": "Yalnızca zamana direnen şeyler kalıcıdır.",
+    "chukarLabel": "Kınalı Keklik (Chukar Partridge) Sezgisi",
+    "narrativeP1": "Dijital dünyada çoğu ürün iki kutuptan birine sıkışır: Ya estetiği büyüleyici fakat arka planda çöken, erişilemez ve yavaş web siteleri; ya da kaya gibi çalışan ancak ruhu, tipografik zarafeti ve duygusu olmayan soğuk yazılımlar.",
+    "narrativeP2": "Ben bu iki kutup arasındaki yapay duvarı reddediyorum. Tasarımı bir mühendis gibi deterministik, performans ve erişilebilirlik sınırlarıyla kurarken; sistem mühendisliğini bir zanaatkâr gibi ritim, mikro-etkileşim ve taktil hislerle ele alıyorum.",
+    "narrativeFocus": "[ ODAK ALANLARI: CREATIVE FRONTEND · HIGH-THROUGHPUT BACKEND · RADIX / TAILWIND DESIGN SYSTEMS · WASM ]",
+    "principlesBadge": "ÇALIŞMA PRENSİPLERİ",
+    "principlesTitle": "Mühendislik ve Estetik Anayasası",
+    "timelineBadge": "ZAMAN ÇİZELGESİ",
+    "timelineTitle": "Seçilmiş Kilometre Taşları"
+  },
+  "contact": {
+    "sectionBadge": "SECTION [04] — GRAND FINALE & CONTACT",
+    "statusBadge": "Q1-Q2 2026 FOR NEW COMMISSIONS",
+    "tagline": "BİRLİKTE ÜRETELİM / COMMISSIONS & COLLABORATIONS",
+    "sendEmail": "E-POSTA GÖNDER",
+    "copyEmail": "ADRESİ KOPYALA",
+    "copied": "ADRES KOPYALANDI!",
+    "footerTitle": "ABDULLAH KEKLİK STUDIO",
+    "footerLoc": "37°09'N / 38°47'E — URFA, MESOPOTAMIA",
+    "footerPatience": "CRAFTED WITH ANCIENT PATIENCE"
+  }
+}

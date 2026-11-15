@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "@/context/LanguageContext";
 import { Award, Check, Compass, Cpu, Feather, History, Shield, Sparkles } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -72,6 +73,8 @@ const milestones: Milestone[] = [
 ];
 
 export function EditorialBio() {
+  const { t } = useI18n();
+
   return (
     <section
       id="about"
@@ -83,18 +86,17 @@ export function EditorialBio() {
           <div>
             <div className="flex items-center gap-2 text-xs font-mono text-ink-muted uppercase tracking-widest mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-amber" />
-              <span>SECTION [03] — BIOGRAPHY &amp; ETHOS</span>
+              <span>{t.bio.sectionBadge}</span>
             </div>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ink font-sans leading-[1.05]">
-              Zanaat, Kökler &amp;
+              {t.bio.title1}
               <br />
-              <span className="text-ink-body font-light">İki Dünyanın Kesişimi</span>
+              <span className="text-ink-body font-light">{t.bio.title2}</span>
             </h2>
           </div>
 
           <p className="text-sm font-sans text-ink-muted max-w-md leading-relaxed">
-            Kod yazabilen bir tasarımcı. Tipografik sezgisi ve görsel estetik gözü olan bir sistem
-            mühendisi.
+            {t.bio.subtitle}
           </p>
         </div>
       </RevealOnScroll>
@@ -124,56 +126,40 @@ export function EditorialBio() {
                 <div>
                   <div className="flex items-center justify-center sm:justify-start gap-2 text-[10px] font-mono text-primary uppercase tracking-widest mb-1.5 font-semibold">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                    <span>SPECIMEN [01] · KINALI KEKLİK TOTEMİ</span>
+                    <span>{t.bio.specimenLabel}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-ink font-sans">
-                    Mezopotamya Kültürel Mührü
-                  </h3>
+                  <h3 className="text-lg font-bold text-ink font-sans">{t.bio.totemTitle}</h3>
                   <p className="text-xs font-sans text-ink-muted mt-1 leading-relaxed">
-                    Urfa Nahit taşı oymacılığı ve antik güneş kadranlarından ilham alan heykelsi
-                    marka totemi.
+                    {t.bio.totemDesc}
                   </p>
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-hairline/60 flex items-center justify-center sm:justify-start gap-3 text-[11px] font-mono text-ink-muted">
                   <span>37°09&apos;N</span>
                   <span className="inline-block w-1 h-1 rounded-full bg-hairline" />
-                  <span>NAHİT TAŞI &amp; BRONZ</span>
+                  <span>{t.bio.totemMeta}</span>
                 </div>
               </div>
             </div>
 
             <blockquote className="text-2xl sm:text-3xl font-light text-ink font-sans leading-snug">
-              &ldquo;Tasarım fazlalıklardan arınmaktır. Urfa&apos;nın kadim taş duvarları bize tek
-              bir şeyi öğretir:{" "}
-              <span className="font-semibold text-primary">
-                Yalnızca zamana direnen şeyler kalıcıdır.
-              </span>
+              &ldquo;{t.bio.quote}{" "}
+              <span className="font-semibold text-primary">{t.bio.quoteHighlight}</span>
               &rdquo;
             </blockquote>
 
             <div className="flex items-center gap-4 text-xs font-mono text-ink-muted pt-2">
               <span className="inline-block w-2 h-2 rounded-full bg-primary" />
-              <span>Kınalı Keklik (Chukar Partridge) Sezgisi</span>
+              <span>{t.bio.chukarLabel}</span>
             </div>
           </div>
 
           {/* Sağ: Biyografik Anlatı */}
           <div className="lg:col-span-7 space-y-6 text-base sm:text-lg text-ink-body font-sans leading-relaxed">
-            <p>
-              Dijital dünyada çoğu ürün iki kutuptan birine sıkışır: Ya estetiği büyüleyici fakat
-              arka planda çöken, erişilemez ve yavaş web siteleri; ya da kaya gibi çalışan ancak
-              ruhu, tipografik zarafeti ve duygusu olmayan soğuk yazılımlar.
-            </p>
-            <p>
-              Ben bu iki kutup arasındaki yapay duvarı reddediyorum. Tasarımı bir mühendis gibi
-              deterministik, performans ve erişilebilirlik sınırlarıyla kurarken; sistem
-              mühendisliğini bir zanaatkâr gibi ritim, mikro-etkileşim ve taktil hislerle ele
-              alıyorum.
-            </p>
+            <p>{t.bio.narrativeP1}</p>
+            <p>{t.bio.narrativeP2}</p>
             <p className="text-sm font-mono text-ink-muted pt-4 border-t border-hairline/60">
-              [ ODAK ALANLARI: CREATIVE FRONTEND · HIGH-THROUGHPUT BACKEND · RADIX / TAILWIND DESIGN
-              SYSTEMS · WASM ]
+              {t.bio.narrativeFocus}
             </p>
           </div>
         </div>
@@ -185,10 +171,10 @@ export function EditorialBio() {
           <div className="flex items-center justify-between gap-4 mb-12">
             <div>
               <span className="text-xs font-mono text-primary uppercase tracking-widest block mb-2">
-                ÇALIŞMA PRENSİPLERİ
+                {t.bio.principlesBadge}
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-ink font-sans">
-                Mühendislik ve Estetik Anayasası
+                {t.bio.principlesTitle}
               </h3>
             </div>
             <span className="hidden sm:inline text-xs font-mono text-ink-muted">
@@ -237,10 +223,10 @@ export function EditorialBio() {
           <div className="flex items-center justify-between gap-4 mb-12">
             <div>
               <span className="text-xs font-mono text-amber uppercase tracking-widest block mb-2">
-                ZAMAN ÇİZELGESİ
+                {t.bio.timelineBadge}
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-ink font-sans">
-                Seçilmiş Kilometre Taşları
+                {t.bio.timelineTitle}
               </h3>
             </div>
             <span className="text-xs font-mono text-ink-muted">[ 2024 — 2026 ]</span>
