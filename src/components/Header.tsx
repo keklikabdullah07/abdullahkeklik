@@ -1,8 +1,10 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowDownRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { InteractiveMedallion } from "./InteractiveMedallion";
+import { EASE_EDITORIAL } from "./MotionWrapper";
 
 export function Header() {
   const [timeString, setTimeString] = useState<string>("17:47");
@@ -109,84 +111,92 @@ export function Header() {
       </div>
 
       {/* Mobil Editoryal Dizin Perdesi */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t border-hairline bg-canvas/98 backdrop-blur-xl px-6 py-8 transition-all animate-in fade-in slide-in-from-top-2 duration-200">
-          <div className="flex flex-col gap-6">
-            <div className="text-[11px] font-mono text-ink-muted uppercase tracking-widest border-b border-hairline pb-2 flex items-center justify-between">
-              <span>EDİTORYAL DİZİN / DIRECTORY</span>
-              <span className="text-primary font-medium">INDEX 2026</span>
-            </div>
-
-            <nav className="flex flex-col gap-3 text-sm font-mono">
-              <button
-                type="button"
-                onClick={() => navigateTo("#curated-works")}
-                className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
-              >
-                <span>[01] SEÇİLMİŞ İŞLER &amp; ARŞİV</span>
-                <ArrowDownRight className="w-4 h-4 text-primary" />
-              </button>
-              <button
-                type="button"
-                onClick={() => navigateTo("#manifesto")}
-                className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
-              >
-                <span>[02] MANİFESTO &amp; ZANAAT</span>
-                <ArrowDownRight className="w-4 h-4 text-primary" />
-              </button>
-              <button
-                type="button"
-                onClick={() => navigateTo("#about")}
-                className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
-              >
-                <span>[03] ZANAAT &amp; BİYOGRAFİ</span>
-                <ArrowDownRight className="w-4 h-4 text-primary" />
-              </button>
-              <button
-                type="button"
-                onClick={() => navigateTo("#contact")}
-                className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
-              >
-                <span>[04] İLETİŞİM &amp; COMMISSIONS</span>
-                <ArrowDownRight className="w-4 h-4 text-primary" />
-              </button>
-            </nav>
-
-            {/* Mobil Sosyal & Künye Alanı */}
-            <div className="pt-3 border-t border-hairline flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-ink-muted">
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://github.com/keklikabdullah07"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  GITHUB
-                </a>
-                <span>·</span>
-                <a
-                  href="https://gitlab.com/keklikabdullah07"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  GITLAB
-                </a>
-                <span>·</span>
-                <a
-                  href="https://www.linkedin.com/in/keklikabdullah/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  LINKEDIN
-                </a>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.35, ease: EASE_EDITORIAL }}
+            className="md:hidden border-t border-hairline bg-canvas/98 backdrop-blur-xl px-6 py-8 overflow-hidden"
+          >
+            <div className="flex flex-col gap-6">
+              <div className="text-[11px] font-mono text-ink-muted uppercase tracking-widest border-b border-hairline pb-2 flex items-center justify-between">
+                <span>EDİTORYAL DİZİN / DIRECTORY</span>
+                <span className="text-primary font-medium">INDEX 2026</span>
               </div>
-              <span className="text-primary font-medium">[OPEN TO WORK]</span>
+
+              <nav className="flex flex-col gap-3 text-sm font-mono">
+                <button
+                  type="button"
+                  onClick={() => navigateTo("#curated-works")}
+                  className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
+                >
+                  <span>[01] SEÇİLMİŞ İŞLER &amp; ARŞİV</span>
+                  <ArrowDownRight className="w-4 h-4 text-primary" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => navigateTo("#manifesto")}
+                  className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
+                >
+                  <span>[02] MANİFESTO &amp; ZANAAT</span>
+                  <ArrowDownRight className="w-4 h-4 text-primary" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => navigateTo("#about")}
+                  className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
+                >
+                  <span>[03] ZANAAT &amp; BİYOGRAFİ</span>
+                  <ArrowDownRight className="w-4 h-4 text-primary" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => navigateTo("#contact")}
+                  className="w-full flex items-center justify-between text-ink hover:text-primary transition-colors py-2.5 border-b border-hairline/40 active:translate-x-1 text-left"
+                >
+                  <span>[04] İLETİŞİM &amp; COMMISSIONS</span>
+                  <ArrowDownRight className="w-4 h-4 text-primary" />
+                </button>
+              </nav>
+
+              {/* Mobil Sosyal & Künye Alanı */}
+              <div className="pt-3 border-t border-hairline flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-ink-muted">
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://github.com/keklikabdullah07"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    GITHUB
+                  </a>
+                  <span>·</span>
+                  <a
+                    href="https://gitlab.com/keklikabdullah07"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    GITLAB
+                  </a>
+                  <span>·</span>
+                  <a
+                    href="https://www.linkedin.com/in/keklikabdullah/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    LINKEDIN
+                  </a>
+                </div>
+                <span className="text-primary font-medium">[OPEN TO WORK]</span>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
