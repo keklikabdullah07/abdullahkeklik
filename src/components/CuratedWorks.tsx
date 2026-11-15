@@ -54,7 +54,7 @@ export function CuratedWorks() {
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             <span>SECTION [02] — SELECTED WORKS &amp; REPOSITORIES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink font-syne">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink font-sans">
             Seçilmiş Projeler &amp; Git Arşivi
           </h2>
         </div>

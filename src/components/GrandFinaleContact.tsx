@@ -47,7 +47,7 @@ export function GrandFinaleContact() {
             BİRLİKTE ÜRETELİM / COMMISSIONS &amp; COLLABORATIONS
           </p>
 
-          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-canvas leading-[0.95] select-none font-syne">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-canvas leading-[0.95] select-none font-sans">
             LET&apos;S CRAFT
             <br />
             <span className="text-canvas/40 hover:text-primary transition-colors duration-300">

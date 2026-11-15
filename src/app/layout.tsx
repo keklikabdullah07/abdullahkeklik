@@ -20,25 +20,30 @@ const cormorant = localFont({
   display: "swap",
 });
 
-const syne = localFont({
+const inter = localFont({
   src: [
     {
-      path: "../../public/fonts/Syne-SemiBold.ttf",
+      path: "../../public/fonts/Inter-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Inter-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Inter-SemiBold.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Syne-Bold.ttf",
+      path: "../../public/fonts/Inter-Bold.ttf",
       weight: "700",
       style: "normal",
     },
-    {
-      path: "../../public/fonts/Syne-ExtraBold.ttf",
-      weight: "800",
-      style: "normal",
-    },
   ],
-  variable: "--font-syne",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -59,8 +64,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className={`${cormorant.variable} ${syne.variable}`}>
-      <body className="antialiased">
+    <html lang="tr" className={`${inter.variable} ${cormorant.variable}`}>
+      <body className="antialiased font-sans">
         <SmoothScrollProvider>
           <a
             href="#main-content"
