@@ -2,9 +2,9 @@
 
 import { useI18n } from "@/context/LanguageContext";
 import { ArrowUpRight, Check, Copy, Mail } from "lucide-react";
+import Image from "next/image";
 import type React from "react";
 import { useState } from "react";
-import { ChukarLogo } from "./ChukarLogo";
 import { RevealOnScroll } from "./MotionWrapper";
 
 export function GrandFinaleContact() {
@@ -95,10 +95,17 @@ export function GrandFinaleContact() {
 
         {/* Alt Künye, Kınalı Keklik Mührü & Ağ Bağlantıları */}
         <div className="pt-12 border-t border-white/10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end text-xs font-mono text-canvas/60">
-          {/* Sol: Kınalı Keklik Amblemi & Konum */}
+          {/* Sol: Beyaz AK Monogramı & Stüdyo Künyesi */}
           <div className="md:col-span-5 flex items-center gap-4">
-            <div className="p-2.5 rounded-lg bg-white/5 border border-white/10">
-              <ChukarLogo size={36} />
+            <div className="relative h-10 w-[60px] sm:h-12 sm:w-[72px] shrink-0 flex items-center justify-center">
+              <Image
+                src="/logo-monogram.png"
+                alt="Abdullah Keklik Beyaz AK Monogramı"
+                width={72}
+                height={48}
+                className="object-contain w-full h-full filter drop-shadow-[0_2px_12px_rgba(255,255,255,0.18)]"
+                unoptimized
+              />
             </div>
             <div>
               <div className="text-canvas font-medium tracking-wide">{t.contact.footerTitle}</div>

@@ -1,4 +1,3 @@
-import { ChukarLogo } from "@/components/ChukarLogo";
 import { initialProjects } from "@/data/projects";
 import {
   ArrowLeft,
@@ -8,6 +7,7 @@ import {
   Github,
   Sparkles,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -59,10 +59,19 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </span>
             <Link
               href="/"
-              className="p-2 rounded-lg bg-surface border border-hairline/60 hover:border-primary transition-colors flex items-center justify-center"
+              className="group flex items-center gap-2.5 text-ink hover:text-primary transition-colors"
               aria-label="Ana sayfaya dön"
             >
-              <ChukarLogo size={28} />
+              <div className="relative h-8 w-[49px] shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/logo-monogram-ar.png"
+                  alt="Abdullah Keklik AR Monogramı"
+                  width={49}
+                  height={32}
+                  className="object-contain w-full h-full filter drop-shadow-[0_2px_8px_rgba(200,83,43,0.15)]"
+                  unoptimized
+                />
+              </div>
             </Link>
           </div>
         </div>

@@ -1,5 +1,5 @@
-import { ChukarLogo } from "@/components/ChukarLogo";
 import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function WorkNotFound() {
@@ -7,8 +7,14 @@ export default function WorkNotFound() {
     <main className="min-h-screen bg-canvas text-ink flex flex-col items-center justify-center px-6 py-24 selection:bg-primary selection:text-primary-contrast">
       <div className="max-w-md w-full text-center space-y-8 p-8 sm:p-12 rounded-2xl bg-surface border border-hairline shadow-warm">
         <div className="flex justify-center">
-          <div className="p-3 rounded-xl bg-canvas border border-hairline">
-            <ChukarLogo size={40} />
+          <div className="relative w-16 h-16 rounded-full overflow-hidden border border-hairline/80 shadow-md">
+            <Image
+              src="/chukar_partridge_luxury_emblem.jpg"
+              alt="Partridge Madalyon Arması"
+              fill
+              className="object-cover"
+              unoptimized
+            />
           </div>
         </div>
 
