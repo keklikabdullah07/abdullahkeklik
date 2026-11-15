@@ -7,7 +7,7 @@ import { ChukarLogo } from "./ChukarLogo";
 
 export function GrandFinaleContact() {
   const [copied, setCopied] = useState(false);
-  const email = "contact@abdullahkeklik.dev";
+  const email = "keklikabdullah07@gmail.com";
 
   const handleCopyEmail = async () => {
     try {
