@@ -2,6 +2,7 @@
 
 import { useI18n } from "@/context/LanguageContext";
 import { Compass, Menu, Sparkles } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { EditorialDirectoryModal } from "./EditorialDirectoryModal";
@@ -36,12 +37,25 @@ export function Header() {
           <div className="flex items-center gap-3 sm:gap-4">
             <Link
               href="/"
-              className="group flex items-baseline gap-2 text-ink hover:text-primary transition-colors"
+              className="group flex items-center gap-2.5 sm:gap-3 text-ink hover:text-primary transition-colors"
             >
-              <span className="font-bold text-base md:text-lg tracking-tight font-sans">
-                ABDULLAH KEKLİK
-              </span>
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary" />
+              <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-lg overflow-hidden shrink-0 border border-hairline/80 bg-surface flex items-center justify-center p-0.5 group-hover:border-primary/50 group-hover:ring-1 group-hover:ring-primary/20 transition-all duration-300">
+                <Image
+                  src="/partridgelogo.png"
+                  alt="Abdullah Keklik Marka Logosu"
+                  width={32}
+                  height={32}
+                  className="object-contain w-full h-full"
+                  priority
+                />
+              </div>
+
+              <div className="flex items-baseline gap-2">
+                <span className="font-bold text-base md:text-lg tracking-tight font-sans">
+                  ABDULLAH KEKLİK
+                </span>
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary" />
+              </div>
             </Link>
 
             <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded bg-surface border border-hairline text-[10px] font-mono text-ink-muted uppercase tracking-wider">
