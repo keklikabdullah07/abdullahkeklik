@@ -34,6 +34,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   const project = initialProjects[projectIndex];
   const nextProject = initialProjects[(projectIndex + 1) % initialProjects.length];
   const projectNumber = String(projectIndex + 1).padStart(2, "0");
+  const totalProjects = String(initialProjects.length).padStart(2, "0");
   const nextProjectNumber = String(((projectIndex + 1) % initialProjects.length) + 1).padStart(
     2,
     "0",
@@ -54,7 +55,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
           <div className="flex items-center gap-6">
             <span className="hidden sm:inline text-xs font-mono text-ink-muted uppercase">
-              URFA 37°09&apos;N · PROJE [{projectNumber}/04]
+              URFA 37°09&apos;N · PROJE [{projectNumber}/{totalProjects}]
             </span>
             <Link
               href="/"
@@ -271,7 +272,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
               <div>
                 <span className="text-xs font-mono text-primary uppercase tracking-widest block mb-2">
-                  SIRADAKİ ARŞİV PROJESİ [{nextProjectNumber}/04] →
+                  SIRADAKİ ARŞİV PROJESİ [{nextProjectNumber}/{totalProjects}] →
                 </span>
                 <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink group-hover:text-primary transition-colors font-sans">
                   {nextProject.title}

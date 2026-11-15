@@ -1,10 +1,17 @@
 "use client";
 
+import { useI18n } from "@/context/LanguageContext";
+import { Compass, Menu, Sparkles } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ChukarLogo } from "./ChukarLogo";
+import { EditorialDirectoryModal } from "./EditorialDirectoryModal";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Header() {
-  const [timeString, setTimeString] = useState<string>("17:47");
+  const { t } = useI18n();
+  const [timeString, setTimeString] = useState<string>("16:32");
+  const [directoryOpen, setDirectoryOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const updateTime = () => {
@@ -23,58 +30,92 @@ export function Header() {
   }, []);
 
   return (
-    <header className="w-full border-b border-hairline bg-canvas/80 backdrop-blur-md sticky top-0 z-40 transition-colors">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-        {/* Sol Alan: Künye, Konum & Canlı Saat */}
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-amber animate-pulse" />
-            <span className="text-xs font-mono uppercase tracking-widest text-ink-muted">
-              URFA 37°09&apos;N
+    <>
+      <header className="w-full border-b border-hairline/60 bg-canvas/80 backdrop-blur-md sticky top-0 z-40 transition-colors">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between gap-4 sm:gap-6">
+          {/* Sol Kanat: Heykelsi Marka & Zanaat Kimliği */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            <Link
+              href="/"
+              className="group flex items-center gap-3 sm:gap-4 text-ink hover:text-primary transition-colors"
+            >
+              <div className="relative h-9 w-[55px] sm:h-11 sm:w-[67px] shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/logo-monogram-ar.png"
+                  alt="Abdullah Keklik Parlak Siyah ve Bakır AR Monogramı"
+                  width={67}
+                  height={44}
+                  className="object-contain w-full h-full filter drop-shadow-[0_2px_10px_rgba(200,83,43,0.15)]"
+                  priority
+                  unoptimized
+                />
+              </div>
+
+              <div className="flex items-baseline gap-2">
+                <span className="font-bold text-base md:text-lg tracking-tight font-sans">
+                  ABDULLAH KEKLİK
+                </span>
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary" />
+              </div>
+            </Link>
+
+            <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded bg-surface border border-hairline text-[10px] font-mono text-ink-muted uppercase tracking-wider">
+              {t.header.discipline}
             </span>
           </div>
 
-          <div className="hidden sm:flex items-center gap-2 border-l border-hairline pl-6">
-            <span className="text-xs font-mono text-ink-muted uppercase">LOCAL:</span>
-            <span className="text-xs font-mono text-ink font-medium tracking-wider">
-              {timeString}
+          {/* Orta Alan: Cömert Negatif Alan & Muted Telemetri */}
+          <div className="hidden md:flex items-center gap-3 text-xs font-mono text-ink-muted">
+            <span>37°09&apos;N</span>
+            <span className="text-hairline">·</span>
+            <span>{t.header.location}</span>
+            <span className="text-hairline">·</span>
+            <span className="text-ink font-medium tabular-nums">
+              {timeString} {t.header.localTime}
             </span>
+          </div>
+
+          {/* Sağ Kanat: Dil Seçici, Durum Boncuğu, İletişim & DIRECTORY [04] Tetikleyici */}
+          <div className="flex items-center gap-2.5 sm:gap-4">
+            {/* Dil Seçici (TR · EN · KU) */}
+            <LanguageSwitcher size="sm" />
+
+            {/* Canlı Durum Boncuğu (Masaüstü) */}
+            <div className="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-surface/80 border border-hairline text-[11px] font-mono text-ink-muted">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              <span>{t.header.openToWork}</span>
+            </div>
+
+            {/* Hızlı İletişim Butonu */}
+            <a
+              href="#contact"
+              className="hidden lg:inline-flex items-center px-3.5 py-1.5 rounded-md bg-surface hover:bg-surface-raised border border-hairline text-ink font-mono text-xs uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
+            >
+              <span>{t.header.contact}</span>
+            </a>
+
+            {/* Awwwards Seviyesi: DIRECTORY [04] Heykelsi Tetikleyici */}
+            <button
+              type="button"
+              onClick={() => setDirectoryOpen(true)}
+              className="group flex items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-2 rounded-md bg-ink text-canvas hover:bg-primary hover:text-primary-contrast transition-all duration-200 active:scale-95 shadow-xs font-mono text-xs tracking-wider uppercase"
+              aria-label="Editoryal dizini aç"
+              aria-expanded={directoryOpen}
+            >
+              <Menu className="w-3.5 h-3.5 group-hover:rotate-90 transition-transform duration-300" />
+              <span className="hidden xs:inline">{t.header.directory}</span>
+              <span className="xs:hidden">[04]</span>
+            </button>
           </div>
         </div>
+      </header>
 
-        {/* Orta Alan: Editoryal Menü (Lenis Smooth Scroll Anchor) */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-mono tracking-wider">
-          <a
-            href="#curated-works"
-            className="text-ink-body hover:text-primary transition-colors py-1"
-          >
-            [01] İŞLER
-          </a>
-          <a href="#manifesto" className="text-ink-body hover:text-primary transition-colors py-1">
-            [02] MANİFESTO
-          </a>
-          <a href="#about" className="text-ink-body hover:text-primary transition-colors py-1">
-            [03] HAKKIMDA
-          </a>
-          <a href="#contact" className="text-ink-body hover:text-primary transition-colors py-1">
-            [04] İLETİŞİM
-          </a>
-        </nav>
-
-        {/* Sağ Alan: Kınalı Keklik Amblemi & Stüdyo Rozeti */}
-        <div className="flex items-center gap-4">
-          <div className="hidden md:flex flex-col text-right">
-            <span className="text-xs font-mono uppercase tracking-wider text-ink font-semibold">
-              ABDULLAH KEKLİK
-            </span>
-            <span className="text-[11px] font-mono text-ink-muted">CREATIVE TECHNOLOGIST</span>
-          </div>
-
-          <div className="p-2 rounded-lg bg-surface border border-hairline/60 flex items-center justify-center">
-            <ChukarLogo size={32} />
-          </div>
-        </div>
-      </div>
-    </header>
+      {/* Tam Ekran Editoryal Dizin Perdesi */}
+      <EditorialDirectoryModal
+        isOpen={directoryOpen}
+        onClose={() => setDirectoryOpen(false)}
+        timeString={timeString}
+      />
+    </>
   );
 }

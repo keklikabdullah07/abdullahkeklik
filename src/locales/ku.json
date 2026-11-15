@@ -1,0 +1,79 @@
+{
+  "header": {
+    "discipline": "TEKNOLOJIYA AFIRÎNER Û SÎSTEM",
+    "openToWork": "JI PROJEYAN RE VEKIRÎ",
+    "contact": "TÊKILÎ",
+    "directory": "DÎZÎN [04]",
+    "localTime": "TRT",
+    "location": "RIHA, MEZOPOTAMYA"
+  },
+  "directoryModal": {
+    "title": "DÎZÎNA EDÎTORYAL / INDEKSA MÎMARÎ",
+    "close": "BIGIRE [ESC]",
+    "worksLabel": "XEBATÊN HILBIJARTÎ Û ARŞÎV",
+    "worksSub": "Depoyên çavkaniya vekirî, telemetrîya IoT û mîmariyên sîstemê",
+    "worksMeta": "08 PROJE / GITHUB & GITLAB",
+    "manifestoLabel": "MANÎFESTO Û HÛNER",
+    "manifestoSub": "Kevirvaniya kevnar a Mezopotamyayê û endezyariya webê ya hemdem",
+    "manifestoMeta": "04 DÎSÎPLÎNÊN ENDEZYARIYÊ",
+    "bioLabel": "BÎYOGRAFÎ Û REH",
+    "bioSub": "Hestiyariya Kewê Gozel, pîvanên xebatê û kronolojî",
+    "bioMeta": "2024 — 2026 KRONOLOJÎ",
+    "contactLabel": "TÊKILÎ Û HEVKARÎ",
+    "contactSub": "Projeyên nû, şêwirmendiya sîstemê û hevkariyên afirîner",
+    "contactMeta": "Q1-Q2 2026 VEKIRÎ",
+    "selectLanguage": "HILBIJARTINA ZIMAN / LANGUAGE"
+  },
+  "hero": {
+    "quote": "Portfolyoyeke zindî ku hunera kevirvaniyê ya kevnar û mîmariya hêmin a Mezopotamyayê bi endezyariya têkiliyên dîjîtal ên hemdem re digihîne hev.",
+    "description": "Li şûna şablonên yekreng ên hişê çêkirî; luksa bêdeng, valahiya comerd, tîpografiya saf û dîsîplîna xişandina nerm.",
+    "exploreCta": "ARŞÎVÊ VEKOLIN",
+    "contactCta": "TÊKILÎ"
+  },
+  "curatedWorks": {
+    "sectionBadge": "BEŞ [02] — XEBATÊN HILBIJARTÎ Û REPO",
+    "title": "Projeyên Hilbijartî Û Arşîva Gitê",
+    "subtitle": "Di dîsîplîna arşîvê ya Nippon Design Center de; depoyên çavkaniya vekirî û mîmariyên sîstemê yên bi C#, TypeScript û Rust hatine ristin.",
+    "tabAll": "HEMÛ",
+    "tabSystems": "SÎSTEM Û EWLEHÎ",
+    "tabWeb": "WEB Û TÊKILÎ",
+    "caseStudyTitle": "Lêkolîna Berfireh a Projeyê"
+  },
+  "manifesto": {
+    "sectionBadge": "BEŞ [03] — RÊGEZ Û HÛNER",
+    "title": "Kevirvaniya hezar salan bi kodên nûjen ên webê re.",
+    "p1": "Em geometriya hêmin a lewheyên kevirî yên yekem ên Mezopotamyayê bi endezyariya webê ya nûjen, dîsîplîna bîra bê-serobinî û têkiliyên asta sermaseyê re dikin yek.",
+    "p2": "Li şûna rengên gradyan ên yekreng ên hişê çêkirî û qelibên sê-qutîkî; luksa bêdeng, germahiya hestyarî û kalîteya endezyariyê ya bê-tewîz."
+  },
+  "bio": {
+    "sectionBadge": "BEŞ [03] — BÎYOGRAFÎ Û RÊGEZ",
+    "title1": "Hûner, Reh Û",
+    "title2": "Hevgihîştina Du Cîhanan",
+    "subtitle": "Sêwirînerek ku kod dinivîse. Endezyarekî sîstemê ku xwedî hestiyariya tîpografîk û çavê estetîk e.",
+    "specimenLabel": "SPECIMEN [01] · TOTEMA KEWÊ GOZEL",
+    "totemTitle": "Mora Çandî Ya Mezopotamyayê",
+    "totemDesc": "Totema heykelsî ya ku ji kevirvaniya Nahît a Rihayê û saetên rojê yên kevnar îlham girtiye.",
+    "totemMeta": "KEVİRÊ NAHÎT & BRONZ",
+    "quote": "Sêwirandin xwe ji zêdahiyan paqijkirin e. Dîwarên kevirî yên kevnar ên Rihayê tenê tiştekî hînî me dikin:",
+    "quoteHighlight": "Tenê tiştên ku li hember demê li ber xwe didin mayinde ne.",
+    "chukarLabel": "Hestiyariya Kewê Gozel (Chukar Partridge)",
+    "narrativeP1": "Di cîhana dîjîtal de piraniya hilberan di navbera du aliyan de asê dimînin: Malperên ku ji aliyê dîtbarî ve balkêş in lê di binyadê de xav, giran û bê-gihîştin in; an jî nermalavên ku wek zinar dixebitin lê bê-ruh, bê-tîpografî û bê-hest in.",
+    "narrativeP2": "Ez vî dîwarê çêkirî yê di navbera van her du aliyan de red dikim. Dema ku ez sêwiranê bi pîvanên performansa endezyariyê ava dikim; endezyariya sîstemê jî mîna hostayekî kevir bi rîtm, têkilî û hestên kûr digirim dest.",
+    "narrativeFocus": "[ QADÊN SEREKE: CREATIVE FRONTEND · HIGH-THROUGHPUT BACKEND · RADIX / TAILWIND DESIGN SYSTEMS · WASM ]",
+    "principlesBadge": "RÊGEZÊN XEBATÊ",
+    "principlesTitle": "Destûra Bingehîn a Endezyarî Û Estetîkê",
+    "timelineBadge": "DÎROK Û QONAX",
+    "timelineTitle": "Qonaxên Girîng Ên Hilbijartî"
+  },
+  "contact": {
+    "sectionBadge": "BEŞ [04] — VEQETÎNA MEZIN Û TÊKILÎ",
+    "statusBadge": "JI BO PROJEYÊN NÛ Q1-Q2 2026 VEKIRÎ",
+    "tagline": "WERIN EM BI HEV RE BIAFIRÎNIN / HEVKARÎ Û PROJE",
+    "sendEmail": "E-POSTA BIŞÎNIN",
+    "copyEmail": "NAVUNÎŞANÊ KOPYA BIKE",
+    "copied": "NAVUNÎŞAN HAT KOPYAKIRIN!",
+    "footerTitle": "ABDULLAH KEKLİK STUDIO",
+    "footerLoc": "37°09'N / 38°47'E — RIHA, MEZOPOTAMYA",
+    "footerPatience": "BI BÊHNDIYA KEVNAR HATIYE ÇÊKIRIN"
+  }
+}

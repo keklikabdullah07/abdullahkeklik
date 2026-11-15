@@ -1,10 +1,14 @@
 export type ProjectCategory = "individual" | "corporate";
+export type ProjectSource = "github" | "gitlab" | "curated";
 
 export interface Project {
   id: string;
   title: string;
   slug: string;
   category: ProjectCategory;
+  source?: ProjectSource;
+  language?: string;
+  stars?: number;
   tagline: string;
   description: string;
   tags: string[];
