@@ -4,15 +4,7 @@ import { useI18n } from "@/context/LanguageContext";
 import { initialProjects } from "@/data/projects";
 import type { Project, ProjectSource } from "@/types/project";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Code2,
-  ExternalLink,
-  GitBranch,
-  Github,
-  Sparkles,
-  Terminal,
-} from "lucide-react";
+import { ArrowUpRight, Code2, ExternalLink, GitBranch, Github, Terminal } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 import { useEffect, useState } from "react";
@@ -198,8 +190,7 @@ export function CuratedWorks() {
                 {/* Sağ: Metrik, Disiplin, Canlı Git Butonları */}
                 <div className="flex items-center gap-3 sm:gap-4 self-end md:self-auto">
                   {project.highlightMetric && (
-                    <span className="hidden lg:inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-1 rounded bg-surface border border-hairline text-ink">
-                      <Sparkles className="w-3 h-3 text-amber" />
+                    <span className="hidden lg:inline-flex items-center text-xs font-mono px-2.5 py-1 rounded bg-surface border border-hairline text-ink-muted">
                       {project.highlightMetric}
                     </span>
                   )}

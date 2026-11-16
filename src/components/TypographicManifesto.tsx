@@ -1,7 +1,7 @@
 "use client";
 
 import { useI18n } from "@/context/LanguageContext";
-import { ArrowUpRight, Compass, Cpu, Layers, Sparkles } from "lucide-react";
+import { ArrowUpRight, Boxes, Compass, Cpu, Layers } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
 import { RevealOnScroll } from "./MotionWrapper";
@@ -25,7 +25,7 @@ const disciplines: Discipline[] = [
     description:
       "Statik şablonları reddeden; eylemsiz kaydırma ritmi (Lenis), maskeli kinetik tipografi ve dokunsal mikro-etkileşimlerle akıcı dijital vitrinler.",
     stack: ["React 19", "Next.js", "Framer Motion", "Lenis", "Tailwind"],
-    icon: Sparkles,
+    icon: Boxes,
   },
   {
     id: "disc-2",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useI18n } from "@/context/LanguageContext";
-import { Award, Check, Compass, Cpu, Feather, History, Shield, Sparkles } from "lucide-react";
+import { Award, Check, Compass, Cpu, Feather, History, Shield } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { RevealOnScroll } from "./MotionWrapper";
@@ -26,9 +26,9 @@ const principles: Principle[] = [
   {
     number: "02",
     title: "Craft Over Noise (Sessiz Lüks)",
-    subtitle: "Yapay Zeka Şablonlarının Reddi",
+    subtitle: "Zamana Direnen Kalıcı Malzeme Dili",
     description:
-      "Tekdüze mor-mavi gradyanları, sahte süsleri ve ruhsuz AI şablonlarını reddederim. Keten dokusu, Nahit Taşı sıcaklığı ve saf tipografinin heykelsi gücüne inanırım.",
+      "Gürültülü dijital trendler ve tekdüze şablonlar yerine; keten dokusu, Nahit Taşı sıcaklığı, cömert negatif alan ve saf tipografinin heykelsi gücüne odaklanırım.",
     icon: Feather,
   },
   {
