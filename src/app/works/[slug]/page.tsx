@@ -1,12 +1,5 @@
 import { initialProjects } from "@/data/projects";
-import {
-  ArrowLeft,
-  ArrowUpRight,
-  CheckCircle2,
-  ExternalLink,
-  Github,
-  Sparkles,
-} from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -132,8 +125,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 <span className="text-[10px] font-mono text-ink-muted uppercase tracking-widest">
                   ÖNE ÇIKAN METRİK
                 </span>
-                <div className="inline-flex items-center gap-2 mt-1.5 px-3 py-1.5 rounded bg-amber/10 border border-amber/20 text-xs font-mono text-ink font-medium">
-                  <Sparkles className="w-3.5 h-3.5 text-amber" />
+                <div className="inline-flex items-center gap-2 mt-1.5 px-3 py-1.5 rounded bg-surface border border-hairline text-xs font-mono text-ink-muted">
                   <span>{project.highlightMetric}</span>
                 </div>
               </div>

@@ -4,11 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const STAGES = [
-  { threshold: 0, code: "01/04", label: "INITIALIZING ARCHITECTURAL GRID" },
-  { threshold: 25, code: "02/04", label: "SYNCHRONIZING TRILINGUAL REPOSITORIES (TR · EN · KU)" },
-  { threshold: 58, code: "03/04", label: "CALIBRATING HIGH-FIDELITY SHADERS & CURATED WORKS" },
-  { threshold: 88, code: "04/04", label: "SYSTEM CORE COMPILED · ALL SYSTEMS GO" },
-  { threshold: 100, code: "STANDBY", label: "OPENING EXHIBITION" },
+  { threshold: 0, code: "01/04", label: "EDİTORYAL KILAVUZ & TİPOGRAFİ" },
+  { threshold: 25, code: "02/04", label: "ÇOK DİLLİ METİN ARŞİVİ (TR · EN · KU)" },
+  { threshold: 58, code: "03/04", label: "SEÇİLMİŞ ÇALIŞMALAR & PROJELER" },
+  { threshold: 88, code: "04/04", label: "DİJİTAL ATÖLYE SERGİSİ HAZIR" },
+  { threshold: 100, code: "STANDBY", label: "SERGİ AÇILIYOR" },
 ];
 
 export function EditorialPreloader() {
@@ -132,8 +132,6 @@ export function EditorialPreloader() {
             </div>
             <div className="flex items-center gap-2 md:gap-3 text-[11px]">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="hidden md:inline">37°09&apos;N · 38°47&apos;E</span>
-              <span className="text-hairline hidden md:inline">|</span>
               <span>URFA, MESOPOTAMIA</span>
             </div>
           </div>
@@ -178,7 +176,7 @@ export function EditorialPreloader() {
               <span>CREATIVE TECH &amp; DIGITAL STUDIO</span>
               <span className="text-ink-muted/60 hidden sm:inline">[CLICK TO SKIP]</span>
               <span className="tabular-nums">
-                {isComplete ? "STANDBY · 100%" : `${progress}% COMPILED`}
+                {isComplete ? "STANDBY · 100%" : `${progress}% YÜKLENDİ`}
               </span>
             </div>
           </div>
