@@ -1,21 +1,24 @@
 "use client";
 
 import { useI18n } from "@/context/LanguageContext";
-import { initialProjects } from "@/data/projects";
-import type { Project, ProjectSource } from "@/types/project";
+import {
+  type ProjectFilterCategory,
+  getFilteredProjects,
+  getProjectCounts,
+} from "@/services/projectService";
+import type { Project } from "@/types/project";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Code2, ExternalLink, GitBranch, Github, Terminal } from "lucide-react";
+import { ArrowUpRight, Code2, GitBranch, Github, Terminal } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 import { useEffect, useState } from "react";
 import { EASE_EDITORIAL, RevealOnScroll } from "./MotionWrapper";
-
-type FilterCategory = "all" | "systems" | "web";
+import { ProjectHoverPreview } from "./ProjectHoverPreview";
 
 export function CuratedWorks() {
   const { t } = useI18n();
   const [activeProject, setActiveProject] = useState<Project | null>(null);
-  const [selectedFilter, setSelectedFilter] = useState<FilterCategory>("all");
+  const [selectedFilter, setSelectedFilter] = useState<ProjectFilterCategory>("all");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const shouldReduceMotion = useReducedMotion();
 
@@ -28,19 +31,8 @@ export function CuratedWorks() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const isSystemsProject = (p: Project) =>
-    p.language === "Rust" || p.language === "C#" || p.tags.includes("Cryptography");
-
-  const filteredProjects = initialProjects.filter((project) => {
-    if (selectedFilter === "all") return true;
-    if (selectedFilter === "systems") return isSystemsProject(project);
-    if (selectedFilter === "web") return !isSystemsProject(project);
-    return true;
-  });
-
-  const countAll = initialProjects.length;
-  const countSystems = initialProjects.filter(isSystemsProject).length;
-  const countWeb = initialProjects.filter((p) => !isSystemsProject(p)).length;
+  const filteredProjects = getFilteredProjects(selectedFilter);
+  const { all: countAll, systems: countSystems, web: countWeb } = getProjectCounts();
 
   return (
     <section
@@ -245,56 +237,8 @@ export function CuratedWorks() {
         </AnimatePresence>
       </motion.div>
 
-      {/* Awwwards Seviyesi: Floating Magnetic Cursor Preview Kartı (Desktop) */}
-      {activeProject && (
-        <div
-          className="hidden md:flex fixed pointer-events-none z-50 flex-col w-84 p-5 rounded-xl bg-surface border border-primary/30 shadow-card backdrop-blur-lg transition-transform duration-75 ease-out"
-          style={{
-            transform: `translate3d(${mousePosition.x + 24}px, ${mousePosition.y - 120}px, 0)`,
-          }}
-        >
-          <div className="flex items-center justify-between text-[11px] font-mono text-ink-muted border-b border-hairline pb-2 mb-3">
-            <span className="flex items-center gap-1.5 text-primary font-medium">
-              <Terminal className="w-3.5 h-3.5" />
-              <span>
-                {activeProject.source === "gitlab" ? "GITLAB REPOSITORY" : "GITHUB REPOSITORY"}
-              </span>
-            </span>
-            <span className="font-semibold">{activeProject.year}</span>
-          </div>
-
-          <div className="flex items-center justify-between">
-            <h4 className="text-base font-bold text-ink leading-snug">{activeProject.title}</h4>
-            {activeProject.language && (
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-canvas border border-hairline text-primary font-medium">
-                {activeProject.language}
-              </span>
-            )}
-          </div>
-
-          <p className="text-xs text-ink-body mt-2 leading-relaxed line-clamp-3">
-            {activeProject.description}
-          </p>
-
-          <div className="flex flex-wrap gap-1 mt-4 pt-3 border-t border-hairline">
-            {activeProject.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[10px] font-mono px-2 py-0.5 rounded bg-canvas border border-hairline text-ink-muted"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          {activeProject.highlightMetric && (
-            <div className="mt-3 py-1.5 px-2 rounded bg-amber/10 border border-amber/20 text-amber text-[11px] font-mono font-medium flex items-center justify-between">
-              <span>METRIC / HIGHLIGHT:</span>
-              <span>{activeProject.highlightMetric}</span>
-            </div>
-          )}
-        </div>
-      )}
+      {/* Awwwards Seviyesi: Floating Magnetic Cursor Preview Kartı (SRP Bileşeni) */}
+      <ProjectHoverPreview project={activeProject} position={mousePosition} />
     </section>
   );
 }

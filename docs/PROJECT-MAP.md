@@ -10,7 +10,11 @@
 - `src/`
 - `src/app/`
 - `src/components/`
+- `src/context/`
 - `src/data/`
+- `src/hooks/`
+- `src/locales/`
+- `src/services/`
 - `src/types/`
 
 ---
@@ -31,6 +35,7 @@ _Henüz Drizzle veya ORM şema tablosu tespit edilmedi._
 ## 4. Kullanılan Ortam Değişkenleri (Environment Variables)
 - `APP_URL`
 - `CI`
+- `NEXT_PUBLIC_SITE_URL`
 
 ---
 
@@ -54,3 +59,14 @@ _Henüz Drizzle veya ORM şema tablosu tespit edilmedi._
 | `0008-tasarim-sifirlama-ve-yalin-tuval` | Spec 0008 — Tasarım Sıfırlama ve Yalın Başlangıç Tuvali | **Approved (Kullanıcı doğrudan "tasarımla ilgili ne bulduysan kaldır baştan başlayacağız" talimatı verdi)** |
 | `0009-git-projeleri-ve-editoryal-vitrin` | Spec 0009 — Canlı Git Projeleri ve Editoryal Vitrin Dönüşümü | **Proposed (Kullanıcı onayı bekleniyor)** |
 | `0014-hero-3d-medallion-video` | Şartname 0014: Hero Alanı 3D Animasyonlu Medalyon Video Entegrasyonu | **Approved (Kullanıcı "onaylıyorum" teyidi verdi)** |
+| `0015-seo-solid-cleanup` | Şartname 0015: SEO Mimarisi, SOLID Refactoring ve Kod/Varlık Temizliği | **Approved (Kullanıcı "onaylıyorum" teyidi verdi)** |
+| `0015-soft-transitions-motion` | Şartname 0015: Editoryal Soft Geçişler & Akıcı Hareket Mimarisi (Quiet Luxury Motion) | **Draft** |
+| `0016-architectural-masthead-header` | Şartname 0016: Architectural Split Masthead & Editoryal Dizin Perdesi (Awwwards Header) | **Draft** |
+| `0018-multilingual-tr-en-ku` | Şartname 0018: Çoklu Dil Desteği — Türkçe (TR), İngilizce (EN) & Kürtçe (KU) | **Draft** |
+| `0019-editorial-preloader-counter` | Spec 0019: Editoryal Sayaç & Shutter Perde (Editorial Preloader) | **Draft** |
+| `0020-gercek-veri-arindirma` | Spec 0020: Gerçek Veri Arındırma ve Portfolyo Senkronizasyonu | **Draft** |
+| `0021-header-brand-logo` | Spec 0021: Header Renkli Marka Logosu & Hibrit İsim Kilidi (Brand Lockup) | **Draft** |
+| `0022-header-ar-monogram-logo` | Spec 0022: Header Parlak Siyah ve Bakır AR Monogramı & Cömert Ebatlama | **Draft** |
+| `0023-footer-white-monogram-relics-cleanup` | Şartname: 0023 — Footer Beyaz AK Monogramı ve Eski Logo Kalıntılarının Temizlenmesi | **Draft** |
+| `0024-ai-slop-and-cliche-purge` | Şartname: 0024 — Yapay Zeka Klişeleri ve Belirteçlerinin Arındırılması | **Draft** |
+| `0025-senior-fullstack-refactor` | SPEC-0025: Kıdemli Full-Stack Mühendislik Dili ve Yapay Zeka Noktalarının Arındırılması | **Draft** |

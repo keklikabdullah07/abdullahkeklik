@@ -49,10 +49,103 @@ const inter = localFont({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://abdullahkeklik.dev";
+
 export const metadata: Metadata = {
-  title: "Abdullah Keklik — Creative Technologist & Digital Studio",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Abdullah Keklik — Creative Technologist & Digital Studio",
+    template: "%s · Abdullah Keklik",
+  },
   description:
     "Mezopotamya'nın sakin mimarisi ve modern web mühendisliğiyle şekillenen editoryal portfolyo.",
+  keywords: [
+    "Abdullah Keklik",
+    "Creative Technologist",
+    "Full-Stack Engineer",
+    "Rust",
+    "TypeScript",
+    "Next.js",
+    "Tailwind CSS",
+    "Awwwards",
+    "Editoryal Tasarım",
+  ],
+  authors: [{ name: "Abdullah Keklik", url: siteUrl }],
+  creator: "Abdullah Keklik",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    url: siteUrl,
+    siteName: "Abdullah Keklik — Digital Studio",
+    title: "Abdullah Keklik — Creative Technologist & Digital Studio",
+    description:
+      "Mezopotamya'nın sakin mimarisi ve modern web mühendisliğiyle şekillenen editoryal portfolyo.",
+    images: [
+      {
+        url: "/logo-monogram-ar.png",
+        width: 1200,
+        height: 630,
+        alt: "Abdullah Keklik — Creative Technologist",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdullah Keklik — Creative Technologist & Digital Studio",
+    description:
+      "Mezopotamya'nın sakin mimarisi ve modern web mühendisliğiyle şekillenen editoryal portfolyo.",
+    images: ["/logo-monogram-ar.png"],
+    creator: "@keklikabdullah",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Abdullah Keklik",
+      jobTitle: "Creative Technologist & Full-Stack Engineer",
+      url: siteUrl,
+      image: `${siteUrl}/logo-monogram-ar.png`,
+      sameAs: [
+        "https://github.com/keklikabdullah07",
+        "https://gitlab.com/keklikabdullah07",
+        "https://www.linkedin.com/in/keklikabdullah/",
+      ],
+      description:
+        "Full-stack mühendisliği, sistem mimarisi ve Awwwards kalitesinde editoryal web deneyimleri üreten bağımsız yaratıcı teknolojist.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Şanlıurfa",
+        addressCountry: "TR",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Abdullah Keklik",
+      publisher: {
+        "@id": `${siteUrl}/#person`,
+      },
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -68,6 +161,11 @@ export default function RootLayout({
   return (
     <html lang="tr" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="antialiased font-sans">
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Static trusted JSON-LD structured data for SEO
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <LanguageProvider>
           <EditorialPreloader />
           <SmoothScrollProvider>

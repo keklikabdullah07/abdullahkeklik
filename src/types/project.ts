@@ -16,7 +16,6 @@ export interface Project {
   gitlabUrl?: string;
   demoUrl?: string;
   featured: boolean;
-  bentoSpan?: "col-span-1" | "col-span-2" | "md:col-span-2" | "md:col-span-3";
   highlightMetric?: string;
   year?: string;
   client?: string;

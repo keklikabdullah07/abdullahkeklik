@@ -1,5 +1,6 @@
-import { initialProjects } from "@/data/projects";
+import { getAllProjects, getNextProject, getProjectBySlug } from "@/services/projectService";
 import { ArrowLeft, ArrowUpRight, CheckCircle2, ExternalLink, Github } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,27 +12,70 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return initialProjects.map((p) => ({
+  return getAllProjects().map((p) => ({
     slug: p.slug,
   }));
 }
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+
+  if (!project) {
+    return {
+      title: "Proje Bulunamadı",
+      description: "Aradığınız vaka analizi bulunamadı.",
+    };
+  }
+
+  const title = `${project.title} — Vaka Analizi`;
+  const description = project.tagline || project.description;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://abdullahkeklik.dev";
+  const projectUrl = `${siteUrl}/works/${project.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: projectUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: projectUrl,
+      type: "article",
+      images: [
+        {
+          url: "/logo-monogram-ar.png",
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/logo-monogram-ar.png"],
+    },
+  };
+}
+
 export default async function ProjectDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const projectIndex = initialProjects.findIndex((p) => p.slug === slug);
+  const project = getProjectBySlug(slug);
 
-  if (projectIndex === -1) {
+  if (!project) {
     notFound();
   }
 
-  const project = initialProjects[projectIndex];
-  const nextProject = initialProjects[(projectIndex + 1) % initialProjects.length];
-  const projectNumber = String(projectIndex + 1).padStart(2, "0");
-  const totalProjects = String(initialProjects.length).padStart(2, "0");
-  const nextProjectNumber = String(((projectIndex + 1) % initialProjects.length) + 1).padStart(
-    2,
-    "0",
-  );
+  const { project: nextProject, nextIndex, total } = getNextProject(slug);
+  const allProjects = getAllProjects();
+  const currentIndex = allProjects.findIndex((p) => p.slug === slug);
+  const projectNumber = String(currentIndex + 1).padStart(2, "0");
+  const totalProjects = String(total).padStart(2, "0");
+  const nextProjectNumber = String(nextIndex).padStart(2, "0");
 
   return (
     <main className="min-h-screen bg-canvas text-ink selection:bg-primary selection:text-primary-contrast transition-colors">

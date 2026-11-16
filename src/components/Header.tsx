@@ -1,33 +1,18 @@
 "use client";
 
 import { useI18n } from "@/context/LanguageContext";
-import { Compass, Menu, Sparkles } from "lucide-react";
+import { useLocalTime } from "@/hooks/useLocalTime";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { EditorialDirectoryModal } from "./EditorialDirectoryModal";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Header() {
   const { t } = useI18n();
-  const [timeString, setTimeString] = useState<string>("16:32");
+  const timeString = useLocalTime("tr-TR", "16:32");
   const [directoryOpen, setDirectoryOpen] = useState<boolean>(false);
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setTimeString(
-        now.toLocaleTimeString("tr-TR", {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-        }),
-      );
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
