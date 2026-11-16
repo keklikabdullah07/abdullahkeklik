@@ -73,8 +73,7 @@ export function TypographicManifesto() {
         {/* Sol Sütun: Heykelsi Manifesto & Zanaat Felsefesi */}
         <div className="lg:col-span-5 lg:sticky lg:top-28">
           <RevealOnScroll>
-            <div className="flex items-center gap-2 text-xs font-mono text-ink-muted uppercase tracking-widest mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber" />
+            <div className="text-xs font-mono text-ink-muted uppercase tracking-widest mb-4">
               <span>{t.manifesto.sectionBadge}</span>
             </div>
 

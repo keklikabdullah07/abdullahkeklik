@@ -34,7 +34,6 @@ export function GrandFinaleContact() {
         {/* Üst Dizin Künyesi */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-8 text-xs font-mono uppercase tracking-widest text-canvas/60">
           <div className="flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span>{t.contact.sectionBadge}</span>
           </div>
 

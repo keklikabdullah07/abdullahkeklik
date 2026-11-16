@@ -1,7 +1,7 @@
 {
   "header": {
-    "discipline": "CREATIVE TECH & SYSTEMS",
-    "openToWork": "OPEN TO COMMISSIONS",
+    "discipline": "FULL-STACK SYSTEMS & ARCHITECTURE",
+    "openToWork": "[OPEN TO COMMISSIONS]",
     "contact": "İLETİŞİM",
     "directory": "DIRECTORY [04]",
     "localTime": "TRT",
@@ -11,13 +11,13 @@
     "title": "EDİTORYAL DİZİN / ARCHITECTURAL INDEX",
     "close": "KAPAT [ESC]",
     "worksLabel": "SEÇİLMİŞ İŞLER & ARŞİV",
-    "worksSub": "Açık kaynak depolar, IoT telemetri ve sistem mimarileri",
+    "worksSub": "Açık kaynak depolar, sistem mimarileri ve web uygulamaları",
     "worksMeta": "08 PROJE / GITHUB & GITLAB",
     "manifestoLabel": "MANİFESTO & ZANAAT",
-    "manifestoSub": "Mezopotamya taş işçiliği ve çağdaş web mühendisliği",
+    "manifestoSub": "Zamana direnen ilkeler, taktil arayüzler ve temiz kod",
     "manifestoMeta": "04 MÜHENDİSLİK DİSİPLİNİ",
     "bioLabel": "BİYOGRAFİ & KÖKLER",
-    "bioSub": "Kınalı Keklik sezgisi, çalışma prensipleri ve zaman çizelgesi",
+    "bioSub": "Kınalı Keklik kimliği, çalışma prensipleri ve zaman çizelgesi",
     "bioMeta": "2024 — 2026 KRONOLOJİ",
     "contactLabel": "İLETİŞİM & COMMISSIONS",
     "contactSub": "Yeni projeler, sistem danışmanlığı ve iş birlikleri",
@@ -25,15 +25,15 @@
     "selectLanguage": "DİL SEÇİMİ / LANGUAGE"
   },
   "hero": {
-    "quote": "Mezopotamya'nın kadim taş işçiliği ve sakin mimarisini, çağdaş dijital etkileşim mühendisliğiyle buluşturan yaşayan portfolyo.",
-    "description": "Sessiz lüks, cömert negatif alan, saf tipografi ve pürüzsüz eylemsiz kaydırma disipliniyle kurgulanmış heykelsi dijital vitrin.",
+    "quote": "Kaya gibi sağlam arka uç sistemleri ve parmak uçlarında hissedilen rafine dijital arayüzler inşa ediyorum.",
+    "description": "C#, TypeScript, .NET 9 ve modern web ekosistemi üzerinde; yüksek erişilebilirlikli mimariler, sıfır çalışma anı hatası ve tipografik zanaatı buluşturan kıdemli mühendislik.",
     "exploreCta": "ARŞİVİ KEŞFET",
     "contactCta": "İLETİŞİM"
   },
   "curatedWorks": {
     "sectionBadge": "SECTION [02] — SELECTED WORKS & REPOSITORIES",
     "title": "Seçilmiş Projeler & Git Arşivi",
-    "subtitle": "Nippon Design Center arşiv disiplininde; C#, TypeScript ve Rust ile geliştirilmiş açık kaynak depolar ve yüksek performanslı sistem mimarileri.",
+    "subtitle": "Nippon Design Center arşiv disiplininde; C#, TypeScript ve Rust ile geliştirilmiş açık kaynak depolar, kriptografik çekirdekler ve modern web mimarileri.",
     "tabAll": "TÜMÜ",
     "tabSystems": "SİSTEM & GÜVENLİK",
     "tabWeb": "WEB & ARAYÜZ",
@@ -41,25 +41,25 @@
   },
   "manifesto": {
     "sectionBadge": "SECTION [03] — ETHOS & CRAFT",
-    "title": "Bin yıllık taş işçiliği ile modern web kodları.",
-    "p1": "Mezopotamya'nın ilk yazılı taş tabletlerindeki dingin geometriyi; modern web mühendisliği, sıfır-çöp bellek disiplini ve masaüstü sınıfı etkileşimlerle harmanlıyoruz.",
-    "p2": "Geçici görsel trendler ve tekdüze şablonlar yerine; sessiz lüks, taktil malzeme hissi ve tavizsiz mühendislik kalitesi."
+    "title": "Zamana direnen mimari ilkeler, modern mühendislik kodları.",
+    "p1": "Urfa'nın kadim taş mimarisinden öğrendiğimiz en temel kural dayanıklılıktır. Yazılımda da bu zanaatla hareket ediyor; gereksiz karmaşıklık ve geçici hevesler yerine, 10 yıl sonra da dimdik ayakta kalacak temiz sistemler kuruyoruz.",
+    "p2": "Arka uçta tip güvenliği ve kaya gibi sağlam bir omurga; ön yüzde ise 60 FPS kilitli, kullanıcıyı yormayan akıcı ve sakin bir etkileşim deneyimi."
   },
   "bio": {
     "sectionBadge": "SECTION [03] — BIOGRAPHY & ETHOS",
-    "title1": "Zanaat, Kökler &",
-    "title2": "İki Dünyanın Kesişimi",
-    "subtitle": "Kod yazabilen bir tasarımcı. Tipografik sezgisi ve görsel estetik gözü olan bir sistem mühendisi.",
+    "title1": "Mühendislik Refleksi &",
+    "title2": "Taktil Arayüz Zanaatı",
+    "subtitle": "Sistem mimarisini deterministik temellerle kurgulayan bir full-stack mühendisi; tipografik hassasiyeti ve kullanıcı deneyimi sezgisi olan bir tasarımcı.",
     "specimenLabel": "SPECIMEN [01] · KINALI KEKLİK TOTEMİ",
     "totemTitle": "Mezopotamya Kültürel Mührü",
-    "totemDesc": "Urfa Nahit taşı oymacılığı ve antik güneş kadranlarından ilham alan heykelsi marka totemi.",
+    "totemDesc": "Urfa Nahit taşı oymacılığı ve antik güneş kadranlarından ilham alan heykelsi marka amblemi.",
     "totemMeta": "NAHİT TAŞI & BRONZ",
-    "quote": "Tasarım fazlalıklardan arınmaktır. Urfa'nın kadim taş duvarları bize tek bir şeyi öğretir:",
+    "quote": "Mühendislik fazlalıklardan arınmaktır. Kadim taş duvarlar bize tek bir şeyi öğretir:",
     "quoteHighlight": "Yalnızca zamana direnen şeyler kalıcıdır.",
     "chukarLabel": "Kınalı Keklik (Chukar Partridge) Sezgisi",
-    "narrativeP1": "Dijital dünyada çoğu ürün iki kutuptan birine sıkışır: Ya estetiği büyüleyici fakat arka planda çöken, erişilemez ve yavaş web siteleri; ya da kaya gibi çalışan ancak ruhu, tipografik zarafeti ve duygusu olmayan soğuk yazılımlar.",
-    "narrativeP2": "Ben bu iki kutup arasındaki yapay duvarı reddediyorum. Tasarımı bir mühendis gibi deterministik, performans ve erişilebilirlik sınırlarıyla kurarken; sistem mühendisliğini bir zanaatkâr gibi ritim, mikro-etkileşim ve taktil hislerle ele alıyorum.",
-    "narrativeFocus": "[ ODAK ALANLARI: CREATIVE FRONTEND · HIGH-THROUGHPUT BACKEND · RADIX / TAILWIND DESIGN SYSTEMS · WASM ]",
+    "narrativeP1": "Modern yazılım ekosisteminde çoğu ürün iki uçtan birine savrulur: Ya estetik olarak etkileyici ancak arka planda çöken, yavaş ve bakımı imkansız arayüzler; ya da teknik olarak çalışan fakat ruhu, tipografik kalitesi ve kullanıcı ergonomisi olmayan soğuk paneller.",
+    "narrativeP2": "Ben bu ayrımı reddediyorum. Arka uçta C#/.NET ve TypeScript ile güvenli, tip korumalı ve yüksek işlem hacimli omurgalar kurarken; ön yüzde kullanıcıyı tek bir mikro gecikmeyle bile bekletmeyen, erişilebilir ve akıcı arayüzler inşa ediyorum.",
+    "narrativeFocus": "[ ODAK ALANLARI: C# / .NET 9 · TYPESCRIPT · NEXT.JS · POSTGRESQL · DAĞITIK SİSTEMLER · RUST / WASM ]",
     "principlesBadge": "ÇALIŞMA PRENSİPLERİ",
     "principlesTitle": "Mühendislik ve Estetik Anayasası",
     "timelineBadge": "ZAMAN ÇİZELGESİ",
@@ -74,6 +74,6 @@
     "copied": "ADRES KOPYALANDI!",
     "footerTitle": "ABDULLAH KEKLİK STUDIO",
     "footerLoc": "37°09'N / 38°47'E — URFA, MESOPOTAMIA",
-    "footerPatience": "CRAFTED WITH ANCIENT PATIENCE"
+    "footerPatience": "CRAFTED WITH ARCHITECTURAL DISCIPLINE"
   }
 }

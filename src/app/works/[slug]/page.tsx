@@ -73,7 +73,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       {/* Proje Başlık ve Hero Alanı */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-12 border-b border-hairline">
         <div className="flex items-center gap-3 text-xs font-mono text-ink-muted uppercase tracking-widest mb-4">
-          <span className="w-2 h-2 rounded-full bg-primary" />
           <span>VAKA ANALİZİ · ARCHIVE [{projectNumber}]</span>
         </div>
 

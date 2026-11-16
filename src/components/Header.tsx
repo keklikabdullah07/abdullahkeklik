@@ -80,9 +80,8 @@ export function Header() {
             {/* Dil Seçici (TR · EN · KU) */}
             <LanguageSwitcher size="sm" />
 
-            {/* Canlı Durum Boncuğu (Masaüstü) */}
-            <div className="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-surface/80 border border-hairline text-[11px] font-mono text-ink-muted">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+            {/* Canlı Durum Künyesi (Masaüstü) */}
+            <div className="hidden xl:flex items-center gap-2 px-3 py-1 rounded-md bg-surface/80 border border-hairline text-[11px] font-mono text-ink-muted">
               <span>{t.header.openToWork}</span>
             </div>
 

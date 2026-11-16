@@ -95,7 +95,6 @@ export function EditorialDirectoryModal({
           {/* Üst Mimari Künye & Kapat Butonu */}
           <div className="flex items-center justify-between border-b border-hairline pb-6 text-xs font-mono uppercase tracking-wider text-ink-muted">
             <div className="flex items-center gap-4">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-ink font-semibold">{t.directoryModal.title}</span>
               <span className="hidden md:inline text-ink-muted">· [FOLIO 2026]</span>
             </div>
