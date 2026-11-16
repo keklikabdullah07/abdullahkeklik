@@ -25,10 +25,10 @@ const principles: Principle[] = [
   },
   {
     number: "02",
-    title: "Craft Over Noise (Sessiz Lüks)",
-    subtitle: "Zamana Direnen Kalıcı Malzeme Dili",
+    title: "Taktil Arayüz ve Tipografik Zanaat",
+    subtitle: "Kullanıcı Ergonomisi ve Görsel Disiplin",
     description:
-      "Gürültülü dijital trendler ve tekdüze şablonlar yerine; keten dokusu, Nahit Taşı sıcaklığı, cömert negatif alan ve saf tipografinin heykelsi gücüne odaklanırım.",
+      "Gereksiz süsler ve yapay şablonlar yerine; saf tipografi, doğru negatif alan, erişilebilirlik (WCAG AA) ve kullanıcının parmak uçlarında hissettiği gecikmesiz bir akış tasarlarım.",
     icon: Feather,
   },
   {
@@ -51,24 +51,24 @@ interface Milestone {
 const milestones: Milestone[] = [
   {
     year: "2026",
-    role: "Creative Technologist & Bağımsız Mühendis",
-    organization: "Abdullah Keklik Studio · Urfa / Global",
+    role: "Full-Stack Mühendisi & Kreatif Teknolojist",
+    organization: "Abdullah Keklik Studio · Urfa / Remote",
     description:
-      "Awwwards kalitesinde yaşayan editoryal vitrinler, tipografik tasarım sistemleri ve sıfır-GC Chukar açık kaynak kural motoru mimarisi.",
+      "Dağıtık sistemler, .NET 9 ve Next.js tabanlı yüksek performanslı web mimarileri ve Rust/WASM tabanlı açık kaynak kural motoru tasarımı.",
   },
   {
     year: "2025",
-    role: "Sistem & Etkileşim Mühendisliği",
-    organization: "Açık Kaynak & Bağımsız Girişimler",
+    role: "Sistem & Backend Mühendisliği",
+    organization: "Açık Kaynak & Bağımsız Projeler",
     description:
-      "C# .NET 9 ile kriptografik veri mühürleme omurgası (BloodSeal) ve gerçek zamanlı işbirliği ekosistemi (weCAN) geliştirilmesi.",
+      "C# .NET 9 ile kriptografik veri mühürleme omurgası (BloodSeal) ve WebSocket tabanlı eşzamanlı işbirliği ekosistemi (weCAN) geliştirilmesi.",
   },
   {
     year: "2024",
-    role: "Frontend Mimarisi & Analitik Arayüzler",
+    role: "Full-Stack Web Geliştirme & Veri Analitiği",
     organization: "Özel Tasarım & Web Çözümleri",
     description:
-      "KidsCare çocuk gelişim pedagoji arayüzü, Ismail Portfoy finansal analiz paneli ve Next.js tabanlı taktil bileşen mimarileri.",
+      "KidsCare çocuk gelişim takip paneli, Ismail Portfoy finansal analiz dashboard'u ve modern TypeScript bileşen mimarileri.",
   },
 ];
 
@@ -84,8 +84,7 @@ export function EditorialBio() {
       <RevealOnScroll>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-hairline">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-ink-muted uppercase tracking-widest mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber" />
+            <div className="text-xs font-mono text-ink-muted uppercase tracking-widest mb-3">
               <span>{t.bio.sectionBadge}</span>
             </div>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ink font-sans leading-[1.05]">
@@ -124,8 +123,7 @@ export function EditorialBio() {
 
               <div className="flex flex-col justify-between h-full py-1 text-center sm:text-left">
                 <div>
-                  <div className="flex items-center justify-center sm:justify-start gap-2 text-[10px] font-mono text-primary uppercase tracking-widest mb-1.5 font-semibold">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  <div className="text-[10px] font-mono text-primary uppercase tracking-widest mb-1.5 font-semibold text-center sm:text-left">
                     <span>{t.bio.specimenLabel}</span>
                   </div>
                   <h3 className="text-lg font-bold text-ink font-sans">{t.bio.totemTitle}</h3>
@@ -148,8 +146,7 @@ export function EditorialBio() {
               &rdquo;
             </blockquote>
 
-            <div className="flex items-center gap-4 text-xs font-mono text-ink-muted pt-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-primary" />
+            <div className="text-xs font-mono text-ink-muted pt-2">
               <span>{t.bio.chukarLabel}</span>
             </div>
           </div>

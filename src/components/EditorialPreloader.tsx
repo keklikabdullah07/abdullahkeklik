@@ -131,7 +131,6 @@ export function EditorialPreloader() {
               <span className="hidden sm:inline">FOLIO [2026]</span>
             </div>
             <div className="flex items-center gap-2 md:gap-3 text-[11px]">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span>URFA, MESOPOTAMIA</span>
             </div>
           </div>

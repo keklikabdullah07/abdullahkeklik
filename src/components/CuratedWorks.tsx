@@ -51,8 +51,7 @@ export function CuratedWorks() {
       <RevealOnScroll>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-hairline">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-ink-muted uppercase tracking-widest mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+            <div className="text-xs font-mono text-ink-muted uppercase tracking-widest mb-3">
               <span>{t.curatedWorks.sectionBadge}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink font-sans">

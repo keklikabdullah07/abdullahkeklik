@@ -104,12 +104,6 @@ export function InteractiveMedallion({ size = 44, className = "" }: InteractiveM
           </div>
         </div>
       </div>
-
-      {/* Taktil Parlama / Canlılık İndikatörü */}
-      <div
-        className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-amber border-2 border-canvas pointer-events-none transition-transform duration-300 group-hover:scale-125"
-        title="Canlı Etkileşimli Madalyon"
-      />
     </div>
   );
 }

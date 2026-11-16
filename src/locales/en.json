@@ -1,7 +1,7 @@
 {
   "header": {
-    "discipline": "CREATIVE TECH & SYSTEMS",
-    "openToWork": "OPEN TO COMMISSIONS",
+    "discipline": "FULL-STACK SYSTEMS & ARCHITECTURE",
+    "openToWork": "[OPEN TO COMMISSIONS]",
     "contact": "CONTACT",
     "directory": "DIRECTORY [04]",
     "localTime": "TRT",
@@ -11,29 +11,29 @@
     "title": "EDITORIAL DIRECTORY / ARCHITECTURAL INDEX",
     "close": "CLOSE [ESC]",
     "worksLabel": "SELECTED WORKS & ARCHIVE",
-    "worksSub": "Open-source repositories, IoT telemetry, and system architectures",
+    "worksSub": "Open-source repositories, system architectures, and web applications",
     "worksMeta": "08 PROJECTS / GITHUB & GITLAB",
     "manifestoLabel": "MANIFESTO & CRAFT",
-    "manifestoSub": "Ancient Mesopotamian stonework meets contemporary web engineering",
-    "manifestoMeta": "04 ENGINEERING DISCIPLINES",
+    "manifestoSub": "Enduring principles, tactile interfaces, and clean code",
+    "manifestoMeta": "04 CORE DISCIPLINES",
     "bioLabel": "BIOGRAPHY & ROOTS",
-    "bioSub": "Chukar intuition, operating principles, and chronology",
+    "bioSub": "Chukar Partridge ethos, operating principles, and timeline",
     "bioMeta": "2024 — 2026 CHRONOLOGY",
     "contactLabel": "CONTACT & COMMISSIONS",
     "contactSub": "New commissions, architectural consulting, and collaborations",
     "contactMeta": "Q1-Q2 2026 OPEN",
-    "selectLanguage": "LANGUAGE / ZIMAN"
+    "selectLanguage": "LANGUAGE SELECTION"
   },
   "hero": {
-    "quote": "A living folio fusing ancient Mesopotamian stonework and serene architecture with contemporary digital interaction engineering.",
-    "description": "Crafted with quiet luxury, generous negative space, pure typography, and smooth inertial scroll discipline.",
+    "quote": "Building resilient backends and intuitive, high-performance interfaces crafted with architectural discipline.",
+    "description": "Engineering across C#, TypeScript, .NET 9, and modern web environments — delivering high-throughput architectures, zero-runtime errors, and typographic craft.",
     "exploreCta": "EXPLORE ARCHIVE",
-    "contactCta": "CONTACT"
+    "contactCta": "GET IN TOUCH"
   },
   "curatedWorks": {
     "sectionBadge": "SECTION [02] — SELECTED WORKS & REPOSITORIES",
     "title": "Selected Works & Git Archive",
-    "subtitle": "In Nippon Design Center archive discipline: open-source repositories and high-performance system architectures crafted with C#, TypeScript, and Rust.",
+    "subtitle": "Curated under Nippon Design Center discipline: open-source repositories, cryptographic cores, and modern web architectures developed with C#, TypeScript, and Rust.",
     "tabAll": "ALL",
     "tabSystems": "SYSTEMS & SECURITY",
     "tabWeb": "WEB & INTERACTION",
@@ -41,25 +41,25 @@
   },
   "manifesto": {
     "sectionBadge": "SECTION [03] — ETHOS & CRAFT",
-    "title": "Millenary stonework meets modern web code.",
-    "p1": "We harmonize the serene geometry of Mesopotamia's earliest stone tablets with modern web engineering, zero-garbage collection discipline, and desktop-grade interactions.",
-    "p2": "Moving beyond ephemeral trends and homogeneous layouts in favor of quiet luxury, tactile material warmth, and uncompromising engineering craft."
+    "title": "Timeless architectural principles, modern engineering code.",
+    "p1": "Durability is the primary rule taught by ancient Mesopotamian stone masonry. We approach software with the same ethos — avoiding transient hype and unnecessary complexity to build clean, enduring systems.",
+    "p2": "End-to-end type safety and a rock-solid backbone on the backend; a smooth 60 FPS, accessible, and clutter-free experience on the frontend."
   },
   "bio": {
     "sectionBadge": "SECTION [03] — BIOGRAPHY & ETHOS",
-    "title1": "Craft, Roots &",
-    "title2": "Intersection of Two Worlds",
-    "subtitle": "A designer who writes code. A systems engineer with typographic intuition and visual discernment.",
-    "specimenLabel": "SPECIMEN [01] · CHUKAR PARTRIDGE TOTEM",
+    "title1": "Engineering Rigor &",
+    "title2": "Tactile Interface Craft",
+    "subtitle": "A full-stack engineer architecting deterministic systems; a designer with typographic intuition and human-centered ergonomics.",
+    "specimenLabel": "SPECIMEN [01] · CHUKAR PARTRIDGE EMBLEM",
     "totemTitle": "Mesopotamian Cultural Seal",
-    "totemDesc": "Sculptural brand totem inspired by Urfa Nahit stone masonry and ancient solar dials.",
-    "totemMeta": "NAHIT STONE & BRONZE",
-    "quote": "Design is the elimination of excess. Urfa's ancient stone walls teach us one thing:",
+    "totemDesc": "Sculptural brand emblem inspired by Urfa limestone carvings and sundial geometry.",
+    "totemMeta": "URFA LIMESTONE & BRONZE",
+    "quote": "Engineering is the discipline of eliminating the unnecessary. Ancient stone walls teach us one enduring lesson:",
     "quoteHighlight": "Only that which withstands time endures.",
-    "chukarLabel": "Chukar Partridge Intuition",
-    "narrativeP1": "In the digital landscape, most products get trapped in one of two extremes: visually stunning yet fragile, inaccessible, and sluggish websites; or rock-solid backend systems stripped of typographic grace, soul, and emotion.",
-    "narrativeP2": "I reject this artificial division. I engineer interfaces deterministically with strict performance and accessibility boundaries, while architecting systems with an artisan's rhythm, micro-interaction, and tactile presence.",
-    "narrativeFocus": "[ CORE FOCUS: CREATIVE FRONTEND · HIGH-THROUGHPUT BACKEND · RADIX / TAILWIND DESIGN SYSTEMS · WASM ]",
+    "chukarLabel": "Chukar Partridge Intuition & Focus",
+    "narrativeP1": "In modern software, products often split into extremes: either visually striking but fragile, slow, and unmaintainable web interfaces; or technically stable but lifeless, poorly typed, and ergonomically clumsy portals.",
+    "narrativeP2": "I eliminate that friction. On the backend, I build secure, strictly typed, and high-throughput pipelines using C#/.NET and TypeScript; on the frontend, I deliver accessible, smooth 60 FPS interfaces with zero perceived latency.",
+    "narrativeFocus": "[ FOCUS: C# / .NET 9 · TYPESCRIPT · NEXT.JS · POSTGRESQL · DISTRIBUTED SYSTEMS · RUST / WASM ]",
     "principlesBadge": "OPERATING PRINCIPLES",
     "principlesTitle": "Engineering & Aesthetic Constitution",
     "timelineBadge": "TIMELINE",
@@ -68,12 +68,12 @@
   "contact": {
     "sectionBadge": "SECTION [04] — GRAND FINALE & CONTACT",
     "statusBadge": "Q1-Q2 2026 FOR NEW COMMISSIONS",
-    "tagline": "LET'S CRAFT TOGETHER / COMMISSIONS & COLLABORATIONS",
+    "tagline": "LET'S BUILD TOGETHER / COMMISSIONS & COLLABORATIONS",
     "sendEmail": "SEND EMAIL",
     "copyEmail": "COPY ADDRESS",
-    "copied": "ADDRESS COPIED!",
+    "copied": "COPIED TO CLIPBOARD!",
     "footerTitle": "ABDULLAH KEKLİK STUDIO",
     "footerLoc": "37°09'N / 38°47'E — URFA, MESOPOTAMIA",
-    "footerPatience": "CRAFTED WITH ANCIENT PATIENCE"
+    "footerPatience": "CRAFTED WITH ARCHITECTURAL DISCIPLINE"
   }
 }

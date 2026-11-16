@@ -90,9 +90,9 @@ export const initialProjects: Project[] = [
     solution:
       "TypeScript ve modern React ekosistemi üzerinde; duyarlı grafikler, persantil hesaplama motorları ve veri gizliliğine tam uyumlu bir kullanıcı deneyimi kurgulandı.",
     impact: [
-      "Kullanıcı testlerinde veri anlama hızında %45 artış",
+      "Persantil normlarının anlık dinamik hesaplanması ve görselleştirilmesi",
       "Mobil ve masaüstü arası kesintisiz duyarlı (responsive) deneyim",
-      "Tam tip güvenli veri akışı ve sıfır çalışma anı (runtime) hatası",
+      "Uçtan uca tip güvenli veri akışı ve sıfır çalışma anı (runtime) hatası",
     ],
     deliverables: [
       "Next.js web arayüzü ve görselleştirme modülleri",
@@ -156,9 +156,9 @@ export const initialProjects: Project[] = [
     solution:
       "Next.js App Router üzerinde, Lenis akışkan kaydırma ve cömert keten/obsidyen zemin dengesiyle inşa edildi.",
     impact: [
-      "Kullanıcı etkileşim ve sayfada kalma süresinde %60 artış",
+      "Lenis eylemsiz kaydırma ile pürüzsüz editoryal gezinme akışı",
       "Lighthouse performans skoru 98/100",
-      "Tasarım odaklı dönüşüm oranlarında net yükseliş",
+      "Taktil mikro-etkileşimler ile yüksek marka prestiji",
     ],
     deliverables: [
       "Editoryal ürün vitrini ve sepet deneyimi",
