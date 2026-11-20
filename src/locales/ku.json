@@ -91,5 +91,17 @@
     "cliWhoamiDesc": "Nasnameya endezyar, refleksa pîşeyî û felsefe",
     "cliStackDesc": "Stûna mîmarî ya ceribandî di hilberînê de",
     "cliKeklikDesc": "Totema çandî ya Kewê Gozel (Kınalı Keklik) ya Mezopotamyayê"
+  },
+  "techRadar": {
+    "sectionBadge": "BEŞ [04] — ARSENAL & RADARA TEKNOLOJIYÊ",
+    "title": "Radara Endezyariyê & Biryarên Mîmarî",
+    "subtitle": "Li gorî pîvanên ThoughtWorks: bingehên pêbawer di hilberînê de, hêzên nû yên di radarê de û şêwazên ku ji bo tenduristiya sîstemê hatine redkirin.",
+    "tierAdopt": "ADOPT [STÛNA HILBERÎNÊ]",
+    "tierAdoptSub": "Teknolojiyên sereke yên diyarkirî ku di sîstemên zindî de bê dudilî tên bikaranîn.",
+    "tierTrial": "TRIAL [HÊZÊN DI RADARÊ DE]",
+    "tierTrialSub": "Amûrên ku ji bo performansa bilind û zanaatê bi kûrahî tên lêkolînkirin.",
+    "tierAvoid": "AVOID [ŞÊWAZÊN REDKIRÎ]",
+    "tierAvoidSub": "Rêbazên ku ji ber giraniya zêde û lawaziyê qet nakevin nava mîmariyê.",
+    "rationaleLabel": "HINCETA MÎMARÎ & TÊBÎNIYA PÎŞEYÎ"
   }
 }

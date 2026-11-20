@@ -91,5 +91,17 @@
     "cliWhoamiDesc": "Engineer identity, craft reflex, and ethos",
     "cliStackDesc": "Production-proven architectural spine",
     "cliKeklikDesc": "Mesopotamian Chukar Partridge cultural totem"
+  },
+  "techRadar": {
+    "sectionBadge": "SECTION [04] — ARSENAL & TECH RADAR",
+    "title": "Engineering Radar & Architectural Decisions",
+    "subtitle": "Built on ThoughtWorks standards: production-trusted foundations, powers on our radar, and anti-patterns consciously avoided for system resilience.",
+    "tierAdopt": "ADOPT [PRODUCTION SPINE]",
+    "tierAdoptSub": "Battle-tested, deterministic technologies powering our production systems without question.",
+    "tierTrial": "TRIAL [RADAR & CRAFT]",
+    "tierTrialSub": "Deep-dive exploratory tools leveraged for extreme performance and boundary-pushing craft.",
+    "tierAvoid": "AVOID [CONSCIOUSLY REJECTED]",
+    "tierAvoidSub": "Anti-patterns and premature abstractions strictly banned to protect architectural health.",
+    "rationaleLabel": "ARCHITECTURAL RATIONALE & CRAFT NOTE"
   }
 }

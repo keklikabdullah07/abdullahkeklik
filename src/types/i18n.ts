@@ -94,4 +94,16 @@ export interface TranslationDictionary {
     cliStackDesc: string;
     cliKeklikDesc: string;
   };
+  techRadar: {
+    sectionBadge: string;
+    title: string;
+    subtitle: string;
+    tierAdopt: string;
+    tierAdoptSub: string;
+    tierTrial: string;
+    tierTrialSub: string;
+    tierAvoid: string;
+    tierAvoidSub: string;
+    rationaleLabel: string;
+  };
 }
