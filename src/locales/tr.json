@@ -103,5 +103,22 @@
     "tierAvoid": "AVOID [REDDEDİLEN YAKLAŞIMLAR]",
     "tierAvoidSub": "Sisteme gereksiz karmaşıklık ve kırılganlık getirdiği için mimariye sokulmayan yöntemler.",
     "rationaleLabel": "MİMARİ GEREKÇE & ZANAAT NOTU"
+  },
+  "craftLab": {
+    "sectionBadge": "SECTION [05] — CRAFT LAB & MICRO-PHYSICS",
+    "title": "Zanaat Laboratuvarı & Arayüz Fiziği",
+    "subtitle": "Kütüphane kopyalamak yerine sıfırdan inşa edilen; yay fiziği kinetiği, deterministik kriptografik bloklar ve Web Audio taktil mikro-etkileşimleri.",
+    "exp1Title": "01 · Yay Fiziği & Kinetik Sönümleme",
+    "exp1Desc": "Nahit taşı plakayı fareyle veya dokunarak çekip fırlatın. Gerilim ve sönümleme ayarlarını değiştirerek hareket bütçesini hissedin.",
+    "stiffnessLabel": "GERİLİM (STIFFNESS)",
+    "dampingLabel": "SÖNÜMLEME (DAMPING)",
+    "massLabel": "KÜTLE (MASS)",
+    "exp2Title": "02 · Deterministik Kriptografik Bloklar",
+    "exp2Desc": "Girdiğiniz her karakter anında deterministik 256-bit bloklara ayrışır. Arka uç sistem düşüncesinin ön yüzdeki görsel yansıması.",
+    "hashInputPlaceholder": "Metin girin (örn: Partridge, .NET 9)...",
+    "exp3Title": "03 · Akustik Taktil Sentez (Web Audio)",
+    "exp3Desc": "Sıfır mp3/harici ses dosyası. Tarayıcının yerel osilatörüyle sentezlenen 40ms sönümlü Leica deklanşör/kadran klik rezonansı.",
+    "tactileTrigger": "TAKTİL KLİK TETİKLE",
+    "tactilePlaying": "REZONANS TETİKLENDİ"
   }
 }

@@ -103,5 +103,22 @@
     "tierAvoid": "AVOID [ŞÊWAZÊN REDKIRÎ]",
     "tierAvoidSub": "Rêbazên ku ji ber giraniya zêde û lawaziyê qet nakevin nava mîmariyê.",
     "rationaleLabel": "HINCETA MÎMARÎ & TÊBÎNIYA PÎŞEYÎ"
+  },
+  "craftLab": {
+    "sectionBadge": "BEŞ [05] — LABORA ZANAATÊ & MÎKRO-FÎZÎK",
+    "title": "Laboratûvara Zanaatê & Fîzîka Arayüzê",
+    "subtitle": "Li şûna kopyakirina pirtûkxaneyan, ji koka matematîkî hatine avakirin: fîzîka kaniyê (springs), blokên krîptografîk û dengê Web Audio.",
+    "exp1Title": "01 · Fîzîka Kaniyê & Tevgera Kînetîk",
+    "exp1Desc": "Kevirê Nahit bi mişkê an tilîyê bikişînin û berdin. Pîvanên kaniyê biguherînin û tevgera siruştî hîs bikin.",
+    "stiffnessLabel": "HIŞKAHÎ (STIFFNESS)",
+    "dampingLabel": "HÊDÎKIRIN (DAMPING)",
+    "massLabel": "KÎLO / GİRANÎ (MASS)",
+    "exp2Title": "02 · Blokên Krîptografîk ên Diyarkirî",
+    "exp2Desc": "Her nivîsa ku hûn dinivîsin rasterast dibe blokên 256-bit ên krîptoyê. Nîşandana hizra binesaziya paşîn li pêş rûpelê.",
+    "hashInputPlaceholder": "Nivîs binivîse (mînak: Partridge, .NET 9)...",
+    "exp3Title": "03 · Dengê Taktîkî yê Web Audio",
+    "exp3Desc": "Bêyî ti pelên dengî yên derveyî. Bi osîlatora gerokê re klîkek sînusê ya 40ms mîna deklanşora kamerayê tê hilberandin.",
+    "tactileTrigger": "KLÎKA TAKTÎKÎ BIXEBİTÎNE",
+    "tactilePlaying": "REZONANS HAT ÇÊKIRIN"
   }
 }

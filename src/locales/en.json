@@ -103,5 +103,22 @@
     "tierAvoid": "AVOID [CONSCIOUSLY REJECTED]",
     "tierAvoidSub": "Anti-patterns and premature abstractions strictly banned to protect architectural health.",
     "rationaleLabel": "ARCHITECTURAL RATIONALE & CRAFT NOTE"
+  },
+  "craftLab": {
+    "sectionBadge": "SECTION [05] — CRAFT LAB & MICRO-PHYSICS",
+    "title": "Craft Lab & Micro-Physics",
+    "subtitle": "Built from mathematical primitives rather than borrowed packages: spring kinetics, deterministic crypto blocks, and Web Audio tactile synthesis.",
+    "exp1Title": "01 · Spring Dynamics & Inertia",
+    "exp1Desc": "Drag and fling the Nahit stone tile. Adjust stiffness and damping parameters live to experience physical motion budgets.",
+    "stiffnessLabel": "STIFFNESS",
+    "dampingLabel": "DAMPING",
+    "massLabel": "MASS",
+    "exp2Title": "02 · Deterministic Crypto Chunks",
+    "exp2Desc": "Every input keypress deterministic 256-bit block partitioning. Translating backend systems architecture into frontend tactile clarity.",
+    "hashInputPlaceholder": "Enter input (e.g. Partridge, .NET 9)...",
+    "exp3Title": "03 · Acoustic Tactile Synthesis (Web Audio)",
+    "exp3Desc": "Zero external mp3 assets. A pure 40ms damped sine click synthesized directly via Web Audio API, mimicking a Leica mechanical shutter.",
+    "tactileTrigger": "TRIGGER TACTILE CLICK",
+    "tactilePlaying": "RESONANCE FIRED"
   }
 }
