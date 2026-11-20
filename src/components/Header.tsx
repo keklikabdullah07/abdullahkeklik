@@ -2,10 +2,11 @@
 
 import { useI18n } from "@/context/LanguageContext";
 import { useLocalTime } from "@/hooks/useLocalTime";
-import { Menu } from "lucide-react";
+import { Menu, Terminal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { CommandPalette } from "./CommandPalette";
 import { EditorialDirectoryModal } from "./EditorialDirectoryModal";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -13,6 +14,19 @@ export function Header() {
   const { t } = useI18n();
   const timeString = useLocalTime("tr-TR", "16:32");
   const [directoryOpen, setDirectoryOpen] = useState<boolean>(false);
+  const [commandPaletteOpen, setCommandPaletteOpen] = useState<boolean>(false);
+
+  // Global Cmd+K / Ctrl+K kısayol dinleyicisi
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setCommandPaletteOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <>
@@ -78,6 +92,22 @@ export function Header() {
               <span>{t.header.contact}</span>
             </a>
 
+            {/* Architectural Command Palette Tetikleyici (⌘K / Ctrl+K) */}
+            <button
+              type="button"
+              onClick={() => setCommandPaletteOpen(true)}
+              className="hidden sm:inline-flex items-center gap-2 px-2.5 py-2 rounded-md bg-surface hover:bg-surface-raised border border-hairline text-ink font-mono text-xs transition-all duration-200 active:scale-95 shadow-2xs group"
+              aria-label="Komut paletini aç (Cmd+K)"
+            >
+              <Terminal className="w-3.5 h-3.5 text-primary group-hover:rotate-12 transition-transform duration-200" />
+              <span className="text-[11px] font-medium tracking-tight text-ink-muted hidden md:inline">
+                {t.commandPalette.triggerLabel}
+              </span>
+              <kbd className="px-1.5 py-0.5 rounded bg-canvas border border-hairline text-[10px] text-primary font-mono uppercase font-semibold">
+                {t.commandPalette.shortcutBadge}
+              </kbd>
+            </button>
+
             {/* Awwwards Seviyesi: DIRECTORY [04] Heykelsi Tetikleyici */}
             <button
               type="button"
@@ -100,6 +130,9 @@ export function Header() {
         onClose={() => setDirectoryOpen(false)}
         timeString={timeString}
       />
+
+      {/* Architectural Command Palette (Cmd + K) */}
+      <CommandPalette isOpen={commandPaletteOpen} onClose={() => setCommandPaletteOpen(false)} />
     </>
   );
 }

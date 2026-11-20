@@ -75,5 +75,21 @@
     "footerTitle": "ABDULLAH KEKLİK STUDIO",
     "footerLoc": "37°09'N / 38°47'E — URFA, MESOPOTAMIA",
     "footerPatience": "CRAFTED WITH ARCHITECTURAL DISCIPLINE"
+  },
+  "commandPalette": {
+    "triggerLabel": "COMMANDS",
+    "placeholder": "Search command or section... (e.g. > whoami)",
+    "shortcutBadge": "⌘K",
+    "sectionsHeading": "SECTIONS & NAVIGATION",
+    "systemHeading": "SYSTEM & ACTIONS",
+    "cliHeading": "ARCHITECTURAL TERMINAL (CLI)",
+    "noResults": "No matching commands found.",
+    "closeHint": "CLOSE [ESC]",
+    "navigateHint": "[↑↓] NAVIGATE",
+    "selectHint": "[↵] EXECUTE",
+    "copyEmailSuccess": "EMAIL COPIED TO CLIPBOARD",
+    "cliWhoamiDesc": "Engineer identity, craft reflex, and ethos",
+    "cliStackDesc": "Production-proven architectural spine",
+    "cliKeklikDesc": "Mesopotamian Chukar Partridge cultural totem"
   }
 }
