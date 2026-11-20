@@ -132,5 +132,14 @@
     "metricPattern": "DESIGN PATTERN",
     "rationaleLabel": "ARCHITECTURAL DECISION & INVARIANT NOTE",
     "interactiveHint": "[Select a node to inspect benchmarks and architectural decisions]"
+  },
+  "fieldNotes": {
+    "sectionBadge": "SECTION [06] — FIELD NOTES & ESSAYS",
+    "title": "Field Notes & Engineering Essays",
+    "subtitle": "Rejecting superficial tutorials in favor of rigorous technical explorations: distributed consistency, 60 FPS spring kinetics, and zero-runtime failure architectures.",
+    "readArticle": "READ ESSAY →",
+    "closeArticle": "CLOSE [ESC]",
+    "keyTakeawaysLabel": "ARCHITECTURAL TAKEAWAYS",
+    "publishedOn": "PUBLISHED"
   }
 }

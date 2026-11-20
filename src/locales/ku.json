@@ -132,5 +132,14 @@
     "metricPattern": "ŞÊWAZA SÊWIRANÊ",
     "rationaleLabel": "BIRYARA MÎMARÎ & TÊBÎNIYA DESTÛRÊ",
     "interactiveHint": "[Dûghekî hilbijêrin da ku hûrgiliyên mîmarî bibînin]"
+  },
+  "fieldNotes": {
+    "sectionBadge": "BEŞ [06] — TÊBÎNIYÊN SAHAYÊ & GOTAR",
+    "title": "Têbîniyên Sahayê & Gotarên Mîmarî",
+    "subtitle": "Li şûna nivîsên ji rêzê; li ser sîstemên belavkirî, fîzîka arayüzê ya 60 FPS û ewlehiya cureyê gotarên kûr ên endezyariyê.",
+    "readArticle": "GOTARÊ BIXWÎNE →",
+    "closeArticle": "BIGIRE [ESC]",
+    "keyTakeawaysLabel": "ENCAMÊN SEREKE YÊN MÎMARÎ",
+    "publishedOn": "DÎROKA WEŞANÊ"
   }
 }

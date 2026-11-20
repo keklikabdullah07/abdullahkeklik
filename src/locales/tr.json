@@ -132,5 +132,14 @@
     "metricPattern": "TASARIM KALIBI",
     "rationaleLabel": "MİMARİ KARAR & INVARIANT NOTU",
     "interactiveHint": "[Düğüm seçerek detaylı metrik ve mimari gerekçeyi inceleyin]"
+  },
+  "fieldNotes": {
+    "sectionBadge": "SECTION [06] — FIELD NOTES & ESSAYS",
+    "title": "Saha Notları & Mimari Makaleler",
+    "subtitle": "Yüzeysel blog yazıları yerine; dağıtık sistemler, 60 FPS arayüz fiziği ve sıfır çalışma anı hatası üzerine derinlemesine mühendislik denemeleri.",
+    "readArticle": "MAKALESİNİ OKU →",
+    "closeArticle": "KAPAT [ESC]",
+    "keyTakeawaysLabel": "TEMEL MİMARİ ÇIKARIMLAR",
+    "publishedOn": "YAYIN TARİHİ"
   }
 }

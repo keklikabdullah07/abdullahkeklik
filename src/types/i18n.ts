@@ -135,4 +135,13 @@ export interface TranslationDictionary {
     rationaleLabel: string;
     interactiveHint: string;
   };
+  fieldNotes: {
+    sectionBadge: string;
+    title: string;
+    subtitle: string;
+    readArticle: string;
+    closeArticle: string;
+    keyTakeawaysLabel: string;
+    publishedOn: string;
+  };
 }
