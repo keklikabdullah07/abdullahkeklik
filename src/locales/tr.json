@@ -75,5 +75,21 @@
     "footerTitle": "ABDULLAH KEKLİK STUDIO",
     "footerLoc": "37°09'N / 38°47'E — URFA, MESOPOTAMIA",
     "footerPatience": "CRAFTED WITH ARCHITECTURAL DISCIPLINE"
+  },
+  "commandPalette": {
+    "triggerLabel": "KOMUTLAR",
+    "placeholder": "Komut veya bölüm arayın... (örn: > whoami)",
+    "shortcutBadge": "⌘K",
+    "sectionsHeading": "BÖLÜMLER & NAVİGASYON",
+    "systemHeading": "SİSTEM & EYLEMLER",
+    "cliHeading": "MİMARİ TERMİNAL (CLI)",
+    "noResults": "Eşleşen komut bulunamadı.",
+    "closeHint": "KAPAT [ESC]",
+    "navigateHint": "[↑↓] GEZİN",
+    "selectHint": "[↵] ÇALIŞTIR",
+    "copyEmailSuccess": "E-POSTA ADRESİ PANOTA KOPYALANDI",
+    "cliWhoamiDesc": "Mühendis kimliği, zanaat refleksi ve felsefe",
+    "cliStackDesc": "Üretim ortamında kanıtlanmış mimari omurga",
+    "cliKeklikDesc": "Mezopotamya Kınalı Keklik (Chukar) kültürel totemi"
   }
 }

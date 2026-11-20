@@ -78,4 +78,20 @@ export interface TranslationDictionary {
     footerLoc: string;
     footerPatience: string;
   };
+  commandPalette: {
+    triggerLabel: string;
+    placeholder: string;
+    shortcutBadge: string;
+    sectionsHeading: string;
+    systemHeading: string;
+    cliHeading: string;
+    noResults: string;
+    closeHint: string;
+    navigateHint: string;
+    selectHint: string;
+    copyEmailSuccess: string;
+    cliWhoamiDesc: string;
+    cliStackDesc: string;
+    cliKeklikDesc: string;
+  };
 }

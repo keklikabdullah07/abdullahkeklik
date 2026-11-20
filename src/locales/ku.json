@@ -75,5 +75,21 @@
     "footerTitle": "ABDULLAH KEKLİK STUDIO",
     "footerLoc": "37°09'N / 38°47'E — RIHA, MEZOPOTAMYA",
     "footerPatience": "BI DÎSÎPLÎNA MÎMARÎ HAT ÇÊKIRIN"
+  },
+  "commandPalette": {
+    "triggerLabel": "FERMAN",
+    "placeholder": "Ferman an beşekê bigerin... (mînak: > whoami)",
+    "shortcutBadge": "⌘K",
+    "sectionsHeading": "BEŞ & GEROKÎ",
+    "systemHeading": "SÎSTEM & ÇALAKÎ",
+    "cliHeading": "TERMÎNALA MÎMARÎ (CLI)",
+    "noResults": "Fermana lihevhatî nehat dîtin.",
+    "closeHint": "BIGIRE [ESC]",
+    "navigateHint": "[↑↓] BIGERE",
+    "selectHint": "[↵] BIXEBİTÎNE",
+    "copyEmailSuccess": "NAVNÎŞANA E-POSTEYÊ HAT KOPYAKIRIN",
+    "cliWhoamiDesc": "Nasnameya endezyar, refleksa pîşeyî û felsefe",
+    "cliStackDesc": "Stûna mîmarî ya ceribandî di hilberînê de",
+    "cliKeklikDesc": "Totema çandî ya Kewê Gozel (Kınalı Keklik) ya Mezopotamyayê"
   }
 }
