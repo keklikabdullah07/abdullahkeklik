@@ -1,3 +1,4 @@
+import { ArchitectureDiagram } from "@/components/ArchitectureDiagram";
 import { ArsenalTechRadar } from "@/components/ArsenalTechRadar";
 import { CraftLab } from "@/components/CraftLab";
 import { CuratedWorks } from "@/components/CuratedWorks";
@@ -15,6 +16,7 @@ export default function Home() {
       <main id="main-content" className="flex-1 flex flex-col justify-center">
         <EditorialHero />
         <CuratedWorks />
+        <ArchitectureDiagram />
         <TypographicManifesto />
         <ArsenalTechRadar />
         <EditorialBio />

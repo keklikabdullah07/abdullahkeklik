@@ -120,5 +120,17 @@
     "exp3Desc": "Bêyî ti pelên dengî yên derveyî. Bi osîlatora gerokê re klîkek sînusê ya 40ms mîna deklanşora kamerayê tê hilberandin.",
     "tactileTrigger": "KLÎKA TAKTÎKÎ BIXEBİTÎNE",
     "tactilePlaying": "REZONANS HAT ÇÊKIRIN"
+  },
+  "architectureDiagram": {
+    "sectionBadge": "BEŞ [03] — NEXŞEYA MÎMARIYA SÎSTEMÊ",
+    "title": "Mîmariya Belavkirî & Herikîna Daxwazan",
+    "subtitle": "Li ser stûna .NET 9 û PostgreSQL: ji sînorê torê heta depoya daneyan qonax bi qonax herikîna daxwazan a pîvandî û ewle.",
+    "pipelineHeading": "XETA MÎMARÎ // HERIKÎNA 6 QONAXÎ YA DAXWAZAN",
+    "inspectorHeading": "LÊKOLÎNA DÛGHA MÎMARÎ (INSPECTOR)",
+    "metricLatency": "BÛDÇEYA HÊDÎBÛNÊ",
+    "metricThroughput": "KAPASÎTEYA HILBERÎNÊ",
+    "metricPattern": "ŞÊWAZA SÊWIRANÊ",
+    "rationaleLabel": "BIRYARA MÎMARÎ & TÊBÎNIYA DESTÛRÊ",
+    "interactiveHint": "[Dûghekî hilbijêrin da ku hûrgiliyên mîmarî bibînin]"
   }
 }
