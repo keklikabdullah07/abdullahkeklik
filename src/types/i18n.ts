@@ -106,4 +106,21 @@ export interface TranslationDictionary {
     tierAvoidSub: string;
     rationaleLabel: string;
   };
+  craftLab: {
+    sectionBadge: string;
+    title: string;
+    subtitle: string;
+    exp1Title: string;
+    exp1Desc: string;
+    stiffnessLabel: string;
+    dampingLabel: string;
+    massLabel: string;
+    exp2Title: string;
+    exp2Desc: string;
+    hashInputPlaceholder: string;
+    exp3Title: string;
+    exp3Desc: string;
+    tactileTrigger: string;
+    tactilePlaying: string;
+  };
 }

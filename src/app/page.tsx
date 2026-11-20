@@ -1,4 +1,5 @@
 import { ArsenalTechRadar } from "@/components/ArsenalTechRadar";
+import { CraftLab } from "@/components/CraftLab";
 import { CuratedWorks } from "@/components/CuratedWorks";
 import { EditorialBio } from "@/components/EditorialBio";
 import { EditorialHero } from "@/components/EditorialHero";
@@ -17,6 +18,7 @@ export default function Home() {
         <TypographicManifesto />
         <ArsenalTechRadar />
         <EditorialBio />
+        <CraftLab />
       </main>
       <GrandFinaleContact />
     </div>
