@@ -102,6 +102,39 @@ function checkInvariants() {
     }
   }
 
+  // 4. Anti-AI-Slop & Klişe İkon İhlali Denetimi
+  const walkFiles = (dir: string): string[] => {
+    let results: string[] = [];
+    if (!fs.existsSync(dir)) return results;
+    const list = fs.readdirSync(dir);
+    for (const file of list) {
+      const fullPath = path.join(dir, file);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        results = results.concat(walkFiles(fullPath));
+      } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+        results.push(fullPath);
+      }
+    }
+    return results;
+  };
+
+  const srcFiles = walkFiles(path.join(ROOT_DIR, "src"));
+  const bannedIcons = ["Sparkles", "Wand", "Bot", "Brain"];
+
+  for (const file of srcFiles) {
+    const content = fs.readFileSync(file, "utf-8");
+    for (const icon of bannedIcons) {
+      if (icon === "Bot" && content.includes("googleBot")) continue;
+      const hasBanned = new RegExp(`\\b${icon}\\b`).test(content);
+      if (hasBanned && content.includes("lucide-react")) {
+        errors.push(
+          `[AI SLOP YASAĞI] ${path.relative(ROOT_DIR, file)} dosyasında '${icon}' ikonu tespit edildi. Mimari anayasa gereği yapay zeka klişesi ikonlar yasaktır.`,
+        );
+      }
+    }
+  }
+
   if (errors.length > 0) {
     console.error("\n❌ Harness Invariant / Capability Drift İhlalleri Tespit Edildi:");
     for (const err of errors) {

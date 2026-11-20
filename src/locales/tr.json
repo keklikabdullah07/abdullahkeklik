@@ -91,5 +91,17 @@
     "cliWhoamiDesc": "Mühendis kimliği, zanaat refleksi ve felsefe",
     "cliStackDesc": "Üretim ortamında kanıtlanmış mimari omurga",
     "cliKeklikDesc": "Mezopotamya Kınalı Keklik (Chukar) kültürel totemi"
+  },
+  "techRadar": {
+    "sectionBadge": "SECTION [04] — ARSENAL & TECH RADAR",
+    "title": "Mühendislik Radarı & Mimari Tercihler",
+    "subtitle": "ThoughtWorks standartlarında; canlı üretimde güvenilen omurga, radardaki yeni güçler ve sistem sağlığı için bilinçli olarak reddedilen yaklaşımlar.",
+    "tierAdopt": "ADOPT [ÜRETİM OMURGASI]",
+    "tierAdoptSub": "Canlı sistemlerde deterministik olarak çalışan ve şüphe duymadan kullanılan çekirdek.",
+    "tierTrial": "TRIAL [RADARDAKİ GÜÇLER]",
+    "tierTrialSub": "Yüksek zanaat ve performans darboğazları için aktif olarak incelenen ve derinleşilen araçlar.",
+    "tierAvoid": "AVOID [REDDEDİLEN YAKLAŞIMLAR]",
+    "tierAvoidSub": "Sisteme gereksiz karmaşıklık ve kırılganlık getirdiği için mimariye sokulmayan yöntemler.",
+    "rationaleLabel": "MİMARİ GEREKÇE & ZANAAT NOTU"
   }
 }
