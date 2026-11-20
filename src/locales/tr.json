@@ -120,5 +120,17 @@
     "exp3Desc": "Sıfır mp3/harici ses dosyası. Tarayıcının yerel osilatörüyle sentezlenen 40ms sönümlü Leica deklanşör/kadran klik rezonansı.",
     "tactileTrigger": "TAKTİL KLİK TETİKLE",
     "tactilePlaying": "REZONANS TETİKLENDİ"
+  },
+  "architectureDiagram": {
+    "sectionBadge": "SECTION [03] — SYSTEM ARCHITECTURE BLUEPRINT",
+    "title": "Dağıtık Sistem Mimarisi & İstek Akışı",
+    "subtitle": "Kaya gibi sağlam .NET 9 ve PostgreSQL omurgasında; uç ağlardan veritabanı kümesine kadar her aşaması ölçülmüş, deterministik istek işleme boru hattı.",
+    "pipelineHeading": "MİMARİ BORU HATTI // 6 AŞAMALI İSTEK AKIŞI",
+    "inspectorHeading": "MİMARİ DÜĞÜM İNCELEMESİ (NODE INSPECTOR)",
+    "metricLatency": "GECİKME BÜTÇESİ",
+    "metricThroughput": "İŞLEM KAPASİTESİ",
+    "metricPattern": "TASARIM KALIBI",
+    "rationaleLabel": "MİMARİ KARAR & INVARIANT NOTU",
+    "interactiveHint": "[Düğüm seçerek detaylı metrik ve mimari gerekçeyi inceleyin]"
   }
 }

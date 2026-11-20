@@ -120,5 +120,17 @@
     "exp3Desc": "Zero external mp3 assets. A pure 40ms damped sine click synthesized directly via Web Audio API, mimicking a Leica mechanical shutter.",
     "tactileTrigger": "TRIGGER TACTILE CLICK",
     "tactilePlaying": "RESONANCE FIRED"
+  },
+  "architectureDiagram": {
+    "sectionBadge": "SECTION [03] — SYSTEM ARCHITECTURE BLUEPRINT",
+    "title": "Distributed Architecture & Request Pipeline",
+    "subtitle": "Anchored by .NET 9 and PostgreSQL: an end-to-end benchmarked, deterministic request processing pipeline from edge ingress down to the persistence tier.",
+    "pipelineHeading": "ARCHITECTURAL PIPELINE // 6-STAGE REQUEST LIFECYCLE",
+    "inspectorHeading": "NODE INSPECTOR & TELEMETRY",
+    "metricLatency": "LATENCY BUDGET",
+    "metricThroughput": "THROUGHPUT CAPACITY",
+    "metricPattern": "DESIGN PATTERN",
+    "rationaleLabel": "ARCHITECTURAL DECISION & INVARIANT NOTE",
+    "interactiveHint": "[Select a node to inspect benchmarks and architectural decisions]"
   }
 }

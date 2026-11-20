@@ -123,4 +123,16 @@ export interface TranslationDictionary {
     tactileTrigger: string;
     tactilePlaying: string;
   };
+  architectureDiagram: {
+    sectionBadge: string;
+    title: string;
+    subtitle: string;
+    pipelineHeading: string;
+    inspectorHeading: string;
+    metricLatency: string;
+    metricThroughput: string;
+    metricPattern: string;
+    rationaleLabel: string;
+    interactiveHint: string;
+  };
 }
