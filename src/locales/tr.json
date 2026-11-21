@@ -141,5 +141,25 @@
     "closeArticle": "KAPAT [ESC]",
     "keyTakeawaysLabel": "TEMEL MİMARİ ÇIKARIMLAR",
     "publishedOn": "YAYIN TARİHİ"
+  },
+  "contactForm": {
+    "badge": "COMMISSION & TALEP FORMU",
+    "title": "Doğrudan İletişim & Proje Başlatma",
+    "subtitle": "Yeni bir mimari kurulum, sistem danışmanlığı veya özel bir dijital vitrin projesi için formu doldurarak WhatsApp veya E-posta üzerinden anında bağlantı kurun.",
+    "nameLabel": "AD SOYAD / KURUM",
+    "namePlaceholder": "örn: Burak Yılmaz (Studio X)",
+    "contactLabel": "E-POSTA VEYA TELEFON",
+    "contactPlaceholder": "örn: burak@studiox.com veya +90 5xx...",
+    "disciplineLabel": "İLGİLENİLEN DİSİPLİN & KAPSAM",
+    "disciplineArchitecture": "SİSTEM MİMARİSİ & .NET",
+    "disciplineFullstack": "FULL-STACK & WEB VİTRİNİ",
+    "disciplineAdvisory": "MİMARİ DANIŞMANLIK & KOD DENETİMİ",
+    "messageLabel": "PROJE NOTU & HEDEFLER",
+    "messagePlaceholder": "Projenizin kapsamını, hedeflenen takvimi ve varsa teknik gereksinimleri kısaca özetleyin...",
+    "submitWhatsApp": "WHATSAPP İLE GÖNDER",
+    "submitEmail": "E-POSTA İLE İLET",
+    "copiedSuccess": "KOPYALANDI!",
+    "validationError": "Lütfen adınızı ve bir iletişim bilginizi (e-posta veya telefon) girin.",
+    "directChannelsHeading": "DOĞRUDAN İLETİŞİM KANALLARI"
   }
 }

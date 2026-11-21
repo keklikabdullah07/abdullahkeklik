@@ -62,7 +62,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
 
   // E-posta kopyalama
   const handleCopyEmail = useCallback(() => {
-    navigator.clipboard.writeText("keklikabdullah73@gmail.com");
+    navigator.clipboard.writeText("keklikabdullah07@gmail.com");
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
@@ -241,7 +241,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
         id: "sys-copy-email",
         category: "system",
         title: copied ? t.commandPalette.copyEmailSuccess : t.contact.copyEmail,
-        subtitle: "keklikabdullah73@gmail.com",
+        subtitle: "keklikabdullah07@gmail.com",
         icon: copied ? (
           <Check className="w-4 h-4 text-emerald-600" />
         ) : (
@@ -250,6 +250,45 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
         shortcut: "COPY",
         onSelect: handleCopyEmail,
         keywords: ["email", "eposta", "kopyala", "copy", "mail"],
+      },
+      {
+        id: "sys-whatsapp",
+        category: "system",
+        title: "WhatsApp Chat",
+        subtitle: "+90 553 167 56 69",
+        icon: <ExternalLink className="w-4 h-4 text-emerald-500" />,
+        shortcut: "CHAT",
+        onSelect: () => {
+          window.open("https://wa.me/905531675669", "_blank", "noreferrer");
+          onClose();
+        },
+        keywords: ["whatsapp", "mesaj", "chat", "telefon", "iletisim"],
+      },
+      {
+        id: "sys-telegram",
+        category: "system",
+        title: "Telegram Chat",
+        subtitle: "+90 553 167 56 69",
+        icon: <ExternalLink className="w-4 h-4 text-sky-500" />,
+        shortcut: "CHAT",
+        onSelect: () => {
+          window.open("https://t.me/+905531675669", "_blank", "noreferrer");
+          onClose();
+        },
+        keywords: ["telegram", "chat", "mesaj", "tg"],
+      },
+      {
+        id: "sys-instagram",
+        category: "system",
+        title: "Instagram Profile",
+        subtitle: "@_keklikabdullah",
+        icon: <ExternalLink className="w-4 h-4 text-pink-500" />,
+        shortcut: "EXT",
+        onSelect: () => {
+          window.open("https://www.instagram.com/_keklikabdullah", "_blank", "noreferrer");
+          onClose();
+        },
+        keywords: ["instagram", "insta", "sosyal", "ig"],
       },
       {
         id: "sys-lang-tr",
@@ -294,11 +333,11 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
         id: "sys-github",
         category: "system",
         title: "GitHub Profile",
-        subtitle: "github.com/keklikabdullah",
+        subtitle: "github.com/keklikabdullah07",
         icon: <ExternalLink className="w-4 h-4 text-ink-muted" />,
         shortcut: "EXT",
         onSelect: () => {
-          window.open("https://github.com/keklikabdullah", "_blank", "noreferrer");
+          window.open("https://github.com/keklikabdullah07", "_blank", "noreferrer");
           onClose();
         },
         keywords: ["github", "kod", "git", "acik kaynak"],
@@ -307,11 +346,11 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
         id: "sys-gitlab",
         category: "system",
         title: "GitLab Profile",
-        subtitle: "gitlab.com/keklikabdullah",
+        subtitle: "gitlab.com/keklikabdullah07",
         icon: <ExternalLink className="w-4 h-4 text-ink-muted" />,
         shortcut: "EXT",
         onSelect: () => {
-          window.open("https://gitlab.com/keklikabdullah", "_blank", "noreferrer");
+          window.open("https://gitlab.com/keklikabdullah07", "_blank", "noreferrer");
           onClose();
         },
         keywords: ["gitlab", "repos", "kaynak"],

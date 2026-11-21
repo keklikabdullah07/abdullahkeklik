@@ -144,4 +144,24 @@ export interface TranslationDictionary {
     keyTakeawaysLabel: string;
     publishedOn: string;
   };
+  contactForm: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    nameLabel: string;
+    namePlaceholder: string;
+    contactLabel: string;
+    contactPlaceholder: string;
+    disciplineLabel: string;
+    disciplineArchitecture: string;
+    disciplineFullstack: string;
+    disciplineAdvisory: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    submitWhatsApp: string;
+    submitEmail: string;
+    copiedSuccess: string;
+    validationError: string;
+    directChannelsHeading: string;
+  };
 }

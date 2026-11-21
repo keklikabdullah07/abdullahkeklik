@@ -141,5 +141,25 @@
     "closeArticle": "BIGIRE [ESC]",
     "keyTakeawaysLabel": "ENCAMÊN SEREKE YÊN MÎMARÎ",
     "publishedOn": "DÎROKA WEŞANÊ"
+  },
+  "contactForm": {
+    "badge": "FORMA HEVKARÎ & DAXWAZÊ",
+    "title": "Têkiliya Rasterast & Destpêkirina Projeyê",
+    "subtitle": "Ji bo avakirina mîmariyan, şêwirmendiya teknîkî an jî projeyên taybet formê tije bikin û bi WhatsApp an jî E-nameyê rasterast têkilî deynin.",
+    "nameLabel": "NAV Û PAŞNAV / SAZÎ",
+    "namePlaceholder": "mînak: Berzan Dîlan (Studio X)",
+    "contactLabel": "E-NAMEYA WE AN TELEFON",
+    "contactPlaceholder": "mînak: berzan@studiox.com an +90 5xx...",
+    "disciplineLabel": "BEŞA HILBIJARTÎ & BERFIREHÎ",
+    "disciplineArchitecture": "MÎMARIYA SÎSTEMÊ & .NET",
+    "disciplineFullstack": "FULL-STACK & RÛPELA TAYBET",
+    "disciplineAdvisory": "ŞÊWIRMENDIYA MÎMARÎ & KONTROLA KODÊ",
+    "messageLabel": "TÊBÎNIYA PROJEYÊ & ARMANC",
+    "messagePlaceholder": "Berfirehiya projeya xwe, dema armanckirî û hewcedariyên teknîkî bi kurtasî binivîsin...",
+    "submitWhatsApp": "BI WHATSAPPÊ BIŞÎNE",
+    "submitEmail": "BI E-NAMEYÊ BIŞÎNE",
+    "copiedSuccess": "HAT KOPYAKIRIN!",
+    "validationError": "Ji kerema xwe navê xwe û agahiyek têkiliyê (e-name an telefon) binivîsin.",
+    "directChannelsHeading": "QENALÊN TÊKILIYÊ YÊN RASTERAST"
   }
 }

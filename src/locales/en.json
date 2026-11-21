@@ -141,5 +141,25 @@
     "closeArticle": "CLOSE [ESC]",
     "keyTakeawaysLabel": "ARCHITECTURAL TAKEAWAYS",
     "publishedOn": "PUBLISHED"
+  },
+  "contactForm": {
+    "badge": "COMMISSIONS & INQUIRY FORM",
+    "title": "Direct Dispatch & Project Commissions",
+    "subtitle": "Initiate a dialogue for system architecture, technical advisory, or bespoke digital artifacts. Dispatch via WhatsApp or Email instantaneously.",
+    "nameLabel": "FULL NAME / ORGANIZATION",
+    "namePlaceholder": "e.g., Alex Mercer (Venture Core)",
+    "contactLabel": "EMAIL OR PHONE NUMBER",
+    "contactPlaceholder": "e.g., alex@venturecore.com or +1 415...",
+    "disciplineLabel": "DISCIPLINE & SCOPE",
+    "disciplineArchitecture": "SYSTEMS ARCHITECTURE & .NET",
+    "disciplineFullstack": "FULL-STACK & BESPOKE WEB",
+    "disciplineAdvisory": "ARCHITECTURAL ADVISORY & AUDIT",
+    "messageLabel": "PROJECT SCOPE & OBJECTIVES",
+    "messagePlaceholder": "Outline your timeline, high-level requirements, and technical architectural goals...",
+    "submitWhatsApp": "DISPATCH VIA WHATSAPP",
+    "submitEmail": "DISPATCH VIA EMAIL",
+    "copiedSuccess": "COPIED TO CLIPBOARD!",
+    "validationError": "Please provide your name and at least one contact channel (email or phone).",
+    "directChannelsHeading": "DIRECT ACCESS CHANNELS"
   }
 }

@@ -1,22 +1,48 @@
 "use client";
 
 import { useI18n } from "@/context/LanguageContext";
-import { ArrowUpRight, Check, Copy, Mail } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  Copy,
+  Instagram,
+  Mail,
+  MessageCircle,
+  MessageSquare,
+  Phone,
+  Send,
+} from "lucide-react";
 import Image from "next/image";
 import type React from "react";
 import { useState } from "react";
+import { CommissionInquiryForm } from "./CommissionInquiryForm";
 import { RevealOnScroll } from "./MotionWrapper";
 
 export function GrandFinaleContact() {
   const { t } = useI18n();
-  const [copied, setCopied] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+
   const email = "keklikabdullah07@gmail.com";
+  const phone = "+90 553 167 56 69";
+  const phoneRaw = "905531675669";
+  const instagramHandle = "_keklikabdullah";
 
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText(email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2500);
+    } catch {
+      // Fallback
+    }
+  };
+
+  const handleCopyPhone = async () => {
+    try {
+      await navigator.clipboard.writeText(phone);
+      setCopiedPhone(true);
+      setTimeout(() => setCopiedPhone(false), 2500);
     } catch {
       // Fallback
     }
@@ -45,7 +71,7 @@ export function GrandFinaleContact() {
 
         {/* Delta Cafés Cesaretinde Devasa Başlık */}
         <RevealOnScroll>
-          <div className="my-20 md:my-28">
+          <div className="my-16 md:my-24">
             <p className="text-sm md:text-base font-mono text-primary uppercase tracking-wider mb-6">
               {t.contact.tagline}
             </p>
@@ -58,38 +84,103 @@ export function GrandFinaleContact() {
               </span>
             </h2>
 
-            {/* İletişim Aksiyon Alanı: Doğrudan Mailto ve Kopyala Butonları */}
-            <div className="mt-12 md:mt-16 flex flex-wrap items-center gap-4 sm:gap-6">
-              <a
-                href={`mailto:${email}`}
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-md bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-contrast font-mono text-xs md:text-sm uppercase tracking-wider transition-all duration-200 shadow-md active:translate-y-[1px]"
-              >
-                <Mail className="w-4 h-4" />
-                <span>{t.contact.sendEmail}</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
+            {/* Doğrudan İletişim Kanalları Rozet Barı */}
+            <div className="mt-10 pt-8 border-t border-white/10">
+              <div className="text-xs font-mono uppercase tracking-wider text-canvas/60 mb-4 flex items-center gap-2">
+                <span>{t.contactForm.directChannelsHeading}</span>
+              </div>
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                {/* WhatsApp */}
+                <a
+                  href={`https://wa.me/${phoneRaw}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-500/30 text-emerald-300 font-mono text-xs uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
+                >
+                  <MessageCircle className="w-4 h-4 text-emerald-400" />
+                  <span>WhatsApp ({phone})</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
+                </a>
 
-              <button
-                type="button"
-                onClick={handleCopyEmail}
-                className="inline-flex items-center gap-2.5 px-6 py-4 rounded-md bg-white/5 hover:bg-white/10 active:bg-white/15 border border-white/10 text-canvas font-mono text-xs md:text-sm uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
-              >
-                {copied ? (
-                  <>
-                    <Check className="w-4 h-4 text-emerald-400" />
-                    <span className="text-emerald-400">{t.contact.copied}</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-4 h-4 text-canvas/60" />
-                    <span>
-                      {t.contact.copyEmail} <span className="hidden sm:inline">({email})</span>
-                    </span>
-                  </>
-                )}
-              </button>
+                {/* Telegram */}
+                <a
+                  href={`https://t.me/+${phoneRaw}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-sky-950/80 hover:bg-sky-900 border border-sky-500/30 text-sky-300 font-mono text-xs uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
+                >
+                  <Send className="w-3.5 h-3.5 text-sky-400" />
+                  <span>Telegram</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
+                </a>
+
+                {/* Instagram */}
+                <a
+                  href={`https://www.instagram.com/${instagramHandle}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-pink-950/80 hover:bg-pink-900 border border-pink-500/30 text-pink-300 font-mono text-xs uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
+                >
+                  <Instagram className="w-4 h-4 text-pink-400" />
+                  <span>@{instagramHandle}</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
+                </a>
+
+                {/* E-posta Doğrudan Buton */}
+                <a
+                  href={`mailto:${email}`}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-primary hover:bg-primary-hover text-primary-contrast font-mono text-xs uppercase tracking-wider transition-all duration-200 active:translate-y-[1px]"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>{t.contact.sendEmail}</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+
+                {/* E-posta Kopyala */}
+                <button
+                  type="button"
+                  onClick={handleCopyEmail}
+                  className="inline-flex items-center gap-2 px-4 py-3 rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-canvas font-mono text-xs uppercase tracking-wider transition-all duration-200"
+                >
+                  {copiedEmail ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="text-emerald-400">{t.contact.copied}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5 text-canvas/60" />
+                      <span>{t.contact.copyEmail}</span>
+                    </>
+                  )}
+                </button>
+
+                {/* Telefon Kopyala */}
+                <button
+                  type="button"
+                  onClick={handleCopyPhone}
+                  className="inline-flex items-center gap-2 px-4 py-3 rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-canvas font-mono text-xs uppercase tracking-wider transition-all duration-200"
+                >
+                  {copiedPhone ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="text-emerald-400">{phone}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Phone className="w-3.5 h-3.5 text-canvas/60" />
+                      <span>{phone}</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
+        </RevealOnScroll>
+
+        {/* Çok Kanallı Editoryal Proje Talep Formu */}
+        <RevealOnScroll>
+          <CommissionInquiryForm />
         </RevealOnScroll>
 
         {/* Alt Künye, Kınalı Keklik Mührü & Ağ Bağlantıları */}
@@ -112,8 +203,8 @@ export function GrandFinaleContact() {
             </div>
           </div>
 
-          {/* Orta: Ağ Bağlantıları */}
-          <div className="md:col-span-4 flex flex-wrap gap-4 sm:gap-6 uppercase">
+          {/* Orta: Ağ Bağlantıları (GitHub, GitLab, LinkedIn, Instagram, Telegram) */}
+          <div className="md:col-span-4 flex flex-wrap gap-4 sm:gap-5 uppercase">
             <a
               href="https://github.com/keklikabdullah07"
               target="_blank"
@@ -139,6 +230,24 @@ export function GrandFinaleContact() {
               className="hover:text-primary transition-colors flex items-center gap-1"
             >
               <span>LINKEDIN</span>
+              <ArrowUpRight className="w-3 h-3 opacity-60" />
+            </a>
+            <a
+              href={`https://www.instagram.com/${instagramHandle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-pink-400 transition-colors flex items-center gap-1"
+            >
+              <span>INSTAGRAM</span>
+              <ArrowUpRight className="w-3 h-3 opacity-60" />
+            </a>
+            <a
+              href={`https://t.me/+${phoneRaw}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sky-400 transition-colors flex items-center gap-1"
+            >
+              <span>TELEGRAM</span>
               <ArrowUpRight className="w-3 h-3 opacity-60" />
             </a>
           </div>

@@ -179,7 +179,7 @@ export function EditorialDirectoryModal({
               </span>
             </div>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <a
                 href="https://github.com/keklikabdullah07"
                 target="_blank"
@@ -203,6 +203,14 @@ export function EditorialDirectoryModal({
                 className="hover:text-primary transition-colors"
               >
                 LINKEDIN
+              </a>
+              <a
+                href="https://www.instagram.com/_keklikabdullah"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                INSTAGRAM
               </a>
             </div>
           </div>
